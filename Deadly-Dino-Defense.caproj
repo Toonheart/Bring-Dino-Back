@@ -11,6 +11,7 @@
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -54,6 +55,9 @@
         </object-type>
         <object-type name="dino" sid="1521423780412625">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="target" sid="2870778874301473" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="6806956909150306">
                     <behavior id="Pathfinding" />
@@ -61,7 +65,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890483526926914" speed="5">
-                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.539683" hotspotY="0.8125">
                         <collision-poly>
                             <point x="0.380952" y="0.375" />
                             <point x="0.492063" y="0.078125" />
@@ -76,17 +80,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Target" sid="6281957837006263">
+        <object-type name="Target3" sid="6281957837006263">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4783050016435932" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="GridBackground" sid="6543835091630928">
-            <plugin id="TiledBg" />
-            <texture />
         </object-type>
         <object-type name="EnemySpawner" sid="1686807355115631">
             <plugin id="Sprite" />
@@ -103,6 +103,35 @@
         <object-type name="TiledBackground3" sid="933186218397521">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="Target1" sid="285093361100363">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="7708757395569071" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9952420582663922" speed="5">
+                    <frame duration="1" hotspotX="0.35" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Target2" sid="3914508073747244">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4752000735573701" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="0.970588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="debugbox" sid="8786469778627136">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

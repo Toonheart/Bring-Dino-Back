@@ -3,17 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">10</variable>
+        <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">2</variable>
         <event-block sid="3783202040741007">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="165633042846889" type="System" />
             </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="4094131438183729" type="dino">
-                    <param id="0" name="X">Target.X</param>
-                    <param id="1" name="Y">Target.Y</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="344252803636845">
             <conditions>
@@ -27,9 +22,9 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="8412556146819565" type="dino">
-                    <param id="0" name="X">Target.X</param>
-                    <param id="1" name="Y">Target.Y</param>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="3873205321714968" type="dino">
+                    <param id="0" name="X">Target1.X</param>
+                    <param id="1" name="Y">Target1.Y</param>
                 </action>
             </actions>
             <sub-events>
@@ -50,17 +45,47 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3214030890994493">
+        <event-block sid="6745710320376295">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="92211227227635" type="dino" />
+                <condition id="-7" name="Compare instance variable" sid="8542397311998216" type="dino">
+                    <param id="0" name="Instance variable">target</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="3448847146258593" type="dino" />
+                <action behavior="Pathfinding" id="0" name="Find path" sid="6915476301414531" type="dino">
+                    <param id="0" name="X">Target1.X</param>
+                    <param id="1" name="Y">Target1.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8951783549312744">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7698121196113714" type="dino">
+                    <param id="0" name="Instance variable">target</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="9126339748718058" type="dino">
+                    <param id="0" name="X">Target2.X</param>
+                    <param id="1" name="Y">Target2.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6325717615074482">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="7854939918750287" type="dino" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="565558946422964" type="dino" />
             </actions>
         </event-block>
         <event-block sid="1891450603548371">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="9052213507448506" type="Target">
+                <condition id="0" name="On collision with another object" sid="9052213507448506" type="Target3">
                     <param id="0" name="Object">dino</param>
                 </condition>
             </conditions>
@@ -68,5 +93,45 @@
                 <action id="-9" name="Destroy" sid="2918144254792174" type="dino" />
             </actions>
         </event-block>
+        <event-block sid="9913486605319977">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7066134757907033" type="dino">
+                    <param id="0" name="Object">Target1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="6308628623342853" type="dino">
+                    <param id="0" name="X">Target3.X</param>
+                    <param id="1" name="Y">Target3.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3053673677557722">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9855800214624426" type="dino">
+                    <param id="0" name="Object">Target2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="9079446193286658" type="dino">
+                    <param id="0" name="X">Target3.X</param>
+                    <param id="1" name="Y">Target3.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="8060590077505716" title="DEBUG">
+            <sub-events>
+                <event-block sid="9301252815410587">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9771196842277153" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9397498430755412" type="debugbox">
+                            <param id="0" name="Text">&quot;DINO target :&quot;   &amp; dino.target</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
