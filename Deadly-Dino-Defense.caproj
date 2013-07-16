@@ -16,6 +16,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -40,14 +41,10 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="TiledBackground" sid="4551277428528833">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Wall" sid="1079486059855141">
+        <object-type name="OldWall" sid="1079486059855141">
             <plugin id="TiledBg" />
             <behaviors>
-                <behavior-type name="Solid" sid="5115696162961197">
+                <behavior-type name="Solid" sid="7519043124476933">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
@@ -55,12 +52,12 @@
         </object-type>
         <object-type name="dino" sid="1521423780412625">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="target" sid="2870778874301473" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="6806956909150306">
                     <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="528824882088277">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -80,7 +77,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Target3" sid="6281957837006263">
+        <object-type name="MainTower" sid="6281957837006263">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4783050016435932" speed="5">
@@ -96,11 +93,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground2" sid="6761912993706167">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="TiledBackground3" sid="933186218397521">
+        <object-type name="BG1" sid="933186218397521">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -132,6 +125,32 @@
         </object-type>
         <object-type name="debugbox" sid="8786469778627136">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Wall" sid="3629241348276924">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="905772781078447">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7106732629418858" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gates" sid="8645813180202614">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2574480351421598">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1173777432900649" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
