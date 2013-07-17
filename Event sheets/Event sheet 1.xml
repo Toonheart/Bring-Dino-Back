@@ -2,5 +2,71 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">10</variable>
+        <event-block sid="3783202040741007">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="165633042846889" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="4094131438183729" type="dino">
+                    <param id="0" name="X">Target.X</param>
+                    <param id="1" name="Y">Target.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="344252803636845">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1571873979693581" type="System">
+                    <param id="0" name="Interval (seconds)">Spawntime</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7903955168108495" type="EnemySpawner">
+                    <param id="0" name="Object">dino</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="8412556146819565" type="dino">
+                    <param id="0" name="X">Target.X</param>
+                    <param id="1" name="Y">Target.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8639438502418286">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9931038347330668" type="System">
+                            <param id="0" name="Variable">Spawntime</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="806962488770075" type="System">
+                            <param id="0" name="Variable">Spawntime</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3214030890994493">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="92211227227635" type="dino" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="3448847146258593" type="dino" />
+            </actions>
+        </event-block>
+        <event-block sid="1891450603548371">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9052213507448506" type="Target">
+                    <param id="0" name="Object">dino</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2918144254792174" type="dino" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
