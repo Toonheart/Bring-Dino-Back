@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Main</name>
+    <name>Stage1</name>
     <events>
-        <include>Archer</include>
+        <include>ArcherUnit</include>
         <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">1</variable>
         <comment>Kick off the first enemy moving.</comment>
         <event-block sid="3783202040741007">

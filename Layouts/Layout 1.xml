@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>7782400051648418</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Stage1</event-sheet>
     <size>
         <width>1280</width>
         <height>800</height>
@@ -689,6 +689,74 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Archer" uid="13">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>185</x>
+                        <y>381</y>
+                        <z>0</z>
+                        <width>124</width>
+                        <height>115</height>
+                        <depth>0</depth>
+                        <hotspotX>0.847826064</hotspotX>
+                        <hotspotY>0.449999988</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrow" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-121</x>
+                        <y>455</y>
+                        <z>0</z>
+                        <width>-64</width>
+                        <height>61</height>
+                        <depth>0</depth>
+                        <hotspotX>0.84375</hotspotX>
+                        <hotspotY>0.78125</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

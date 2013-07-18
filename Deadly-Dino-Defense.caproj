@@ -13,10 +13,13 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -152,15 +155,71 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Archer" sid="4475695892764222">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="2373192194643879">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210624076581434" speed="5">
+                    <frame duration="1" hotspotX="0.847826" hotspotY="0.45">
+                        <collision-poly>
+                            <point x="0.538043" y="0.4125" />
+                            <point x="0.5" y="0.4125" />
+                            <point x="0.804348" y="0.15" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.75" y="0.808333" />
+                            <point x="0.5" y="0.904167" />
+                            <point x="0.0163043" y="0.9875" />
+                            <point x="0.217391" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="arrow" sid="8673935613427653">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7956275925947739">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8353354326860118" speed="5">
+                    <frame duration="1" hotspotX="0.84375" hotspotY="0.78125">
+                        <collision-poly>
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.1875" y="0.8125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="9024731132988014">
+            <plugin id="Touch" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Stage1.xml</event-sheet>
+        <event-sheet>ArcherUnit.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Touch" uid="15">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1" />
