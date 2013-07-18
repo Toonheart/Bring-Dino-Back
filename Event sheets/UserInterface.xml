@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UserInterface</name>
+    <events>
+        <event-block sid="2905742102487754">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4640939661352102" type="Touch">
+                    <param id="0" name="Object">Tile</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1257397766646657" type="Rect">
+                    <param id="0" name="X">Touch.X</param>
+                    <param id="1" name="Y">Touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="9477892661994343" title="Scroll">
+            <sub-events>
+                <event-block sid="4241874130777773">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="994123194357418" type="Touch">
+                            <param id="0" name="Object">Rect</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9757666396092876" type="System">
+                            <param id="0" name="Object to create">Scroll</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2864299666216319" type="Scroll">
+                            <param id="0" name="Object">Dino_Inv</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7832404161051668" type="Scroll">
+                            <param id="0" name="Object">BigDino_Inv</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3584795502672568" type="Scroll">
+                            <param id="0" name="Object">FastDino_Inv</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5914638857627451" type="Scroll">
+                            <param id="0" name="Object">FlyingDino_Inv</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

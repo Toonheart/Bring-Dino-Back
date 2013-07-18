@@ -10,6 +10,7 @@
     <unique-id>19qhqie3r2kml</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -20,6 +21,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -44,17 +46,11 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="OldWall" sid="1079486059855141">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Solid" sid="7519043124476933">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
         <object-type name="dino" sid="1521423780412625">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="health hit point for dinos. If 0, dino dies" name="health" sid="354435532812707" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="6806956909150306">
                     <behavior id="Pathfinding" />
@@ -67,13 +63,13 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890483526926914" speed="5">
                     <frame duration="1" hotspotX="0.539683" hotspotY="0.8125">
                         <collision-poly>
-                            <point x="0.380952" y="0.375" />
-                            <point x="0.492063" y="0.078125" />
-                            <point x="0.888889" y="0.109375" />
-                            <point x="0.809524" y="0.5" />
-                            <point x="0.825397" y="0.828125" />
-                            <point x="0.492063" y="0.84375" />
-                            <point x="0.222222" y="0.78125" />
+                            <point x="0" y="0.015625" />
+                            <point x="0.47619" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.984127" y="0.5" />
+                            <point x="1" y="0.96875" />
+                            <point x="0.492063" y="0.96875" />
+                            <point x="0" y="0.96875" />
                             <point x="0.031746" y="0.5" />
                         </collision-poly>
                     </frame>
@@ -204,14 +200,262 @@
         <object-type name="Touch" sid="9024731132988014">
             <plugin id="Touch" />
         </object-type>
+        <object-type name="Infantry" sid="7750576343466892">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8495165257763343" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.8475" y="0" />
+                            <point x="0.8675" y="1" />
+                            <point x="0.1825" y="0.9975" />
+                            <point x="0.2" y="0.0025" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BigDino" sid="9723470137382252">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="BigDinoHealth" sid="4030852728515426" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="5478797996688086">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="6311090856321699">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9653879485861252" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.304688" y="0.304688" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.914063" y="0.914063" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.0390625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FastDino" sid="9241086678125935">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FastDinoHealth" sid="5511084067394782" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="8703775811352961">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1249083360595142">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6895113597169169" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.42" y="0.42" />
+                            <point x="0.5" y="0.38" />
+                            <point x="0.845" y="0.155" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.785" />
+                            <point x="0.425" y="0.575" />
+                            <point x="0.305" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlyingDino" sid="1119352982085327">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FlyingDinoHealth" sid="4387263125187085" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="3619018938746083">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4966519490102381">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5332726797041809" speed="5">
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.81">
+                        <collision-poly>
+                            <point x="0.171875" y="0.03" />
+                            <point x="0.5" y="0.055" />
+                            <point x="1" y="0.245" />
+                            <point x="0.695313" y="0.355" />
+                            <point x="0.765625" y="0.48" />
+                            <point x="0.578125" y="0.63" />
+                            <point x="0.0703125" y="0.365" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="List" sid="6073034700471791">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="Scroll" sid="3470567069331618">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387967755927913" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.257732" y="0.2" />
+                        <image-point name="Imagepoint 2" x="0.701031" y="0.203846" />
+                        <image-point name="Imagepoint 3" x="0.257732" y="0.807692" />
+                        <image-point name="Imagepoint 4" x="0.757732" y="0.769231" />
+                        <collision-poly>
+                            <point x="0.0670103" y="0.05" />
+                            <point x="0.93299" y="0.05" />
+                            <point x="0.835052" y="0.5" />
+                            <point x="0.876289" y="0.907692" />
+                            <point x="0.103093" y="0.923077" />
+                            <point x="0.154639" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tile" sid="1646451700580919">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7372873303978276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BigDino_Inv" sid="6051639355940764">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="748579724550874">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9657898896822461" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.304688" y="0.304688" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.914063" y="0.914063" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.0390625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dino_Inv" sid="4533480127331511">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6146976306588361">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6492897937527001" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.380952" y="0.375" />
+                            <point x="0.492063" y="0.078125" />
+                            <point x="0.888889" y="0.109375" />
+                            <point x="0.809524" y="0.5" />
+                            <point x="0.825397" y="0.828125" />
+                            <point x="0.492063" y="0.84375" />
+                            <point x="0.222222" y="0.78125" />
+                            <point x="0.031746" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlyingDino_Inv" sid="4447351783735478">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="8481373070491825">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3116994084407456" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.215" />
+                            <point x="0.5" y="0.055" />
+                            <point x="0.734375" y="0.17" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.5" y="0.445" />
+                            <point x="0.578125" y="0.63" />
+                            <point x="0.585938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FastDino_Inv" sid="2049739411285488">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="3477535598185121">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7104284255156417" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.42" y="0.42" />
+                            <point x="0.5" y="0.38" />
+                            <point x="0.845" y="0.155" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.785" />
+                            <point x="0.425" y="0.575" />
+                            <point x="0.305" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Rect" sid="1063244913395247">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1177002775903859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.00224215" y="0.00505051" />
+                            <point x="0.997758" y="0.00505051" />
+                            <point x="0.997758" y="0.99495" />
+                            <point x="0.00224215" y="0.99495" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
+        <layout>GraphicStore.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Stage1.xml</event-sheet>
         <event-sheet>ArcherUnit.xml</event-sheet>
+        <event-sheet>Infantry.xml</event-sheet>
+        <event-sheet>DinoHealth.xml</event-sheet>
+        <event-sheet>UserInterface.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="15">

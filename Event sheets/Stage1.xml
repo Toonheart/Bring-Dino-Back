@@ -3,8 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Stage1</name>
     <events>
+        <include>UserInterface</include>
+        <include>DinoHealth</include>
+        <include>Infantry</include>
         <include>ArcherUnit</include>
-        <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">1</variable>
+        <variable constant="0" name="Spawntime" sid="1956364368295446" static="0" type="number">2</variable>
         <comment>Kick off the first enemy moving.</comment>
         <event-block sid="3783202040741007">
             <conditions>
@@ -161,7 +164,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="497848276014999" type="debugbox">
-                            <param id="0" name="Text">dino.pathfinding.MovingAngle</param>
+                            <param id="0" name="Text">dino.health</param>
                         </action>
                     </actions>
                 </event-block>

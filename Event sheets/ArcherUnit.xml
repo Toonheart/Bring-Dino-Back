@@ -25,17 +25,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4041389164042342">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="454180587572175" type="arrow">
-                    <param id="0" name="Object">dino</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="2816227121474973" type="dino" />
-                <action id="-9" name="Destroy" sid="494930497883295" type="arrow" />
-            </actions>
-        </event-block>
         <event-block sid="3904382079951323">
             <conditions>
                 <condition id="3" name="On touched object" sid="8169628308828861" type="Touch">
@@ -55,11 +44,21 @@
             <conditions>
                 <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="8613465178444755" type="arrow">
                     <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Distance">200</param>
+                    <param id="1" name="Distance">640</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="1012734360462043" type="arrow" />
+            </actions>
+        </event-block>
+        <event-block sid="7401105275716747">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1072269112796909" type="arrow">
+                    <param id="0" name="Object">dino</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8826155410643975" type="arrow" />
             </actions>
         </event-block>
     </events>
