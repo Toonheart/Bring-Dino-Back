@@ -9,7 +9,7 @@
             </conditions>
             <actions>
                 <action behavior="Turret" id="1" name="Add object to target" sid="4752220623240056" type="Archer">
-                    <param id="0" name="Target">dino</param>
+                    <param id="0" name="Target">Dino</param>
                 </action>
             </actions>
         </event-block>
@@ -20,14 +20,14 @@
             <actions>
                 <action id="0" name="Spawn another object" sid="4313159838987676" type="Archer">
                     <param id="0" name="Object">arrow</param>
-                    <param id="1" name="Layer">1</param>
+                    <param id="1" name="Layer">&quot;Aliens&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3904382079951323">
+        <event-block disabled="1" sid="3904382079951323">
             <conditions>
-                <condition id="3" name="On touched object" sid="8169628308828861" type="Touch">
+                <condition disabled="1" id="3" name="On touched object" sid="8169628308828861" type="Touch">
                     <param id="0" name="Object">Wall</param>
                 </condition>
             </conditions>
@@ -54,7 +54,7 @@
         <event-block sid="7401105275716747">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1072269112796909" type="arrow">
-                    <param id="0" name="Object">dino</param>
+                    <param id="0" name="Object">Dino</param>
                 </condition>
             </conditions>
             <actions>

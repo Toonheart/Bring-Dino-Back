@@ -14,14 +14,14 @@
                 <condition id="-2" name="On start of layout" sid="165633042846889" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="2439049256079592" type="dino">
+                <action behavior="Pathfinding" id="0" name="Find path" sid="2439049256079592" type="Dino">
                     <param id="0" name="X">MainTower.X</param>
                     <param id="1" name="Y">MainTower.Y</param>
                 </action>
             </actions>
         </event-block>
         <comment>Every spawntime seconds, but gradually reducing the interval, spawn a new enemy and move it to the target.</comment>
-        <event-block sid="344252803636845">
+        <event-block disabled="1" sid="344252803636845">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="1571873979693581" type="System">
                     <param id="0" name="Interval (seconds)">Spawntime</param>
@@ -29,17 +29,17 @@
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="7903955168108495" type="EnemySpawner">
-                    <param id="0" name="Object">dino</param>
+                    <param id="0" name="Object">Dino</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="3129230281981013" type="dino">
+                <action behavior="Pathfinding" id="0" name="Find path" sid="3129230281981013" type="Dino">
                     <param id="0" name="X">MainTower.X</param>
                     <param id="1" name="Y">MainTower.Y</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="8639438502418286">
+                <event-block disabled="1" sid="8639438502418286">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="9931038347330668" type="System">
                             <param id="0" name="Variable">Spawntime</param>
@@ -56,6 +56,42 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="3968220271985101" title="Move Dinos along poth towards Target">
+            <sub-events>
+                <event-block sid="6325717615074482">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="7854939918750287" type="Dino" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="565558946422964" type="Dino" />
+                    </actions>
+                </event-block>
+                <event-block sid="3771287097119848">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="2624235245629809" type="FastDino" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="4560498086517856" type="FastDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="2323259694696219">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="4969224728743006" type="FlyingDino" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="6552739836057774" type="FlyingDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="299891449755825">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="2038550135038979" type="BigDino" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="5162187681417078" type="BigDino" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Gates, that open and close at timings for dynamic paths of dinos</comment>
         <event-block sid="8690376723778819">
             <conditions>
@@ -70,7 +106,7 @@
                 <action id="-15" name="Set visible" sid="3957178911194655" type="gates">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="9365986966686709" type="dino" />
+                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="9365986966686709" type="Dino" />
             </actions>
         </event-block>
         <event-block sid="4024490877959341">
@@ -86,29 +122,11 @@
                 <action id="-15" name="Set visible" sid="8057523312788682" type="gates">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="2909185554798357" type="dino" />
+                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="2909185554798357" type="Dino" />
             </actions>
         </event-block>
         <comment>When at Gates, rethink about new path</comment>
-        <event-block sid="6693957405393997">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="5010216628285482" type="dino">
-                    <param id="0" name="Object">gates</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="8854588188145687" type="dino" />
-            </actions>
-        </event-block>
         <comment>Once a path has been found, start moving along it.</comment>
-        <event-block sid="6325717615074482">
-            <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="7854939918750287" type="dino" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="565558946422964" type="dino" />
-            </actions>
-        </event-block>
         <event-group description="" sid="6550445294359285" title="WayPoint System">
             <sub-events>
                 <comment>WAYPOINT Collisions</comment>
@@ -122,7 +140,7 @@
                         <condition id="-4" name="Trigger once while true" sid="9810605754712549" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="6308628623342853" type="dino">
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6308628623342853" type="Dino">
                             <param id="0" name="X">MainTower.X</param>
                             <param id="1" name="Y">MainTower.Y</param>
                         </action>
@@ -138,20 +156,98 @@
                         <condition id="-4" name="Trigger once while true" sid="4763934124139782" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="9079446193286658" type="dino">
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9079446193286658" type="Dino">
                             <param id="0" name="X">MainTower.X</param>
                             <param id="1" name="Y">MainTower.Y</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1891450603548371">
+            </sub-events>
+        </event-group>
+        <event-group description="When at Gates, rethink about new path" sid="4705498424542825" title="Regenerating  new path">
+            <sub-events>
+                <event-block sid="6693957405393997">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="9052213507448506" type="MainTower">
-                            <param id="0" name="Object">dino</param>
+                        <condition id="0" name="On collision with another object" sid="5010216628285482" type="Dino">
+                            <param id="0" name="Object">gates</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="2918144254792174" type="dino" />
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="8854588188145687" type="Dino" />
+                    </actions>
+                </event-block>
+                <event-block sid="95732078370038">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5017883419084912" type="BigDino">
+                            <param id="0" name="Object">gates</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="8291166148873878" type="BigDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="7880844632276267">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7383138577993844" type="FlyingDino">
+                            <param id="0" name="Object">gates</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="7043179756780608" type="FlyingDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="7916353361538999">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8716785415332134" type="FastDino">
+                            <param id="0" name="Object">gates</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="9016712042610019" type="FastDino" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="9341433652190753" title="Destroy Dinos at MainTarget">
+            <sub-events>
+                <event-block sid="1891450603548371">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9052213507448506" type="MainTower">
+                            <param id="0" name="Object">Dino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2918144254792174" type="Dino" />
+                    </actions>
+                </event-block>
+                <event-block sid="553528462983007">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2413300513869157" type="MainTower">
+                            <param id="0" name="Object">FastDino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7083900869878827" type="FastDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="4716193408606478">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6061063961495886" type="MainTower">
+                            <param id="0" name="Object">FlyingDino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="658548067510985" type="FlyingDino" />
+                    </actions>
+                </event-block>
+                <event-block sid="3739669463595734">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4504793408343595" type="MainTower">
+                            <param id="0" name="Object">BigDino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6145233218303247" type="BigDino" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -164,21 +260,18 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="497848276014999" type="debugbox">
-                            <param id="0" name="Text">dino.health</param>
+                            <param id="0" name="Text">&quot;FastDino Inv - &quot; &amp; FastDino_Inv.Count</param>
+                        </action>
+                        <action id="1" name="Append text" sid="3845877993063525" type="debugbox">
+                            <param id="0" name="Text">&quot;FastDino  - &quot; &amp; FastDino.Count</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="8040504707254973">
                     <conditions>
-                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="4145867297752589" type="dino" />
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="4145867297752589" type="Dino" />
                     </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="8086366817319898" type="dino">
-                            <param id="0" name="&apos;On&apos; time">0.5</param>
-                            <param id="1" name="&apos;Off&apos; time">0.5</param>
-                            <param id="2" name="Duration">5</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

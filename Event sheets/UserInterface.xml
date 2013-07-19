@@ -3,55 +3,252 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UserInterface</name>
     <events>
-        <event-block sid="2905742102487754">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4640939661352102" type="Touch">
-                    <param id="0" name="Object">Tile</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="1257397766646657" type="Rect">
-                    <param id="0" name="X">Touch.X</param>
-                    <param id="1" name="Y">Touch.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="9477892661994343" title="Scroll">
+        <event-group description="" sid="7837250090555031" title="Dino Launch">
             <sub-events>
+                <comment>Move SpawnRectangle to the touched object position</comment>
+                <event-block sid="2905742102487754">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3955983725900306" type="Touch">
+                            <param id="0" name="Object">CrackedTile</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="1257397766646657" type="SpawnRectangle">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="4241874130777773">
                     <conditions>
                         <condition id="3" name="On touched object" sid="994123194357418" type="Touch">
-                            <param id="0" name="Object">Rect</param>
+                            <param id="0" name="Object">SpawnRectangle</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="3368705471958786" type="System">
+                            <param id="0" name="First value">Scroll.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="9757666396092876" type="System">
                             <param id="0" name="Object to create">Scroll</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">3</param>
                             <param id="2" name="X">LayoutWidth/2</param>
                             <param id="3" name="Y">LayoutHeight/2</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="6226974021914566" type="SelectRectangle" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9477892661994343" title="Scroll">
+            <sub-events>
+                <comment>Spawn Inv Dinos at imagepoints on Scroll</comment>
+                <event-block sid="1917922824938585">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2062672178650418" type="System">
+                            <param id="0" name="First value">Scroll.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="260425021211699" type="System" />
+                    </conditions>
+                    <actions>
                         <action id="0" name="Spawn another object" sid="2864299666216319" type="Scroll">
                             <param id="0" name="Object">Dino_Inv</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">3</param>
                             <param id="2" name="Image point">1</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="7832404161051668" type="Scroll">
                             <param id="0" name="Object">BigDino_Inv</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">3</param>
                             <param id="2" name="Image point">2</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="3584795502672568" type="Scroll">
                             <param id="0" name="Object">FastDino_Inv</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">3</param>
                             <param id="2" name="Image point">3</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="5914638857627451" type="Scroll">
                             <param id="0" name="Object">FlyingDino_Inv</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">3</param>
                             <param id="2" name="Image point">4</param>
                         </action>
                     </actions>
+                </event-block>
+                <comment>Place the selected Dino at SpawnRectangle.</comment>
+                <event-block sid="9520527827696374">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8654173715357877" type="Touch">
+                            <param id="0" name="Object">FastDino_Inv</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4328537930362953" type="SelectRectangle" />
+                        <action id="0" name="Spawn another object" sid="4042133991441827" type="FastDino_Inv">
+                            <param id="0" name="Object">SelectRectangle</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6262351421488612">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2990935450452954" type="Touch">
+                            <param id="0" name="Object">FlyingDino_Inv</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7077712348006422" type="SelectRectangle" />
+                        <action id="0" name="Spawn another object" sid="976918098947315" type="FlyingDino_Inv">
+                            <param id="0" name="Object">SelectRectangle</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8534317418768553">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="768483545369016" type="Touch">
+                            <param id="0" name="Object">Dino_Inv</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1966376929204222" type="SelectRectangle" />
+                        <action id="0" name="Spawn another object" sid="8039990565353481" type="Dino_Inv">
+                            <param id="0" name="Object">SelectRectangle</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4509002572925877">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6571674720750171" type="Touch">
+                            <param id="0" name="Object">BigDino_Inv</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5955562240390234" type="SelectRectangle" />
+                        <action id="0" name="Spawn another object" sid="5817726106940279" type="BigDino_Inv">
+                            <param id="0" name="Object">SelectRectangle</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9894890211038202">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9088520876997916" type="Touch">
+                            <param id="0" name="Object">SelectRectangle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3857395682472925">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2155838237538704" type="SelectRectangle">
+                                    <param id="0" name="Object">Dino_Inv</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="757161979664778" type="SelectRectangle" />
+                                <action id="-9" name="Destroy" sid="9584568304888605" type="Dino_Inv" />
+                                <action id="-9" name="Destroy" sid="5555314688775593" type="Scroll" />
+                                <action id="0" name="Spawn another object" sid="1453107554746174" type="SpawnRectangle">
+                                    <param id="0" name="Object">Dino</param>
+                                    <param id="1" name="Layer">&quot;Dinos&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="9629420164009364" type="Dino">
+                                    <param id="0" name="X">MainTower.X</param>
+                                    <param id="1" name="Y">MainTower.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1840980531613167" type="FastDino_Inv" />
+                                <action id="-9" name="Destroy" sid="303019478900013" type="BigDino_Inv" />
+                                <action id="-9" name="Destroy" sid="1362993975084898" type="FlyingDino_Inv" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9422003783682721">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="949365820294483" type="SelectRectangle">
+                                    <param id="0" name="Object">FastDino_Inv</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2430194302660085" type="SelectRectangle" />
+                                <action id="-9" name="Destroy" sid="4781487075012422" type="Scroll" />
+                                <action id="-9" name="Destroy" sid="1487555944897578" type="FastDino_Inv" />
+                                <action id="0" name="Spawn another object" sid="4619386505259885" type="SpawnRectangle">
+                                    <param id="0" name="Object">FastDino</param>
+                                    <param id="1" name="Layer">&quot;Dinos&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="3803376829882666" type="FastDino">
+                                    <param id="0" name="X">MainTower.X</param>
+                                    <param id="1" name="Y">MainTower.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6928972042501325" type="BigDino_Inv" />
+                                <action id="-9" name="Destroy" sid="7520469841531434" type="FlyingDino_Inv" />
+                                <action id="-9" name="Destroy" sid="5925368183336684" type="Dino_Inv" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3270638987508816">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="8250124315192752" type="SelectRectangle">
+                                    <param id="0" name="Object">FlyingDino_Inv</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4002351615927383" type="SelectRectangle" />
+                                <action id="0" name="Spawn another object" sid="2610278812525912" type="SpawnRectangle">
+                                    <param id="0" name="Object">FlyingDino</param>
+                                    <param id="1" name="Layer">&quot;Dinos&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="6076663623990702" type="FlyingDino" />
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="9864045280422269" type="FlyingDino">
+                                    <param id="0" name="X">MainTower.X</param>
+                                    <param id="1" name="Y">MainTower.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8896170696689767" type="Scroll" />
+                                <action id="-9" name="Destroy" sid="1276999090221115" type="FastDino_Inv" />
+                                <action id="-9" name="Destroy" sid="7989554911954456" type="BigDino_Inv" />
+                                <action id="-9" name="Destroy" sid="3125309834154746" type="FlyingDino_Inv" />
+                                <action id="-9" name="Destroy" sid="6123251028711829" type="Dino_Inv" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7845454530986574">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="8182594233699766" type="SelectRectangle">
+                                    <param id="0" name="Object">BigDino_Inv</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="7841904646601698" type="SelectRectangle" />
+                                <action id="0" name="Spawn another object" sid="7724824427637442" type="SpawnRectangle">
+                                    <param id="0" name="Object">BigDino</param>
+                                    <param id="1" name="Layer">&quot;Dinos&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="2432710229250794" type="BigDino" />
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="4830769575747914" type="BigDino">
+                                    <param id="0" name="X">MainTower.X</param>
+                                    <param id="1" name="Y">MainTower.Y</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="9327339980943032" type="BigDino">
+                                    <param id="0" name="X">MainTower.X</param>
+                                    <param id="1" name="Y">MainTower.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4510918745002813" type="Scroll" />
+                                <action id="-9" name="Destroy" sid="5304917292419418" type="FastDino_Inv" />
+                                <action id="-9" name="Destroy" sid="4975265985873933" type="BigDino_Inv" />
+                                <action id="-9" name="Destroy" sid="4040442888126078" type="FlyingDino_Inv" />
+                                <action id="-9" name="Destroy" sid="6697903221142757" type="Dino_Inv" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

@@ -11,7 +11,7 @@
                         <condition id="-2" name="On start of layout" sid="123556458831885" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="244575757999633" type="dino">
+                        <action id="-10" name="Set value" sid="244575757999633" type="Dino">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">3</param>
                         </action>
@@ -21,53 +21,71 @@
         </event-group>
         <event-group description="" sid="6076058847925725" title="Collision">
             <sub-events>
+                <comment>Destroy Dinos Which are running out of health.</comment>
                 <event-block sid="2079854049285928">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7425249112906122" type="dino">
+                        <condition id="-7" name="Compare instance variable" sid="7425249112906122" type="Dino">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="5432664532976647" type="dino" />
+                        <action id="-9" name="Destroy" sid="5432664532976647" type="Dino" />
                     </actions>
                 </event-block>
+                <comment>Set animation when GotHit and substract from Health. </comment>
                 <event-block sid="8457036365330124">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="4768148655685017" type="dino">
+                        <condition id="0" name="On collision with another object" sid="4768148655685017" type="Dino">
                             <param id="0" name="Object">arrow</param>
                         </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="587744263803731" type="dino" />
+                        <condition id="2" inverted="1" name="Is playing" sid="587744263803731" type="Dino">
+                            <param id="0" name="Animation">&quot;GotHit&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="3812990256057489" type="dino">
-                            <param id="0" name="&apos;On&apos; time">0.5</param>
-                            <param id="1" name="&apos;Off&apos; time">0.5</param>
-                            <param id="2" name="Duration">1</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="1309298366579977" type="dino">
+                        <action id="-12" name="Subtract from" sid="1309298366579977" type="Dino">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8572707430112699" type="Dino">
+                            <param id="0" name="Animation">&quot;GotHit&quot;</param>
+                            <param id="1" name="From">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="1789348683105099">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="3602871759238575" type="dino">
+                        <condition id="0" name="On collision with another object" sid="3602871759238575" type="Dino">
                             <param id="0" name="Object">Infantry</param>
                         </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="2042084488218812" type="dino" />
+                        <condition id="2" inverted="1" name="Is playing" sid="2595695854533095" type="Dino">
+                            <param id="0" name="Animation">&quot;GotHit&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="1607532858289851" type="dino">
-                            <param id="0" name="&apos;On&apos; time">0.5</param>
-                            <param id="1" name="&apos;Off&apos; time">0.5</param>
-                            <param id="2" name="Duration">1</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="9982334381586999" type="dino">
+                        <action id="-12" name="Subtract from" sid="9982334381586999" type="Dino">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7031680970135899" type="Dino">
+                            <param id="0" name="Animation">&quot;GotHit&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Revoke animation to walk cycle</comment>
+                <event-block sid="5854436062665486">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="3216867102924064" type="Dino">
+                            <param id="0" name="Animation">&quot;GotHit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="221516875920007" type="Dino">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

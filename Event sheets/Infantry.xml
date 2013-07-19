@@ -9,7 +9,7 @@
             </conditions>
             <actions />
         </event-block>
-        <event-block sid="1446373449497661">
+        <event-block disabled="1" sid="1446373449497661">
             <conditions>
                 <condition id="3" name="On touched object" sid="4425258248248158" type="Touch">
                     <param id="0" name="Object">Wall</param>

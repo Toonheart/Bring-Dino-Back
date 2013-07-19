@@ -17,9 +17,8 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -46,7 +45,7 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="dino" sid="1521423780412625">
+        <object-type name="Dino" sid="1521423780412625">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="health hit point for dinos. If 0, dino dies" name="health" sid="354435532812707" type="number" />
@@ -55,13 +54,10 @@
                 <behavior-type name="Pathfinding" sid="6806956909150306">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="Flash" sid="528824882088277">
-                    <behavior id="Flash" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890483526926914" speed="1">
-                    <frame duration="1" hotspotX="0.540064" hotspotY="0.812425">
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890483526926914" speed="3">
+                    <frame duration="1" hotspotX="0.641026" hotspotY="0.600956">
                         <collision-poly>
                             <point x="0.274038" y="0.204301" />
                             <point x="0.583333" y="0.037037" />
@@ -70,7 +66,7 @@
                             <point x="0.269231" y="0.893668" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.500768" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.640553" hotspotY="0.600719">
                         <collision-poly>
                             <point x="0.274038" y="0.204301" />
                             <point x="0.583333" y="0.037037" />
@@ -79,7 +75,7 @@
                             <point x="0.269231" y="0.893668" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.500805" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.640902" hotspotY="0.600746">
                         <collision-poly>
                             <point x="0.274038" y="0.204301" />
                             <point x="0.583333" y="0.037037" />
@@ -89,8 +85,8 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="GotHit" pingpong="0" repeatcount="1" repeatto="0" sid="2693499930181231" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500606">
+                <animation framecount="1" loop="0" name="GotHit" pingpong="0" repeatcount="3" repeatto="0" sid="2693499930181231" speed="1">
+                    <frame duration="1" hotspotX="0.64127" hotspotY="0.601212">
                         <collision-poly>
                             <point x="0.274038" y="0.204301" />
                             <point x="0.583333" y="0.037037" />
@@ -250,9 +246,6 @@
                 <behavior-type name="Pathfinding" sid="5478797996688086">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="Flash" sid="6311090856321699">
-                    <behavior id="Flash" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9653879485861252" speed="5">
@@ -280,9 +273,6 @@
                 <behavior-type name="Pathfinding" sid="8703775811352961">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="Flash" sid="1249083360595142">
-                    <behavior id="Flash" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6895113597169169" speed="5">
@@ -309,9 +299,6 @@
                 <behavior-type name="Pathfinding" sid="3619018938746083">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="Flash" sid="4966519490102381">
-                    <behavior id="Flash" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5332726797041809" speed="5">
@@ -337,10 +324,10 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387967755927913" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.257732" y="0.2" />
-                        <image-point name="Imagepoint 2" x="0.701031" y="0.203846" />
-                        <image-point name="Imagepoint 3" x="0.257732" y="0.807692" />
-                        <image-point name="Imagepoint 4" x="0.757732" y="0.769231" />
+                        <image-point name="Imagepoint 1" x="0.670103" y="0.719231" />
+                        <image-point name="Imagepoint 2" x="0.659794" y="0.211538" />
+                        <image-point name="Imagepoint 3" x="0.206186" y="0.669231" />
+                        <image-point name="Imagepoint 4" x="0.242268" y="0.165385" />
                         <collision-poly>
                             <point x="0.0670103" y="0.05" />
                             <point x="0.93299" y="0.05" />
@@ -350,14 +337,6 @@
                             <point x="0.154639" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tile" sid="1646451700580919">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7372873303978276" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -394,16 +373,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6492897937527001" speed="5">
-                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.508013" hotspotY="0.500597">
                         <collision-poly>
-                            <point x="0.380952" y="0.375" />
-                            <point x="0.492063" y="0.078125" />
-                            <point x="0.888889" y="0.109375" />
-                            <point x="0.809524" y="0.5" />
-                            <point x="0.825397" y="0.828125" />
-                            <point x="0.492063" y="0.84375" />
-                            <point x="0.222222" y="0.78125" />
-                            <point x="0.031746" y="0.5" />
+                            <point x="0.274038" y="0.204301" />
+                            <point x="0.5" y="0.046595" />
+                            <point x="0.833333" y="0.124253" />
+                            <point x="0.878205" y="0.499403" />
+                            <point x="0.823718" y="0.868578" />
+                            <point x="0.5" y="0.97491" />
+                            <point x="0.0689103" y="0.948626" />
+                            <point x="0.222756" y="0.499403" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -418,7 +397,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3116994084407456" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.3">
                         <collision-poly>
                             <point x="0.335938" y="0.215" />
                             <point x="0.5" y="0.055" />
@@ -455,7 +434,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Rect" sid="1063244913395247">
+        <object-type name="SpawnRectangle" sid="1063244913395247">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1177002775903859" speed="5">
@@ -465,6 +444,38 @@
                             <point x="0.997758" y="0.00505051" />
                             <point x="0.997758" y="0.99495" />
                             <point x="0.00224215" y="0.99495" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrackedTile" sid="8645752568051034">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7806844593902872" speed="5">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.504425">
+                        <collision-poly>
+                            <point x="0.128" y="0.141593" />
+                            <point x="0.496" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.872" y="0.858407" />
+                            <point x="0.496" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SelectRectangle" sid="153978029763602">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4524206049677315" speed="5">
+                    <frame duration="1" hotspotX="0.501538" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.00307692" y="0.00543478" />
+                            <point x="0.996923" y="0.00543478" />
+                            <point x="0.996923" y="0.994565" />
+                            <point x="0.00307692" y="0.994565" />
                         </collision-poly>
                     </frame>
                 </animation>
