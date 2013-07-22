@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Debug</name>
+    <events>
+        <event-block sid="583863765941456">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8753611039300152" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3189827512416231" type="Debug">
+                    <param id="0" name="Text">&quot;Current node-&quot; &amp; Dino.Pathfinding.CurrentNode</param>
+                </action>
+                <action id="1" name="Append text" sid="1841786536385179" type="Debug">
+                    <param id="0" name="Text">&quot;Total node-&quot; &amp; Dino.Pathfinding.NodeCount</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
