@@ -14,6 +14,9 @@
                 <action id="1" name="Append text" sid="1841786536385179" type="Debug">
                     <param id="0" name="Text">&quot;Total node-&quot; &amp; Dino.Pathfinding.NodeCount</param>
                 </action>
+                <action id="1" name="Append text" sid="3890920663054782" type="Debug">
+                    <param id="0" name="Text">&quot;Health&quot;&amp;DinoHealth</param>
+                </action>
             </actions>
         </event-block>
     </events>

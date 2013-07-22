@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Patroling</name>
+    <events>
+        <event-block sid="270914503400046">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8280150642054239" type="alien">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9607435466129554" type="alien">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6970329717721274">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7242598968161161" type="alien">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="1166408577817878" type="alien">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="7933240817794766" type="alien">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

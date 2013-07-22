@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -42,7 +43,7 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="TiledBackground" sid="5025215313838989">
+        <object-type name="Background1" sid="5025215313838989">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -82,16 +83,14 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500597">
+                    <frame duration="1" hotspotX="0.68242" hotspotY="0.89372">
                         <collision-poly>
-                            <point x="0.274038" y="0.204301" />
-                            <point x="0.5" y="0.046595" />
-                            <point x="0.833333" y="0.124253" />
-                            <point x="0.878205" y="0.499403" />
-                            <point x="0.823718" y="0.868578" />
-                            <point x="0.5" y="0.97491" />
-                            <point x="0.0689103" y="0.948626" />
-                            <point x="0.222756" y="0.499403" />
+                            <point x="0.187146" y="0.15942" />
+                            <point x="0.499055" y="0.00805153" />
+                            <point x="0.867675" y="0.112721" />
+                            <point x="0.907372" y="0.499195" />
+                            <point x="0.994329" y="0.924316" />
+                            <point x="0.119093" y="0.898551" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -103,6 +102,112 @@
         <object-type name="Debug" sid="6634968710867077">
             <plugin id="Text" />
         </object-type>
+        <object-type name="HealthIndicator" sid="5226528074924198">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2718428893984215" speed="5">
+                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222">
+                        <collision-poly>
+                            <point x="0.471111" y="0.471111" />
+                            <point x="0.497778" y="0.44" />
+                            <point x="0.666667" y="0.333333" />
+                            <point x="0.795556" y="0.497778" />
+                            <point x="0.697778" y="0.697778" />
+                            <point x="0.497778" y="0.866667" />
+                            <point x="0.271111" y="0.728889" />
+                            <point x="0.155556" y="0.497778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Spikes" sid="4021953063128643">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4295698976277606">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4113300977760562" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.514286">
+                        <collision-poly>
+                            <point x="0.028571" y="1.45286e-007" />
+                            <point x="0.471429" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0142858" y="0.457143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlackHoleBG" sid="6208814681743992">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="BlackTile" sid="33746369410964">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1468678608800405">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5537413491693293" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="alien" sid="1917608046148512">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="9728155716435391">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5292429789073342" speed="5">
+                    <frame duration="1" hotspotX="0.502283" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.292237" y="0.334782" />
+                            <point x="0.497717" y="0" />
+                            <point x="0.616438" y="0.365217" />
+                            <point x="0.803653" y="0.5" />
+                            <point x="0.666667" y="0.682609" />
+                            <point x="0.497717" y="0.952174" />
+                            <point x="0.0776255" y="0.634782" />
+                            <point x="0.178082" y="0.447826" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="3214779676977865">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8019875868160704" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightArrow" sid="2486565833053506">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5839060343094516" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeftArrow" sid="2077114536790673">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1337584641532836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -113,6 +218,7 @@
         <event-sheet>UserControls.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>DinoHealth.xml</event-sheet>
+        <event-sheet>Patroling.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="132">

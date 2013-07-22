@@ -2,5 +2,49 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DinoHealth</name>
-    <events />
+    <events>
+        <variable constant="0" name="DinoHealth" sid="4167312655858217" static="0" type="number">3</variable>
+        <event-block sid="7961373143314657">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8594165074616562" type="Dino">
+                    <param id="0" name="Object">Spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="4007325870236224" type="System">
+                    <param id="0" name="Variable">DinoHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="78303316945675" type="alien">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7980830835508758">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2689332912994855" type="System">
+                    <param id="0" name="Variable">DinoHealth</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="2" name="Stop" sid="5499760558547092" type="Dino" />
+                <action id="-9" name="Destroy" sid="9448143135681457" type="Dino" />
+            </actions>
+        </event-block>
+        <event-block sid="4932216815651472">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3291367518647979" type="Dino">
+                    <param id="0" name="Object">alien</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="5872638407579276" type="System">
+                    <param id="0" name="Variable">DinoHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
