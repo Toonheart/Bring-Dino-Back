@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UserControls</name>
     <events>
-        <variable constant="0" name="DinoRange" sid="9164035090656878" static="0" type="number">0</variable>
         <event-group description="" sid="8659582496885548" title="Movement">
             <sub-events>
                 <event-block disabled="1" sid="4937522659893916">
@@ -32,7 +31,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="5594837488118347">
+        <event-block disabled="1" sid="5594837488118347">
             <conditions>
                 <condition id="1" name="On any touch end" sid="853936886386788" type="Touch" />
             </conditions>

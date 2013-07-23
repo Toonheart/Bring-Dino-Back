@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Collectibles</name>
+    <events>
+        <event-block sid="6469772385545555">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1911018428363795" type="Dino">
+                    <param id="0" name="Object">Meatloaf</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="8671441659285239" type="Dino">
+                    <param id="0" name="Instance variable">DinoHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3319587775912247" type="Meatloaf" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

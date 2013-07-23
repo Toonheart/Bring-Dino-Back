@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PowerUps</name>
+    <events>
+        <event-group description="" sid="9072153252425343" title="FireBall">
+            <sub-events>
+                <comment>If currentPower=0 Set PowerUp Default on Hub</comment>
+                <event-block sid="1564682358488695">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1750652832645076" type="Dino">
+                            <param id="0" name="Instance variable">CurrentPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9798611800391186" type="PowerUp">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Dino When collected FireBall_inv Show It On HUD,and Start CountDown timer. </comment>
+                <event-block sid="2922472272524874">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1931139426717422" type="Dino">
+                            <param id="0" name="Object">FireBall_inv</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9566694269604746" type="Dino">
+                            <param id="0" name="Instance variable">CurrentPower</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2941045137543262" type="FireBall_inv" />
+                        <action id="-11" name="Add to" sid="5874701175104875" type="Dino">
+                            <param id="0" name="Instance variable">FireBallLimit</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="627621344946328" type="FireBallCount">
+                            <param id="0" name="Text">&quot;&quot;&amp;Dino.FireBallLimit</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When CurrentPower=1 Set Show FireBall on HUD,and throw a fireball when touched Dino</comment>
+                <event-block sid="136540099583731">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6007687235024586" type="System">
+                            <param id="0" name="First value">Dino.CurrentPower</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8421872697576326" type="PowerUp">
+                            <param id="0" name="Animation">&quot;FireBall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7386145635661887">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="8088769977841499" type="Touch">
+                                    <param id="0" name="Object">Dino</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="7678510668488738" type="Dino">
+                                    <param id="0" name="Object">FireBall</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="1337794815955268" type="Dino">
+                                    <param id="0" name="Instance variable">FireBallLimit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2355589639318212" type="FireBallCount">
+                                    <param id="0" name="Text">&quot;&quot;&amp;Dino.FireBallLimit</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Set Default power when running out of FireBalls</comment>
+                <event-block sid="9081314112363201">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1737771442148204" type="Dino">
+                            <param id="0" name="Instance variable">FireBallLimit</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7741205554775574" type="Dino">
+                            <param id="0" name="Instance variable">CurrentPower</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4346564829120405" type="FireBallCount">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8343800095728485" title="Lock&amp;Key" />
+        <comment>Collect key</comment>
+        <event-block sid="9230702140534954">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1171852790138437" type="Dino">
+                    <param id="0" name="Object">Key</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1349889093911173" type="Key_HUD">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1803493515058529" type="Key" />
+            </actions>
+        </event-block>
+        <comment>Unlock the way using key</comment>
+        <event-block sid="6035628575605025">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="7892983451147148" type="Key_HUD" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8751910639005939">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8025191791428922" type="Dino">
+                            <param id="0" name="Object">Lock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3810224659091488" type="Lock" />
+                        <action id="-15" name="Set visible" sid="2103782281221524" type="Key_HUD">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

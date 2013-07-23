@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Collisions</name>
+    <events>
+        <comment>On coolision with Alien reduce health</comment>
+        <event-block sid="6246310236782955">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4724343633716263" type="Dino">
+                    <param id="0" name="Object">Alien</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="6081094566594613" type="Dino">
+                    <param id="0" name="Instance variable">DinoHealth</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>On coolision with spike reduce health</comment>
+        <event-block sid="3609107463580839">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7828932382687724" type="Dino">
+                    <param id="0" name="Object">Spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="8356654782389375" type="Dino">
+                    <param id="0" name="Instance variable">DinoHealth</param>
+                    <param id="1" name="Value">0.25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8549685896788863">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5134687854997312" type="FireBall">
+                    <param id="0" name="Object">Alien</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7414838154986695" type="Alien" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

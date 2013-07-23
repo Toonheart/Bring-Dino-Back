@@ -8,14 +8,11 @@
                 <condition id="-1" name="Every tick" sid="8753611039300152" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="3189827512416231" type="Debug">
-                    <param id="0" name="Text">&quot;Current node-&quot; &amp; Dino.Pathfinding.CurrentNode</param>
+                <action id="0" name="Set text" sid="6250316141490544" type="Debug">
+                    <param id="0" name="Text">&quot;time&quot;&amp;dino.FireBallLimit</param>
                 </action>
-                <action id="1" name="Append text" sid="1841786536385179" type="Debug">
-                    <param id="0" name="Text">&quot;Total node-&quot; &amp; Dino.Pathfinding.NodeCount</param>
-                </action>
-                <action id="1" name="Append text" sid="3890920663054782" type="Debug">
-                    <param id="0" name="Text">&quot;Health&quot;&amp;DinoHealth</param>
+                <action id="1" name="Append text" sid="1474972014958305" type="Debug">
+                    <param id="0" name="Text">&quot;currenttime&quot;&amp;time</param>
                 </action>
             </actions>
         </event-block>

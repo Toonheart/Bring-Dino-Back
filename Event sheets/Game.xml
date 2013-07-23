@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>Game</name>
     <events>
+        <include>Pause</include>
+        <include>PowerUps</include>
+        <include>Collisions</include>
+        <include>Collectibles</include>
         <include>Patroling</include>
         <include>DinoHealth</include>
         <include>Debug</include>

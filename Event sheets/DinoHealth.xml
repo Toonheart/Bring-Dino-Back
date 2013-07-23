@@ -3,48 +3,235 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DinoHealth</name>
     <events>
-        <variable constant="0" name="DinoHealth" sid="4167312655858217" static="0" type="number">3</variable>
-        <event-block sid="7961373143314657">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="8594165074616562" type="Dino">
-                    <param id="0" name="Object">Spikes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="4007325870236224" type="System">
-                    <param id="0" name="Variable">DinoHealth</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="78303316945675" type="alien">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7980830835508758">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="2689332912994855" type="System">
-                    <param id="0" name="Variable">DinoHealth</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="2" name="Stop" sid="5499760558547092" type="Dino" />
-                <action id="-9" name="Destroy" sid="9448143135681457" type="Dino" />
-            </actions>
-        </event-block>
-        <event-block sid="4932216815651472">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="3291367518647979" type="Dino">
-                    <param id="0" name="Object">alien</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="5872638407579276" type="System">
-                    <param id="0" name="Variable">DinoHealth</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="8689155620082625" title="Health System for Dino">
+            <sub-events>
+                <event-block sid="7950499190099095">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4356449864658559" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7585567763611797" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>On recovery Remove warning</comment>
+                <event-block sid="769325562903416">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7973141831177916" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4194783545367905" type="Dino">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Draw player attention to health bar,only once helth when is super low-fixed</comment>
+                <event-block sid="777688175360044">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9710141835986708" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1175671805598036" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="6211925772856059" type="HealthIndicator">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9480482161648285" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Do it again for longer time super low health almost dead</comment>
+                <event-block sid="2448890283403698">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2428429429608686" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0.5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3025813370271914" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6804845363610198" type="HealthIndicator">
+                            <param id="0" name="Animation">&quot;warning&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="9714451264837024" type="HealthIndicator">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">3</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3432977444352386" type="System">
+                            <param id="0" name="Seconds">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Health animation</comment>
+                <comment>Player health is in fraction,then player health  bar shows diminishing</comment>
+                <event-block sid="2023618711458364">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7382489364205432" type="System">
+                            <param id="0" name="First value">Dino.DinoHealth%1</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="7916768511848915" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8546134198126152">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="6279950915970743" type="System">
+                                    <param id="0" name="Object">HealthIndicator</param>
+                                    <param id="1" name="Instance">Dino.DinoHealth-0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9300963015306719" type="HealthIndicator">
+                                    <param id="0" name="Animation">&quot;warning&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>On recovery,re-enable player health indicator</comment>
+                <comment>case when player health recovers from fraction health loss</comment>
+                <event-block sid="1304764302425056">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6577475180771476" type="System">
+                            <param id="0" name="First value">Dino.DinoHealth%1</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="333599552175202" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4651211109005966">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="3223117297852378" type="System">
+                                    <param id="0" name="Object">HealthIndicator</param>
+                                    <param id="1" name="Expression">0</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="6591554823906803" type="HealthIndicator">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8790796644276475" type="HealthIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4918785900383041">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="187369270955749" type="System">
+                                    <param id="0" name="Object">HealthIndicator</param>
+                                    <param id="1" name="Expression">0</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="39400494068237" type="System">
+                                    <param id="0" name="First value">HealthIndicator.IID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">Dino.DinoHealth-0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="714615625993475" type="HealthIndicator">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4698692247879151" type="HealthIndicator">
+                                    <param id="0" name="Animation">&quot;Warning&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>case when player health recovers from full point health loss</comment>
+                <event-block sid="4921295652223463">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9332735212087146" type="System">
+                            <param id="0" name="First value">Dino.DinoHealth%1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7825627099621362">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="5612018310515926" type="System">
+                                    <param id="0" name="Object">HealthIndicator</param>
+                                    <param id="1" name="Expression">0</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="5093627992648377" type="System">
+                                    <param id="0" name="First value">HealthIndicator.IID</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Dino.DinoHealth</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="5215258273495152" type="HealthIndicator">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2815503915660332" type="HealthIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>wanish health bars greater than player health</comment>
+                <event-block sid="1074597607322319">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="5444791960999271" type="System">
+                            <param id="0" name="Object">HealthIndicator</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="1875442718364222" type="System">
+                            <param id="0" name="First value">HealthIndicator.IID</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Dino.DinoHealth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="3556992560188069" type="HealthIndicator">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
