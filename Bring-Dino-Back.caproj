@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -26,15 +27,15 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>400</height>
+        <width>1280</width>
+        <height>800</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -56,18 +57,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4518917593875704" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0285714" y="0.0285714" />
-                            <point x="0.5" y="0" />
-                            <point x="0.971429" y="0.0285714" />
-                            <point x="1" y="0.5" />
-                            <point x="0.971429" y="0.971429" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0285714" y="0.971429" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -80,17 +70,20 @@
                 <behavior-type name="ScrollTo" sid="4726247122454335">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="8Direction" sid="1604283851646915">
+                    <behavior id="EightDir" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
-                    <frame duration="1" hotspotX="0.68242" hotspotY="0.89372">
+                    <frame duration="1" hotspotX="0.685714" hotspotY="0.890244">
                         <collision-poly>
-                            <point x="0.187146" y="0.15942" />
-                            <point x="0.499055" y="0.00805153" />
-                            <point x="0.867675" y="0.112721" />
-                            <point x="0.907372" y="0.499195" />
-                            <point x="0.994329" y="0.924316" />
-                            <point x="0.119093" y="0.898551" />
+                            <point x="0.185714" y="0.158537" />
+                            <point x="0.5" y="0" />
+                            <point x="0.871429" y="0.109756" />
+                            <point x="0.914286" y="0.926829" />
+                            <point x="0.114286" y="0.902439" />
+                            <point x="0.171429" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -104,6 +97,11 @@
         </object-type>
         <object-type name="HealthIndicator" sid="5226528074924198">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1860055644895552">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2718428893984215" speed="5">
                     <frame duration="1" hotspotX="0.502222" hotspotY="0.502222">

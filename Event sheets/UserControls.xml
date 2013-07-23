@@ -6,7 +6,7 @@
         <variable constant="0" name="DinoRange" sid="9164035090656878" static="0" type="number">0</variable>
         <event-group description="" sid="8659582496885548" title="Movement">
             <sub-events>
-                <event-block sid="4937522659893916">
+                <event-block disabled="1" sid="4937522659893916">
                     <conditions>
                         <condition id="1" name="On any touch end" sid="8270422814741941" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="1401338330762487" type="System">
@@ -22,7 +22,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7306008529463326">
+                <event-block disabled="1" sid="7306008529463326">
                     <conditions>
                         <condition behavior="Pathfinding" id="0" name="On path found" sid="1710009945792297" type="Dino" />
                     </conditions>
@@ -32,5 +32,11 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="5594837488118347">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="853936886386788" type="Touch" />
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
