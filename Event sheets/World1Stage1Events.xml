@@ -2,5 +2,10 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>World1Stage1Events</name>
-    <events />
+    <events>
+        <include>Patroling</include>
+        <include>DinoHealth</include>
+        <include>Debug</include>
+        <include>UserControls</include>
+    </events>
 </c2eventsheet>

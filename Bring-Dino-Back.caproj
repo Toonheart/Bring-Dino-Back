@@ -10,19 +10,19 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -31,15 +31,15 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>400</height>
+        <width>1280</width>
+        <height>800</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -438,6 +438,80 @@
         <object-type name="Button" sid="3900006296869755">
             <plugin id="Button" />
         </object-type>
+        <object-type name="Tile1Center" sid="4192319867896592">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7520044540535967" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503401">
+                        <collision-poly>
+                            <point x="0.1875" y="0.163265" />
+                            <point x="0.5" y="0.0136054" />
+                            <point x="0.8125" y="0.163265" />
+                            <point x="1" y="0.496599" />
+                            <point x="0.828125" y="0.85034" />
+                            <point x="0.5" y="1" />
+                            <point x="0.171875" y="0.85034" />
+                            <point x="0.0078125" y="0.496599" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tile1Normal" sid="3304095679223312">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7195985384884088" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.5" y="0.0133333" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.828125" y="0.706667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.179688" y="0.693333" />
+                            <point x="0.015625" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tile1Left" sid="4812899315411444">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3540342428322403" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503401">
+                        <collision-poly>
+                            <point x="0.179688" y="0.156463" />
+                            <point x="0.5" y="0" />
+                            <point x="0.820313" y="0.156463" />
+                            <point x="0.515625" y="0.496599" />
+                            <point x="0.507813" y="0.571429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.179688" y="0.843537" />
+                            <point x="0.0078125" y="0.496599" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tile1Right" sid="4176137971497873">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7112159873994884" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503401">
+                        <collision-poly>
+                            <point x="0.179688" y="0.156463" />
+                            <point x="0.5" y="0" />
+                            <point x="0.820313" y="0.156463" />
+                            <point x="1" y="0.496599" />
+                            <point x="0.820313" y="0.843537" />
+                            <point x="0.5" y="1" />
+                            <point x="0.492188" y="0.571429" />
+                            <point x="0.484375" y="0.496599" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -458,12 +532,12 @@
         <event-sheet>World1Stage1Events.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="132">
+        <global-instance type="Touch" uid="305">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Pause" uid="233" />
+        <global-instance type="Pause" uid="306" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
