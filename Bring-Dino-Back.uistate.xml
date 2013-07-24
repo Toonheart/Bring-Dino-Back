@@ -11,7 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Main</layout>
-        <event-sheet>Game</event-sheet>
+        <layout>World1Stage1</layout>
+        <layout active="1">GraphicStore</layout>
+        <event-sheet>MainEvents</event-sheet>
         <event-sheet>UserControls</event-sheet>
         <event-sheet>Debug</event-sheet>
         <event-sheet>DinoHealth</event-sheet>
@@ -19,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Collectibles</event-sheet>
         <event-sheet>Collisions</event-sheet>
         <event-sheet>PowerUps</event-sheet>
-        <event-sheet active="1">Pause</event-sheet>
+        <event-sheet>Pause</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

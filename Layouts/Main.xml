@@ -2,7 +2,7 @@
 <c2layout>
     <name>Main</name>
     <sid>2911707678961286</sid>
-    <event-sheet>Game</event-sheet>
+    <event-sheet>MainEvents</event-sheet>
     <size>
         <width>1280</width>
         <height>800</height>

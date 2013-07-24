@@ -18,11 +18,11 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -442,9 +442,11 @@
     <families />
     <layout-folder expanded="1">
         <layout>Main.xml</layout>
+        <layout>World1Stage1.xml</layout>
+        <layout>GraphicStore.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>MainEvents.xml</event-sheet>
         <event-sheet>UserControls.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>DinoHealth.xml</event-sheet>
@@ -453,6 +455,7 @@
         <event-sheet>Collisions.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Pause.xml</event-sheet>
+        <event-sheet>World1Stage1Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="132">
