@@ -7,7 +7,7 @@
         <event-block sid="6246310236782955">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4724343633716263" type="Dino">
-                    <param id="0" name="Object">Alien</param>
+                    <param id="0" name="Object">AlienLR</param>
                 </condition>
                 <condition id="-10" name="Compare opacity" sid="7208602221067242" type="Dino">
                     <param id="0" name="Comparison">0</param>
@@ -16,6 +16,19 @@
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="6081094566594613" type="Dino">
+                    <param id="0" name="Instance variable">DinoHealth</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9099956486148526">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4930339274590286" type="Dino">
+                    <param id="0" name="Object">AlienUD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1550993463582961" type="Dino">
                     <param id="0" name="Instance variable">DinoHealth</param>
                     <param id="1" name="Value">0.5</param>
                 </action>
@@ -35,14 +48,29 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Destroy alien when got hit by fireball</comment>
         <event-block sid="8549685896788863">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="5134687854997312" type="FireBall">
-                    <param id="0" name="Object">Alien</param>
+                    <param id="0" name="Object">AlienLR</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="7414838154986695" type="Alien" />
+                <action id="-9" name="Destroy" sid="7414838154986695" type="AlienLR" />
+            </actions>
+        </event-block>
+        <comment>Lazers decreases the Dino Health </comment>
+        <event-block sid="4308164158221108">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9786682623161803" type="Dino">
+                    <param id="0" name="Object">Lazer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="4264286960097134" type="Dino">
+                    <param id="0" name="Instance variable">DinoHealth</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
             </actions>
         </event-block>
     </events>

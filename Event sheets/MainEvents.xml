@@ -3,12 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainEvents</name>
     <events>
+        <include>NavigationControlls</include>
+        <include>DinoHealth</include>
+        <include>DynamicWalls</include>
+        <include>TelePorting</include>
+        <include>Obstacles</include>
         <include>Pause</include>
         <include>PowerUps</include>
         <include>Collisions</include>
         <include>Collectibles</include>
         <include>Patroling</include>
-        <include>DinoHealth</include>
         <include>Debug</include>
         <include>UserControls</include>
     </events>

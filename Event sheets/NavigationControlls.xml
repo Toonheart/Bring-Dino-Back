@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NavigationControlls</name>
+    <events>
+        <event-group description="" sid="5043631264520298" title="Navigation Controlls">
+            <sub-events>
+                <comment>Left </comment>
+                <event-block sid="3627740116699216">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="6930624325744062" type="Touch">
+                            <param id="0" name="Object">Navigate_L</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="1005347356171703" type="Dino">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Right</comment>
+                <event-block sid="1812908181123193">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="9476402274754061" type="Touch">
+                            <param id="0" name="Object">Navigate_R</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="9385034610375395" type="Dino">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Down</comment>
+                <event-block sid="9641287589972704">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1613298419970608" type="Touch">
+                            <param id="0" name="Object">Navigation_D</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="8243232269184571" type="Dino">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Up</comment>
+                <event-block sid="681146448913888">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="8355146603256238" type="Touch">
+                            <param id="0" name="Object">Navigation_U</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="8291254729787472" type="Dino">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

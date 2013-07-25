@@ -1701,14 +1701,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>107</x>
-                        <y>117</y>
+                        <x>225.729248047</x>
+                        <y>178.677688599</y>
                         <z>0</z>
                         <width>70</width>
                         <height>82</height>
                         <depth>0</depth>
-                        <hotspotX>0.685714304</hotspotX>
-                        <hotspotY>0.890243888</hotspotY>
+                        <hotspotX>1.014285684</hotspotX>
+                        <hotspotY>0.902438998</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1878,19 +1878,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>32</y>
+                        <x>-60.155647278</x>
+                        <y>172.866485596</y>
                         <z>0</z>
-                        <width>71</width>
-                        <height>51</height>
+                        <width>96</width>
+                        <height>84</height>
                         <depth>0</depth>
-                        <hotspotX>0.50222224</hotspotX>
-                        <hotspotY>0.50222224</hotspotY>
+                        <hotspotX>-1.020833373</hotspotX>
+                        <hotspotY>1.952380896</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HealthIndicator" uid="445">
+                <instance type="HealthCount" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1898,6 +1898,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>
@@ -1906,52 +1907,18 @@
                                 <bottom-edge>None</bottom-edge>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
-                        <y>32</y>
+                        <x>48.940765381</x>
+                        <y>66.365951538</y>
                         <z>0</z>
-                        <width>71</width>
-                        <height>51</height>
+                        <width>50.99200058</width>
+                        <height>69.665130615</height>
                         <depth>0</depth>
-                        <hotspotX>0.50222224</hotspotX>
-                        <hotspotY>0.50222224</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HealthIndicator" uid="446">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>71</width>
-                        <height>51</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50222224</hotspotX>
-                        <hotspotY>0.50222224</hotspotY>
+                        <hotspotX>0.507042229</hotspotX>
+                        <hotspotY>0.50515461</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

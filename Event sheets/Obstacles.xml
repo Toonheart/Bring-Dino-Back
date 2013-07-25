@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Obstacles</name>
+    <events>
+        <comment>Span Lazer at lazer origin while dino is in range </comment>
+        <event-block sid="104361777516937">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4541049953805715" type="Dino">
+                    <param id="0" name="Object">LazerOrigin</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="961151620731943">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3779074106928786" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="2676969240477039" type="LazerOrigin">
+                            <param id="0" name="Object">Lazer</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1616295843368568" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="124205629129203" type="Lazer" />
+                        <action id="-16" name="Wait" sid="8198205900387173" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1006727420402835" type="LazerOrigin">
+                            <param id="0" name="Object">Lazer</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5853548061745357" type="Lazer" />
+                        <action id="0" name="Spawn another object" sid="7672754009955885" type="LazerOrigin">
+                            <param id="0" name="Object">Lazer</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6576016512983759" type="Lazer" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TelePorting</name>
+    <events>
+        <comment>On entering into Inport Port the Dino to out port</comment>
+        <event-block sid="1944627486156425">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7785763393359844" type="Dino">
+                    <param id="0" name="Object">InPort</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3787898674228131" type="Dino">
+                    <param id="0" name="Object">OutPort</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8244370900307326">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6108744458597868" type="Dino">
+                    <param id="0" name="Object">OutPort</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="9156291344006575" type="Dino">
+                    <param id="0" name="Object">InPort</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

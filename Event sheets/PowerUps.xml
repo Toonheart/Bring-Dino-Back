@@ -115,7 +115,10 @@
                 <action id="-15" name="Set visible" sid="1349889093911173" type="Key_HUD">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="1803493515058529" type="Key" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="8221190275976802" type="Key">
+                    <param id="0" name="Pin to">Dino</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>Unlock the way using key</comment>
@@ -136,6 +139,8 @@
                         <action id="-15" name="Set visible" sid="2103782281221524" type="Key_HUD">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="4488016686558591" type="Key" />
+                        <action id="-9" name="Destroy" sid="1889339296243226" type="Key" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -153,9 +158,7 @@
                     <param id="0" name="Instance variable">CurrentPower</param>
                     <param id="1" name="Value">2</param>
                 </action>
-                <action id="-15" name="Set visible" sid="9198436283601192" type="CamouFlaged_inv">
-                    <param id="0" name="Visibility">0</param>
-                </action>
+                <action id="-9" name="Destroy" sid="9198436283601192" type="CamouFlaged_inv" />
                 <action id="0" name="Set text" sid="4526162059023845" type="FireBallCount">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
