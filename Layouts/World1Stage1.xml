@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BlackHoleBG" uid="184">
+                <instance type="BlackHoleBG" uid="132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -152,7 +152,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Center" uid="225">
+                <instance type="Tile1Center" uid="233">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -174,7 +174,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="226">
+                <instance type="Tile1Normal" uid="235">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -196,7 +196,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="227">
+                <instance type="Tile1Left" uid="236">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -218,7 +218,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="228">
+                <instance type="Tile1Right" uid="237">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -240,7 +240,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Center" uid="229">
+                <instance type="Tile1Center" uid="238">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -262,7 +262,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="230">
+                <instance type="Tile1Left" uid="239">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -284,7 +284,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="231">
+                <instance type="Tile1Right" uid="240">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -306,7 +306,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="232">
+                <instance type="Tile1Normal" uid="241">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -328,7 +328,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="237">
+                <instance type="Tile1Left" uid="242">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -350,7 +350,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="238">
+                <instance type="Tile1Normal" uid="243">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -372,7 +372,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="239">
+                <instance type="Tile1Right" uid="244">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -394,7 +394,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="240">
+                <instance type="Tile1Normal" uid="245">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -416,7 +416,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="241">
+                <instance type="Tile1Normal" uid="246">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -438,7 +438,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="242">
+                <instance type="Tile1Left" uid="247">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -460,7 +460,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="243">
+                <instance type="Tile1Normal" uid="248">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -482,7 +482,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="234">
+                <instance type="Tile1Left" uid="249">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -504,7 +504,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="236">
+                <instance type="Tile1Normal" uid="250">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -526,7 +526,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="233">
+                <instance type="Tile1Left" uid="251">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -548,7 +548,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="235">
+                <instance type="Tile1Left" uid="253">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -570,7 +570,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="244">
+                <instance type="Tile1Normal" uid="254">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -592,7 +592,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="245">
+                <instance type="Tile1Normal" uid="255">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -614,7 +614,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="247">
+                <instance type="Tile1Left" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -636,7 +636,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="248">
+                <instance type="Tile1Right" uid="257">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -658,7 +658,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="249">
+                <instance type="Tile1Normal" uid="258">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -680,7 +680,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="250">
+                <instance type="Tile1Left" uid="259">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -702,7 +702,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="251">
+                <instance type="Tile1Normal" uid="260">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -724,7 +724,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="253">
+                <instance type="Tile1Normal" uid="261">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -746,7 +746,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="256">
+                <instance type="Tile1Right" uid="262">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -768,7 +768,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="257">
+                <instance type="Tile1Normal" uid="263">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -790,7 +790,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="258">
+                <instance type="Tile1Right" uid="266">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -812,7 +812,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="259">
+                <instance type="Tile1Normal" uid="267">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -834,7 +834,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="260">
+                <instance type="Tile1Right" uid="268">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -856,7 +856,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="261">
+                <instance type="Tile1Normal" uid="269">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -878,7 +878,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="262">
+                <instance type="Tile1Right" uid="270">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -900,7 +900,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="263">
+                <instance type="Tile1Normal" uid="271">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -922,7 +922,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="254">
+                <instance type="Tile1Normal" uid="273">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -944,7 +944,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="255">
+                <instance type="Tile1Left" uid="274">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -966,7 +966,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Center" uid="246">
+                <instance type="Tile1Center" uid="275">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -988,7 +988,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="266">
+                <instance type="Tile1Right" uid="276">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1010,7 +1010,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="267">
+                <instance type="Tile1Left" uid="277">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1032,7 +1032,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="269">
+                <instance type="Tile1Normal" uid="278">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1054,7 +1054,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="270">
+                <instance type="Tile1Right" uid="279">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1076,7 +1076,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="271">
+                <instance type="Tile1Right" uid="280">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1098,7 +1098,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="273">
+                <instance type="Tile1Right" uid="281">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1120,7 +1120,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="274">
+                <instance type="Tile1Right" uid="282">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1142,7 +1142,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="275">
+                <instance type="Tile1Right" uid="283">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1164,7 +1164,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="276">
+                <instance type="Tile1Normal" uid="284">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1186,7 +1186,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="277">
+                <instance type="Tile1Left" uid="285">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1208,7 +1208,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="278">
+                <instance type="Tile1Left" uid="286">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1230,7 +1230,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="279">
+                <instance type="Tile1Left" uid="287">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1252,7 +1252,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="282">
+                <instance type="Tile1Right" uid="288">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1274,7 +1274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="283">
+                <instance type="Tile1Right" uid="289">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1296,7 +1296,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Center" uid="284">
+                <instance type="Tile1Center" uid="290">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1318,7 +1318,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="285">
+                <instance type="Tile1Left" uid="291">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1340,7 +1340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="286">
+                <instance type="Tile1Left" uid="292">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1362,7 +1362,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="287">
+                <instance type="Tile1Right" uid="293">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1384,7 +1384,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="280">
+                <instance type="Tile1Right" uid="294">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1406,7 +1406,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="281">
+                <instance type="Tile1Right" uid="295">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1428,7 +1428,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="288">
+                <instance type="Tile1Right" uid="296">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1450,7 +1450,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="289">
+                <instance type="Tile1Right" uid="297">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1472,7 +1472,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="291">
+                <instance type="Tile1Left" uid="298">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1494,7 +1494,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="292">
+                <instance type="Tile1Normal" uid="299">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1516,7 +1516,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="294">
+                <instance type="Tile1Normal" uid="300">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1538,7 +1538,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Center" uid="296">
+                <instance type="Tile1Center" uid="301">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1560,7 +1560,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Normal" uid="268">
+                <instance type="Tile1Normal" uid="302">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1582,7 +1582,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Left" uid="293">
+                <instance type="Tile1Left" uid="303">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1604,7 +1604,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile1Right" uid="295">
+                <instance type="Tile1Right" uid="304">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1666,6 +1666,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <DinoHealth>3</DinoHealth>
+                        <CurrentPower>0</CurrentPower>
+                        <FireBallLimit>0</FireBallLimit>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
                             <properties>
@@ -1691,6 +1696,7 @@
                                 <default-controls>Yes</default-controls>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1867,6 +1873,7 @@
                                 <bottom-edge>None</bottom-edge>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1899,6 +1906,7 @@
                                 <bottom-edge>None</bottom-edge>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1931,6 +1939,7 @@
                                 <bottom-edge>None</bottom-edge>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

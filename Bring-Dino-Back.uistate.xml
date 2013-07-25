@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Main</layout>
-        <layout active="1">World1Stage1</layout>
+        <layout>World1Stage1</layout>
         <layout>GraphicStore</layout>
         <event-sheet>MainEvents</event-sheet>
         <event-sheet>UserControls</event-sheet>
@@ -20,13 +20,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Patroling</event-sheet>
         <event-sheet>Collectibles</event-sheet>
         <event-sheet>Collisions</event-sheet>
-        <event-sheet>PowerUps</event-sheet>
+        <event-sheet active="1">PowerUps</event-sheet>
         <event-sheet>Pause</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1" />

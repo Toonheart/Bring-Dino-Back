@@ -9,6 +9,10 @@
                 <condition id="0" name="On collision with another object" sid="4724343633716263" type="Dino">
                     <param id="0" name="Object">Alien</param>
                 </condition>
+                <condition id="-10" name="Compare opacity" sid="7208602221067242" type="Dino">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="6081094566594613" type="Dino">

@@ -5525,8 +5525,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>608</y>
+                        <x>672</x>
+                        <y>544</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -5660,13 +5660,35 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>480</x>
-                        <y>384</y>
+                        <y>416</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.685714304</hotspotX>
                         <hotspotY>0.890243888</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CamouFlaged_inv" uid="307">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>480</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -5834,11 +5856,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>593</x>
-                        <y>384</y>
+                        <x>624</x>
+                        <y>272</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>64</height>
+                        <width>128</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -5957,8 +5979,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2016</x>
-                        <y>272</y>
+                        <x>2048</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>320</width>
                         <height>224</height>
@@ -5969,7 +5991,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Button" uid="234">
+                <instance type="Resume" uid="234">
                     <properties>
                         <type>Button</type>
                         <text>Resume</text>
@@ -5986,8 +6008,8 @@
                         <x>1984</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>64</height>
+                        <width>40</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
