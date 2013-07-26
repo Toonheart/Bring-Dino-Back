@@ -3,9 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DynamicWalls</name>
     <events>
+        <comment>Set dinamic walls visible for 2 sec&apos;s and make invissible.Repeat this....</comment>
         <event-block sid="5005027522734171">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="5734620251665751" type="System">
+                <condition id="-6" name="Every X seconds" sid="2207226335233483" type="System">
                     <param id="0" name="Interval (seconds)">5</param>
                 </condition>
             </conditions>
@@ -19,13 +20,24 @@
                 <action id="-16" name="Wait" sid="4931880092179818" type="System">
                     <param id="0" name="Seconds">2</param>
                 </action>
-                <action id="-15" name="Set visible" sid="5784099640286705" type="DynamicWall">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Solid" id="0" name="Set enabled" sid="9977000967613814" type="DynamicWall">
-                    <param id="0" name="State">1</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="3916973919631848">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="792618427514131" type="Dino">
+                            <param id="0" name="Object">DynamicWall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3259507551104421" type="DynamicWall">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="24437801453482" type="DynamicWall">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

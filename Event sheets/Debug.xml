@@ -7,20 +7,7 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="8753611039300152" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="6250316141490544" type="Debug">
-                    <param id="0" name="Text">&quot;Scoll postion&quot;&amp;PauseScreen.X</param>
-                </action>
-                <action id="1" name="Append text" sid="2845643315410512" type="Debug">
-                    <param id="0" name="Text">&quot;:&quot;&amp;PauseScreen.Y</param>
-                </action>
-                <action id="1" name="Append text" sid="9213957620896642" type="Debug">
-                    <param id="0" name="Text">&quot;&quot;&amp; newline &amp;WindowWidth</param>
-                </action>
-                <action id="1" name="Append text" sid="8443143513372498" type="Debug">
-                    <param id="0" name="Text">&quot;:&quot;&amp;WindowHeight</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

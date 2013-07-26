@@ -115,6 +115,10 @@
                 <action id="-15" name="Set visible" sid="1349889093911173" type="Key_HUD">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-3" name="Set position" sid="8439044159567403" type="Key">
+                    <param id="0" name="X">Dino.X-(Dino.Width/2)</param>
+                    <param id="1" name="Y">Dino.Y-(Dino.Height)</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="8221190275976802" type="Key">
                     <param id="0" name="Pin to">Dino</param>
                     <param id="1" name="Mode">0</param>

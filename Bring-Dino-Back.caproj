@@ -10,18 +10,19 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -32,8 +33,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>400</height>
+        <width>1280</width>
+        <height>800</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -89,7 +90,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
-                    <frame duration="1" hotspotX="1.01429" hotspotY="0.902439">
+                    <frame duration="1" hotspotX="0.614286" hotspotY="0.939024">
                         <image-point name="FirePoint" x="0.814286" y="0.597561" />
                         <collision-poly>
                             <point x="0.257143" y="0.158537" />
@@ -124,25 +125,27 @@
                     <frame duration="1" hotspotX="-1.02083" hotspotY="1.95238">
                         <image-point name="CountPin" x="0.708333" y="0.702381" />
                         <collision-poly>
-                            <point x="0.15625" y="0.178571" />
+                            <point x="0.135417" y="0.154762" />
+                            <point x="0.5" y="0.107143" />
                             <point x="0.90625" y="0.107143" />
-                            <point x="1" y="0.5" />
-                            <point x="0.8125" y="0.785714" />
-                            <point x="0.5" y="0.988095" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.791667" y="0.761905" />
+                            <point x="0.5" y="0.952381" />
                             <point x="0.208333" y="0.761905" />
-                            <point x="0.03125" y="0.5" />
+                            <point x="0.0208333" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="HalfHeart" pingpong="0" repeatcount="1" repeatto="0" sid="7101072092475087" speed="5">
                     <frame duration="1" hotspotX="-1" hotspotY="-1">
                         <collision-poly>
-                            <point x="0.15625" y="0.178571" />
+                            <point x="0.135417" y="0.154762" />
+                            <point x="0.5" y="0.119048" />
                             <point x="0.90625" y="0.107143" />
-                            <point x="1" y="0.5" />
-                            <point x="0.8125" y="0.785714" />
-                            <point x="0.5" y="0.988095" />
-                            <point x="0.208333" y="0.761905" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.791667" y="0.761905" />
+                            <point x="0.5" y="0.952381" />
+                            <point x="0.21875" y="0.75" />
                             <point x="0.03125" y="0.5" />
                         </collision-poly>
                     </frame>
@@ -417,16 +420,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4576096300532797" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155">
                         <collision-poly>
-                            <point x="0.186667" y="0.186667" />
-                            <point x="0.497778" y="0.142222" />
-                            <point x="0.813333" y="0.186667" />
-                            <point x="0.844444" y="0.497778" />
-                            <point x="0.791111" y="0.791111" />
-                            <point x="0.497778" y="0.826667" />
-                            <point x="0.208889" y="0.791111" />
-                            <point x="0.155556" y="0.497778" />
+                            <point x="0.15625" y="0.154639" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.154639" />
+                            <point x="1" y="0.494845" />
+                            <point x="0.84375" y="0.845361" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15625" y="0.845361" />
+                            <point x="0" y="0.494845" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -772,6 +775,46 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Keyboard" sid="6079847549923917">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Glass1Left" sid="9050219149491298">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1328701671825167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504673">
+                        <collision-poly>
+                            <point x="0.015625" y="0.00934579" />
+                            <point x="0.5" y="0.168224" />
+                            <point x="0.390625" y="0.364486" />
+                            <point x="0.984375" y="0.495327" />
+                            <point x="0.984375" y="0.990654" />
+                            <point x="0.5" y="0.841121" />
+                            <point x="0.359375" y="0.785047" />
+                            <point x="0" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Glass1Right" sid="2826264891305133">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1382381024153264" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504673">
+                        <collision-poly>
+                            <point x="0.359375" y="0.214953" />
+                            <point x="0.5" y="0.158879" />
+                            <point x="0.984375" y="0.00934579" />
+                            <point x="1" y="0.495327" />
+                            <point x="0.640625" y="0.785047" />
+                            <point x="0.015625" y="0.990654" />
+                            <point x="0.015625" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -781,7 +824,6 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>MainEvents.xml</event-sheet>
-        <event-sheet>UserControls.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>DinoHealthOld.xml</event-sheet>
         <event-sheet>Patroling.xml</event-sheet>
@@ -794,7 +836,7 @@
         <event-sheet>TelePorting.xml</event-sheet>
         <event-sheet>DynamicWalls.xml</event-sheet>
         <event-sheet>DinoHealth.xml</event-sheet>
-        <event-sheet>NavigationControlls.xml</event-sheet>
+        <event-sheet>UserControlls.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="305">
@@ -803,6 +845,7 @@
             </properties>
         </global-instance>
         <global-instance type="Pause" uid="306" />
+        <global-instance type="Keyboard" uid="321" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
