@@ -789,8 +789,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>657.623474121</x>
-                        <y>340.340789795</y>
+                        <x>656.967346191</x>
+                        <y>340.22277832</y>
                         <z>0</z>
                         <width>128</width>
                         <height>75</height>
@@ -1804,8 +1804,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>572.255859375</x>
-                        <y>255.55657959</y>
+                        <x>445.255859375</x>
+                        <y>180.55657959</y>
                         <z>0</z>
                         <width>79</width>
                         <height>115</height>
@@ -1829,14 +1829,39 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>641.24407959</x>
-                        <y>305.816558838</y>
+                        <x>517.282226563</x>
+                        <y>228.930648804</y>
                         <z>0</z>
-                        <width>130</width>
-                        <height>122</height>
+                        <width>117.183097839</width>
+                        <height>117.413536072</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LazerHoldRight" uid="336">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>619.473205566</x>
+                        <y>283.593200684</y>
+                        <z>0</z>
+                        <width>79</width>
+                        <height>115</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506329119</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2062,31 +2087,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.504672885</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="LazerHoldRight" uid="336">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>743.473205566</x>
-                        <y>356.593200684</y>
-                        <z>0</z>
-                        <width>79</width>
-                        <height>115</height>
-                        <depth>0</depth>
-                        <hotspotX>0.506329119</hotspotX>
-                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -4,6 +4,7 @@
     <name>World1Stage1Events</name>
     <events>
         <include>UserControlls</include>
+        <include>Obstacles</include>
         <include>Patroling</include>
         <include>DinoHealthOld</include>
         <include>Debug</include>

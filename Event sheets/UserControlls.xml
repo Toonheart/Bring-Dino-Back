@@ -21,7 +21,7 @@
                         </action>
                         <action id="-23" name="Move at angle" sid="429165639174111" type="Dino">
                             <param id="0" name="Angle">228</param>
-                            <param id="1" name="Distance">2</param>
+                            <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -41,7 +41,7 @@
                         </action>
                         <action id="-23" name="Move at angle" sid="5033029093852679" type="Dino">
                             <param id="0" name="Angle">48</param>
-                            <param id="1" name="Distance">2</param>
+                            <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -61,7 +61,7 @@
                         </action>
                         <action id="-23" name="Move at angle" sid="3421247031669426" type="Dino">
                             <param id="0" name="Angle">132</param>
-                            <param id="1" name="Distance">2</param>
+                            <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -81,7 +81,7 @@
                         </action>
                         <action id="-23" name="Move at angle" sid="5276665301997856" type="Dino">
                             <param id="0" name="Angle">-48</param>
-                            <param id="1" name="Distance">2</param>
+                            <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
                 </event-block>

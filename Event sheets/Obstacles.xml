@@ -4,7 +4,7 @@
     <name>Obstacles</name>
     <events>
         <comment>Span Lazer at lazer origin while dino is in range </comment>
-        <event-block sid="104361777516937">
+        <event-block disabled="1" sid="104361777516937">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="4541049953805715" type="Dino">
                     <param id="0" name="Object">LazerOrigin</param>
@@ -12,7 +12,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="961151620731943">
+                <event-block disabled="1" sid="961151620731943">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="3779074106928786" type="System">
                             <param id="0" name="Interval (seconds)">2</param>
@@ -47,5 +47,53 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="Simple Lazer obstacle that toggles on and off automatically" sid="2875556717450429" title="SimpleLazer">
+            <sub-events>
+                <event-block sid="2128786631442716">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="9112340783718369" type="Obs_Lazer" />
+                        <condition id="-8" name="Compare two values" sid="5428695087107018" type="System">
+                            <param id="0" name="First value">distance(dino.X,dino.Y,Obs_Lazer.X,Obs_Lazer.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1454829010325803">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="2235533423262951" type="System">
+                                    <param id="0" name="Interval (seconds)">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9118523013547846" type="Obs_Lazer">
+                                    <param id="0" name="Animation">&quot;LazerON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7917262888632824" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6202206100505257" type="Obs_Lazer">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3215413261545393">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4683180616211446" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3063523541656988" type="Obs_Lazer">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
