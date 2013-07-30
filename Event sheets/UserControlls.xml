@@ -16,11 +16,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" disabled="1" id="7" name="Simulate control" sid="1005347356171703" type="Dino">
-                            <param id="0" name="Control">0</param>
-                        </action>
                         <action id="-23" name="Move at angle" sid="429165639174111" type="Dino">
-                            <param id="0" name="Angle">228</param>
+                            <param id="0" name="Angle">211.82</param>
                             <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
@@ -36,11 +33,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" disabled="1" id="7" name="Simulate control" sid="9385034610375395" type="Dino">
-                            <param id="0" name="Control">1</param>
-                        </action>
                         <action id="-23" name="Move at angle" sid="5033029093852679" type="Dino">
-                            <param id="0" name="Angle">48</param>
+                            <param id="0" name="Angle">31.18</param>
                             <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
@@ -56,11 +50,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" disabled="1" id="7" name="Simulate control" sid="8243232269184571" type="Dino">
-                            <param id="0" name="Control">3</param>
-                        </action>
                         <action id="-23" name="Move at angle" sid="3421247031669426" type="Dino">
-                            <param id="0" name="Angle">132</param>
+                            <param id="0" name="Angle">148.82</param>
                             <param id="1" name="Distance">5</param>
                         </action>
                     </actions>
@@ -76,11 +67,126 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" disabled="1" id="7" name="Simulate control" sid="8291254729787472" type="Dino">
-                            <param id="0" name="Control">2</param>
-                        </action>
                         <action id="-23" name="Move at angle" sid="5276665301997856" type="Dino">
-                            <param id="0" name="Angle">-48</param>
+                            <param id="0" name="Angle">-31.18</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="9317989086534807">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3549762376596297" type="Touch">
+                    <param id="0" name="Object">NavRect</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Rotate toward position" sid="2852445343350371" type="Dino">
+                    <param id="0" name="Degrees">31.8</param>
+                    <param id="1" name="X">Touch.X</param>
+                    <param id="2" name="Y">Touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="4836327854439385" title="Navigation by splitting screen into four parts">
+            <sub-events>
+                <event-block sid="3926759240814795">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7236903216952851" type="Touch">
+                            <param id="0" name="Object">NavRectLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5781550530273029" type="Dino">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4976956055574309">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="7730114887589055" type="Touch">
+                            <param id="0" name="Object">NavRectLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="3471058030522784" type="Dino">
+                            <param id="0" name="Angle">211.82</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9596590129708942">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7591206470224391" type="Touch">
+                            <param id="0" name="Object">NavRectRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="6947562510684809" type="Dino">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7745303489834101">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="8621641862172747" type="Touch">
+                            <param id="0" name="Object">NavRectRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7121844114117338" type="Dino">
+                            <param id="0" name="Angle">31.18</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5131607867972065">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5484927303682131" type="Touch">
+                            <param id="0" name="Object">NavRectUP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5615111287566489" type="Dino">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5342800152663154">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="5184232003864848" type="Touch">
+                            <param id="0" name="Object">NavRectUP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="8809152997883278" type="Dino">
+                            <param id="0" name="Angle">-31.18</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4763947913869136">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8609186851998577" type="Touch">
+                            <param id="0" name="Object">NavRectDown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4875614042240413" type="Dino">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2240550410016973">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1379469252521874" type="Touch">
+                            <param id="0" name="Object">NavRectDown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4794978883702487" type="Dino">
+                            <param id="0" name="Angle">148.82</param>
                             <param id="1" name="Distance">5</param>
                         </action>
                     </actions>

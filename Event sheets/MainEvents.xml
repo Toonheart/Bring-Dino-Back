@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainEvents</name>
     <events>
+        <include>IsoToggling</include>
         <include>UserControlls</include>
         <include>DinoHealth</include>
         <include>DynamicWalls</include>

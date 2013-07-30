@@ -18,5 +18,65 @@
                 <action id="-9" name="Destroy" sid="3319587775912247" type="Meatloaf" />
             </actions>
         </event-block>
+        <event-group description="" sid="9592584413186165" title="Alphabates Collection">
+            <sub-events>
+                <comment>Collect D and show it on HUD</comment>
+                <event-block sid="9060299309637382">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7538849695813847" type="Dino">
+                            <param id="0" name="Object">D</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="647794471019558" type="D" />
+                        <action id="-15" name="Set visible" sid="6397446405094436" type="D_HUD">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Collect I and show it on HUD</comment>
+                <event-block sid="2222102423190131">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4770071250848676" type="Dino">
+                            <param id="0" name="Object">I</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="530544868629703" type="I" />
+                        <action id="-15" name="Set visible" sid="678037549462252" type="I_HUD">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Collect N and show it on HUD</comment>
+                <event-block sid="5232377004399093">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7358645554519458" type="Dino">
+                            <param id="0" name="Object">N</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6311642283188202" type="N" />
+                        <action id="-15" name="Set visible" sid="9834172306876765" type="N_HUD">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Collect O and show it on HUD</comment>
+                <event-block sid="507854807208112">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1833439480279425" type="Dino">
+                            <param id="0" name="Object">O</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="172910392236966" type="O" />
+                        <action id="-15" name="Set visible" sid="9601588784530263" type="O_HUD">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
