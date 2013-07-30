@@ -19,8 +19,8 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -73,6 +73,7 @@
                 <instance-variable name="DinoHealth" sid="8268410769456296" type="number" />
                 <instance-variable name="CurrentPower" sid="7383718654551111" type="number" />
                 <instance-variable name="FireBallLimit" sid="7265119679441393" type="number" />
+                <instance-variable name="IsoOffset" sid="9708431071814419" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="6090520108591548">
@@ -817,11 +818,9 @@
         </object-type>
         <object-type name="LazerHoldLeft" sid="7588805628354612">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="8379218077656978">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
+            <instance-variables>
+                <instance-variable name="IsolOffset" sid="978360142001338" type="number" />
+            </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7108850658314402" speed="5">
                     <frame duration="1" hotspotX="0.506329" hotspotY="0.504348">
@@ -861,13 +860,16 @@
         </object-type>
         <object-type name="Obs_Lazer" sid="4312318070037453">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Toogle" sid="9016128268841776" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="8509614565293242">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="LazerON" pingpong="0" repeatcount="0" repeatto="0" sid="1355984628843268" speed="6">
+                <animation framecount="4" loop="0" name="LazerON" pingpong="0" repeatcount="20" repeatto="0" sid="1355984628843268" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.0387323" y="0.0225564" />
@@ -917,12 +919,29 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5467065128818703" speed="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="7" repeatto="0" sid="5467065128818703" speed="1">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="1" y="0.996094" />
                             <point x="1" y="1" />
                             <point x="0.996094" y="0.992188" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IsoRefTile" sid="7204863425799602">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5384134126532663" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.5" y="0.0133333" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.828125" y="0.706667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.179688" y="0.693333" />
+                            <point x="0.015625" y="0.493333" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -950,6 +969,7 @@
         <event-sheet>DynamicWalls.xml</event-sheet>
         <event-sheet>DinoHealth.xml</event-sheet>
         <event-sheet>UserControlls.xml</event-sheet>
+        <event-sheet>IsoToggling.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="305">

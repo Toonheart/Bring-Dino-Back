@@ -1791,6 +1791,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="IsoRefTile" uid="338">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>405</x>
+                        <y>194</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50666666</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="LazerHoldLeft" uid="335">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1798,9 +1820,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
+                    <instance-variables>
+                        <IsolOffset>20</IsolOffset>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1823,14 +1845,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toogle>1</Toogle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>517.282226563</x>
-                        <y>228.930648804</y>
+                        <x>519.934265137</x>
+                        <y>230.918640137</y>
                         <z>0</z>
                         <width>117.183097839</width>
                         <height>117.413536072</height>
@@ -1877,6 +1902,7 @@
                         <DinoHealth>3</DinoHealth>
                         <CurrentPower>0</CurrentPower>
                         <FireBallLimit>0</FireBallLimit>
+                        <IsoOffset>10</IsoOffset>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1908,8 +1934,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>586.049865723</x>
-                        <y>409.605895996</y>
+                        <x>515</x>
+                        <y>339</y>
                         <z>0</z>
                         <width>70</width>
                         <height>82</height>
@@ -2230,7 +2256,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>128,255,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2240,11 +2266,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>448</x>
-                        <y>0</y>
+                        <x>436</x>
+                        <y>27</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>79</height>
+                        <width>535</width>
+                        <height>117</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

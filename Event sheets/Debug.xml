@@ -7,7 +7,20 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="8753611039300152" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Set text" sid="9321911957101934" type="Debug">
+                    <param id="0" name="Text">&quot;DX:&quot;&amp;Dino.X</param>
+                </action>
+                <action id="1" name="Append text" sid="662689012274142" type="Debug">
+                    <param id="0" name="Text">&quot;DY:&quot;&amp;Dino.Y</param>
+                </action>
+                <action id="1" name="Append text" sid="1596071310486182" type="Debug">
+                    <param id="0" name="Text">&quot;LX&quot;&amp;LazerHoldLeft.X</param>
+                </action>
+                <action id="1" name="Append text" sid="7846288653984631" type="Debug">
+                    <param id="0" name="Text">&quot;Ly:&quot;&amp;LazerHoldLeft.Y</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

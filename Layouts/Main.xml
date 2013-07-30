@@ -5656,6 +5656,7 @@
                         <DinoHealth>3</DinoHealth>
                         <CurrentPower>0</CurrentPower>
                         <FireBallLimit>0</FireBallLimit>
+                        <IsoOffset>10</IsoOffset>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -5912,7 +5913,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>128,255,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

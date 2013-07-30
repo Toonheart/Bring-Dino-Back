@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>IsoToggling</name>
+    <events>
+        <event-group description="" sid="5433265298623652" title="IsoTaggling using a RefTile">
+            <sub-events>
+                <event-block sid="1129103177421573">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7451098741221798" type="Dino">
+                            <param id="0" name="Object">LazerHoldLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9640499147299841">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8464063689173352" type="Dino">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">LazerHoldLeft.X-Self.IsoOffset</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="4422458129267336" type="LazerHoldLeft" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="6017692573816824" title="IsoTaggle-Old">
+            <sub-events>
+                <event-block disabled="1" sid="2206979590746452">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3191505952790533" type="System">
+                            <param id="0" name="First value">Dino.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">LazerHoldLeft.x</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="1156644077739841" type="System">
+                            <param id="0" name="First value">Dino.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">LazerHoldLeft.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="8161462101085059" type="Dino">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">LazerHoldLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="13805279819432">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5405885645435816" type="System">
+                            <param id="0" name="First value">LazerHoldLeft.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Dino.X</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7405574352667657" type="System">
+                            <param id="0" name="First value">LazerHoldLeft.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Dino.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="1070995304605506" type="LazerHoldLeft">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">Dino</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="9613643944958166">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1048383260647288" type="System">
+                            <param id="0" name="First value">Dino.X</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">LazerHoldLeft.X</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="1809380792863682">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7336687349119951" type="System">
+                                    <param id="0" name="First value">Dino.Y</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">LazerHoldLeft.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="846630010306344" type="Dino">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">LazerHoldLeft</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="2119063637431107">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1343466564650961" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="4297483139082841" type="LazerHoldLeft">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Dino</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="7590399254373976">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4764262903070193" type="System">
+                            <param id="0" name="First value">Dino.Y</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">LazerHoldLeft.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="6775983439116556">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="526719119534793" type="System">
+                                    <param id="0" name="First value">Dino.X</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">LazerHoldLeft.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="609547909533434" type="Dino">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">LazerHoldLeft</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="6023517802830322">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6846259204369358" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="9176390416636039" type="LazerHoldLeft">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Dino</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

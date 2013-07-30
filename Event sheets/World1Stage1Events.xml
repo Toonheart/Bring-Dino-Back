@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>World1Stage1Events</name>
     <events>
+        <include>IsoToggling</include>
         <include>UserControlls</include>
         <include>Obstacles</include>
         <include>Patroling</include>
