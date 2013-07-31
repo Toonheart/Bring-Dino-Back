@@ -5674,6 +5674,11 @@
                         </behavior-instance>
                         <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5684,8 +5689,8 @@
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
-                        <hotspotX>0.614285707</hotspotX>
-                        <hotspotY>0.939024389</hotspotY>
+                        <hotspotX>0.685714304</hotspotX>
+                        <hotspotY>0.902438998</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

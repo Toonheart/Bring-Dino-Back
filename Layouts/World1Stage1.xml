@@ -207,28 +207,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="IsoRefTile" uid="338">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>409</x>
-                        <y>191</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>75</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.50666666</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="IsoRefTile" uid="352">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -240,7 +218,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>588</x>
-                        <y>303</y>
+                        <y>297</y>
                         <z>0</z>
                         <width>128</width>
                         <height>75</height>
@@ -1780,7 +1758,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>342.286773682</x>
-                        <y>152.414459229</y>
+                        <y>151.414459229</y>
                         <z>0</z>
                         <width>128</width>
                         <height>75</height>
@@ -1813,9 +1791,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Glass1Right" uid="332">
+                <instance type="IsoRefTile" uid="354">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1823,14 +1801,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>374.559082031</x>
-                        <y>136.30909729</y>
+                        <x>344</x>
+                        <y>153</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>107</height>
+                        <width>128</width>
+                        <height>75</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504672885</hotspotY>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1859,6 +1837,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IsoRefTile" uid="338">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>405</x>
+                        <y>188</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1913,10 +1913,54 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Glass1Right" uid="332">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>374.559082031</x>
+                        <y>136.30909729</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>107</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504672885</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IsoRefTile" uid="353">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>215</x>
+                        <y>228</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50666666</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Player" sid="8821858500842947">
+        <layer name="IsoFloorTop" sid="8821858500842947">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1959,6 +2003,11 @@
                         </behavior-instance>
                         <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1969,8 +2018,8 @@
                         <width>70</width>
                         <height>82</height>
                         <depth>0</depth>
-                        <hotspotX>0.614285707</hotspotX>
-                        <hotspotY>0.939024389</hotspotY>
+                        <hotspotX>0.685714304</hotspotX>
+                        <hotspotY>0.902438998</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

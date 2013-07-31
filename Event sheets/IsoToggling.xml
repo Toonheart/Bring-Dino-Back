@@ -5,6 +5,10 @@
     <events>
         <event-group description="" sid="5433265298623652" title="IsoTaggling using a RefTile">
             <sub-events>
+                <comment>An IsoRefTile is taken instead of comparing x and y co-ordinates.</comment>
+                <comment>New layer is added on IsoFloor in which the dino operates.</comment>
+                <comment>IsoRefTiles should be placed carefully according to the need wher u need to send dino behind the objects</comment>
+                <comment>When Dino overlaping IsoRefTile send dino to Isofloor layer and also consider the Z order.</comment>
                 <event-block sid="1129103177421573">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7451098741221798" type="Dino">
@@ -20,21 +24,6 @@
                             <param id="1" name="Object">LazerHoldLeft</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="9640499147299841">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="8464063689173352" type="Dino">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">LazerHoldLeft.X-Self.IsoOffset</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-26" name="Move to layer" sid="4422458129267336" type="LazerHoldLeft">
-                                    <param id="0" name="Layer">7</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="3468419078857647">
                     <conditions>
@@ -42,7 +31,7 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="3949348501143954" type="Dino">
-                            <param id="0" name="Layer">&quot;Player&quot;</param>
+                            <param id="0" name="Layer">&quot;IsoFloorTop&quot;</param>
                         </action>
                         <action id="-24" name="Move to top" sid="476209029412364" type="Dino" />
                     </actions>

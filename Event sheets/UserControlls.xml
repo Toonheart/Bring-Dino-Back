@@ -20,6 +20,10 @@
                             <param id="0" name="Angle">211.82</param>
                             <param id="1" name="Distance">5</param>
                         </action>
+                        <action id="4" name="Set animation" sid="1917142241873176" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Right</comment>
@@ -36,6 +40,10 @@
                         <action id="-23" name="Move at angle" sid="5033029093852679" type="Dino">
                             <param id="0" name="Angle">31.18</param>
                             <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1321165308257444" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad4&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -54,6 +62,10 @@
                             <param id="0" name="Angle">148.82</param>
                             <param id="1" name="Distance">5</param>
                         </action>
+                        <action id="4" name="Set animation" sid="8434363124479961" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Up</comment>
@@ -70,6 +82,10 @@
                         <action id="-23" name="Move at angle" sid="5276665301997856" type="Dino">
                             <param id="0" name="Angle">-31.18</param>
                             <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6320687642704739" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad1&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -89,7 +105,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="4836327854439385" title="Navigation by splitting screen into four parts">
+        <event-group description="" disabled="1" sid="4836327854439385" title="Navigation by splitting screen into four parts">
             <sub-events>
                 <event-block sid="3926759240814795">
                     <conditions>

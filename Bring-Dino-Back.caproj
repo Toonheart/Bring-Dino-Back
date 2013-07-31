@@ -10,21 +10,22 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -45,7 +46,7 @@
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">No</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
@@ -85,18 +86,71 @@
                 <behavior-type name="Flash" sid="6891910479536211">
                     <behavior id="Flash" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout" sid="6036810593354613">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
-                    <frame duration="1" hotspotX="0.614286" hotspotY="0.939024">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6277814631912079" speed="5">
+                    <frame duration="1" hotspotX="0.685714" hotspotY="0.902439">
+                        <collision-poly>
+                            <point x="0.185714" y="0.158537" />
+                            <point x="0.5" y="0" />
+                            <point x="0.871429" y="0.109756" />
+                            <point x="0.914286" y="0.926829" />
+                            <point x="0.114286" y="0.902439" />
+                            <point x="0.171429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Quad4" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
+                    <frame duration="1" hotspotX="0.685714" hotspotY="0.902439">
                         <image-point name="FirePoint" x="0.814286" y="0.597561" />
                         <collision-poly>
-                            <point x="0.257143" y="0.158537" />
+                            <point x="0.185714" y="0.158537" />
                             <point x="0.5" y="0" />
-                            <point x="0.828572" y="0.170732" />
-                            <point x="0.885714" y="0.865853" />
-                            <point x="0.257143" y="0.865854" />
-                            <point x="0.214286" y="0.512195" />
+                            <point x="0.871429" y="0.109756" />
+                            <point x="0.914286" y="0.926829" />
+                            <point x="0.114286" y="0.902439" />
+                            <point x="0.171429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Quad3" pingpong="0" repeatcount="1" repeatto="0" sid="86573071732778" speed="5">
+                    <frame duration="1" hotspotX="0.542857" hotspotY="0.902439">
+                        <collision-poly>
+                            <point x="0.828571" y="0.5" />
+                            <point x="0.885714" y="0.902439" />
+                            <point x="0.0857143" y="0.926829" />
+                            <point x="0.128571" y="0.109756" />
+                            <point x="0.5" y="0" />
+                            <point x="0.814286" y="0.158537" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Quad2" pingpong="0" repeatcount="1" repeatto="0" sid="7188499443755867" speed="5">
+                    <frame duration="1" hotspotX="0.813559" hotspotY="0.902439">
+                        <collision-poly>
+                            <point x="0.20339" y="0.146341" />
+                            <point x="0.491525" y="0.097561" />
+                            <point x="0.813559" y="0.134146" />
+                            <point x="1" y="1" />
+                            <point x="0.491525" y="0.939024" />
+                            <point x="0.118644" y="0.914634" />
+                            <point x="0.101695" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Quad1" pingpong="0" repeatcount="1" repeatto="0" sid="9318022326534997" speed="5">
+                    <frame duration="1" hotspotX="0.474576" hotspotY="0.951219">
+                        <collision-poly>
+                            <point x="0.898305" y="0.5" />
+                            <point x="0.881356" y="0.914634" />
+                            <point x="0.508475" y="0.939024" />
+                            <point x="0" y="1" />
+                            <point x="0.186441" y="0.134146" />
+                            <point x="0.508475" y="0.097561" />
+                            <point x="0.79661" y="0.146341" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -934,8 +988,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
                         <collision-poly>
                             <point x="0.507813" y="0" />
-                            <point x="0.695313" y="0.173333" />
-                            <point x="0.265625" y="0.72" />
+                            <point x="0.84375" y="0.373333" />
+                            <point x="0.28125" y="0.746667" />
                             <point x="0.0312505" y="0.506666" />
                         </collision-poly>
                     </frame>
