@@ -5984,7 +5984,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="OutPort" uid="314">
+                <instance type="TelePortLeft" uid="314">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -5997,16 +5997,16 @@
                         <x>928</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>169</height>
+                        <width>133</width>
+                        <height>269</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.503759384</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="OutPort" uid="357">
+                <instance type="TelePortLeft" uid="357">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6019,10 +6019,10 @@
                         <x>928</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>169</height>
+                        <width>133</width>
+                        <height>269</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.503759384</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

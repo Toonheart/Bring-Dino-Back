@@ -12,7 +12,7 @@
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="3787898674228131" type="Dino">
-                    <param id="0" name="Object">OutPort</param>
+                    <param id="0" name="Object">TelePortLeft</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
             </actions>
@@ -20,7 +20,7 @@
         <event-block disabled="1" sid="8244370900307326">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6108744458597868" type="Dino">
-                    <param id="0" name="Object">OutPort</param>
+                    <param id="0" name="Object">TelePortLeft</param>
                 </condition>
             </conditions>
             <actions>
