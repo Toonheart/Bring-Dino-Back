@@ -5550,8 +5550,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>672</x>
-                        <y>544</y>
+                        <x>704</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -5842,50 +5842,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="InPort" uid="313">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>672</x>
-                        <y>544</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.428571433</hotspotX>
-                        <hotspotY>-2.14814806</hotspotY>
-                        <angle>1.54869175</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="OutPort" uid="314">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>928</x>
-                        <y>503</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>-32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.485714287</hotspotX>
-                        <hotspotY>-2.592592478</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="D" uid="339">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -5952,6 +5908,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="InPort" uid="313">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-227.198074341</x>
+                        <y>351.866455078</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>169</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0.035961512</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="O" uid="345">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -6002,6 +5980,50 @@
                         <depth>0</depth>
                         <hotspotX>0.502074718</hotspotX>
                         <hotspotY>0.502392352</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OutPort" uid="314">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>480</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>169</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OutPort" uid="357">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>480</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>169</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

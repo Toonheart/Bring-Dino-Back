@@ -17,7 +17,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8244370900307326">
+        <event-block disabled="1" sid="8244370900307326">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6108744458597868" type="Dino">
                     <param id="0" name="Object">OutPort</param>

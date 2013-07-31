@@ -10,11 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>World1Stage1</layout>
+        <layout active="1">World1Stage1</layout>
         <layout>Main</layout>
         <event-sheet>Obstacles</event-sheet>
         <event-sheet>World1Stage1Events</event-sheet>
-        <event-sheet active="1">UserControlls</event-sheet>
+        <event-sheet>UserControlls</event-sheet>
         <event-sheet>Collisions</event-sheet>
         <event-sheet>DynamicWalls</event-sheet>
         <event-sheet>Collectibles</event-sheet>
@@ -25,6 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>PowerUps</event-sheet>
         <event-sheet>IsoToggling</event-sheet>
         <event-sheet>Debug</event-sheet>
+        <event-sheet>TelePorting</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
