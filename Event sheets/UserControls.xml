@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UserControls</name>
+    <events>
+        <variable constant="0" name="TouchTime" sid="2257544369564688" static="0" type="number">0</variable>
+        <variable constant="0" name="MovementAngle" sid="6652532277654011" static="0" type="number">31.18</variable>
+        <event-group description="" disabled="1" sid="5043631264520298" title="Navigation Controlls">
+            <sub-events>
+                <comment>Left </comment>
+                <event-block any="1" sid="3627740116699216">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2979406412597073" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="3286804283326843" type="Touch">
+                            <param id="0" name="Object">Navigate_L</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="429165639174111" type="Dino">
+                            <param id="0" name="Angle">211.82</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1917142241873176" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Right</comment>
+                <event-block any="1" sid="1812908181123193">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="9476402274754061" type="Touch">
+                            <param id="0" name="Object">Navigate_R</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="2088869477409279" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5033029093852679" type="Dino">
+                            <param id="0" name="Angle">31.18</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1321165308257444" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad4&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Down</comment>
+                <event-block any="1" sid="9641287589972704">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1613298419970608" type="Touch">
+                            <param id="0" name="Object">Navigation_D</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="572982893469136" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="3421247031669426" type="Dino">
+                            <param id="0" name="Angle">148.82</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8434363124479961" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Up</comment>
+                <event-block any="1" sid="681146448913888">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="8355146603256238" type="Touch">
+                            <param id="0" name="Object">Navigation_U</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1995636187187691" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5276665301997856" type="Dino">
+                            <param id="0" name="Angle">-31.18</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6320687642704739" type="Dino">
+                            <param id="0" name="Animation">&quot;Quad1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3052419455236889" title="Navigation using on touch rectangle">
+            <sub-events>
+                <event-block sid="6362794153418371">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="6718320858999144" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="8762119886135665" type="Touch">
+                            <param id="0" name="Object">Dino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8691822679866321" type="Debug">
+                            <param id="0" name="Text">&quot;Angle:&quot; &amp;angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="623833649229611">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="827666776756242" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4512079597568479" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4546996939452901" type="Dino">
+                                    <param id="0" name="Animation">&quot;quad4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8032694100724548" type="System">
+                                    <param id="0" name="Variable">MovementAngle</param>
+                                    <param id="1" name="Value">31.18</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7875714961003933">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7920850781758085" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">90</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7210280065153888" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9615619013559039" type="Dino">
+                                    <param id="0" name="Animation">&quot;quad3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3204301254828094" type="System">
+                                    <param id="0" name="Variable">MovementAngle</param>
+                                    <param id="1" name="Value">148.82</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5011073573788627">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6659202850702498" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="8053961603709958" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">-90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5733849408230891" type="Dino">
+                                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6759066992240819" type="System">
+                                    <param id="0" name="Variable">MovementAngle</param>
+                                    <param id="1" name="Value">-31.18</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8695020908914926">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3437193620183739" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-90</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6874542704834024" type="System">
+                                    <param id="0" name="First value">angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">-180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="836982784477528" type="Dino">
+                                    <param id="0" name="Animation">&quot;quad2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4605728892252059" type="System">
+                                    <param id="0" name="Variable">MovementAngle</param>
+                                    <param id="1" name="Value">211.82</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6147295714143425">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4033276884454023">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="41199647947994" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7123412066140341" type="System">
+                    <param id="0" name="Variable">TouchTime</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4748913526399116">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="2705236329410856" type="Touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="1153191324280092">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2358919821568974" type="Touch">
+                            <param id="0" name="Object">Nv_Rectangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="9945499111019724" type="Dino">
+                            <param id="0" name="Angle">MovementAngle</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6054873025585486">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="8234579653403228" type="System">
+                    <param id="0" name="Interval (seconds)">0.3</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="1312880241821637" type="Touch">
+                    <param id="0" name="Object">Nv_Rectangle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="3129402180609706" type="System">
+                    <param id="0" name="Variable">TouchTime</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4656001734851154">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3464148590761294" type="System">
+                    <param id="0" name="Variable">TouchTime</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="9825740552950602" type="Touch">
+                    <param id="0" name="Object">Nv_Rectangle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="4605710070313467" type="Dino">
+                    <param id="0" name="Angle">MovementAngle</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

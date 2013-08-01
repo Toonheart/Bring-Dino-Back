@@ -12,19 +12,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout active="1">World1Stage1</layout>
         <layout>Main</layout>
-        <event-sheet>Obstacles</event-sheet>
         <event-sheet>World1Stage1Events</event-sheet>
-        <event-sheet>UserControlls</event-sheet>
-        <event-sheet>Collisions</event-sheet>
-        <event-sheet>DynamicWalls</event-sheet>
-        <event-sheet>Collectibles</event-sheet>
-        <event-sheet>DinoHealth</event-sheet>
+        <event-sheet>UserControls</event-sheet>
         <event-sheet>DinoHealthOld</event-sheet>
-        <event-sheet>MainEvents</event-sheet>
-        <event-sheet>Patroling</event-sheet>
-        <event-sheet>PowerUps</event-sheet>
-        <event-sheet>IsoToggling</event-sheet>
         <event-sheet>Debug</event-sheet>
+        <event-sheet>PowerUps</event-sheet>
         <event-sheet>TelePorting</event-sheet>
     </open-tabs>
     <properties>

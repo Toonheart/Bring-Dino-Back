@@ -7,26 +7,44 @@
         <event-block sid="1944627486156425">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="7785763393359844" type="Dino">
-                    <param id="0" name="Object">InPort</param>
+                    <param id="0" name="Object">PortingTileIn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2039450290092462" type="PortingTileIn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="3256023400112085" type="Dino">
+                    <param id="0" name="X">PortingTileIn.X</param>
+                    <param id="1" name="Y">PortingTileIn.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="6769217821802231" type="TelePortWave">
+                    <param id="0" name="X">PortingTileIn.X</param>
+                    <param id="1" name="Y">PortingTileIn.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="9345561638992536" type="TelePortWave">
+                    <param id="0" name="Animation">&quot;PortalActive&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9343363059871903">
+            <conditions>
+                <condition id="4" name="On finished" sid="6204947086825999" type="TelePortWave">
+                    <param id="0" name="Animation">&quot;PortalActive&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="3787898674228131" type="Dino">
-                    <param id="0" name="Object">TelePortLeft</param>
+                    <param id="0" name="Object">PortingTileOut</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="8244370900307326">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="6108744458597868" type="Dino">
-                    <param id="0" name="Object">TelePortLeft</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="9156291344006575" type="Dino">
-                    <param id="0" name="Object">InPort</param>
-                    <param id="1" name="Image point (optional)">0</param>
+                <action id="-15" name="Set visible" sid="3015593499702564" type="PortingTileIn">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="3932046515363148" type="TelePortWave">
+                    <param id="0" name="X">1600</param>
+                    <param id="1" name="Y">1400</param>
                 </action>
             </actions>
         </event-block>

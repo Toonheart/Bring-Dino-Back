@@ -5551,7 +5551,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>704</x>
-                        <y>512</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -5579,6 +5579,7 @@
                                 <set-angle>Yes</set-angle>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5683,8 +5684,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>320</x>
-                        <y>160</y>
+                        <x>864</x>
+                        <y>576</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -5908,7 +5909,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="InPort" uid="313">
+                <instance type="PortingTileIn" uid="313">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -5922,10 +5923,10 @@
                         <y>351.866455078</y>
                         <z>0</z>
                         <width>128</width>
-                        <height>169</height>
+                        <height>75</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.4765625</hotspotX>
+                        <hotspotY>0.439999998</hotspotY>
                         <angle>0.035961512</angle>
                         <opacity>1</opacity>
                     </world>
@@ -5991,6 +5992,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -6013,6 +6017,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

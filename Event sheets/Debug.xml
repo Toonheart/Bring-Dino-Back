@@ -3,22 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Debug</name>
     <events>
-        <event-block sid="583863765941456">
+        <event-block sid="4217867523694654">
             <conditions>
-                <condition id="-1" name="Every tick" sid="8753611039300152" type="System" />
+                <condition id="1" name="On any touch end" sid="8367775981296209" type="Touch" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="9321911957101934" type="Debug">
-                    <param id="0" name="Text">&quot;DX:&quot;&amp;Dino.X</param>
+                <action id="0" name="Set text" sid="6662432638518252" type="Debug">
+                    <param id="0" name="Text">&quot;Angle:&quot;&amp;angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
                 </action>
-                <action id="1" name="Append text" sid="662689012274142" type="Debug">
-                    <param id="0" name="Text">&quot;DY:&quot;&amp;Dino.Y</param>
-                </action>
-                <action id="1" name="Append text" sid="1596071310486182" type="Debug">
-                    <param id="0" name="Text">&quot;LX&quot;&amp;LazerHoldLeft.X</param>
-                </action>
-                <action id="1" name="Append text" sid="7846288653984631" type="Debug">
-                    <param id="0" name="Text">&quot;Ly:&quot;&amp;LazerHoldLeft.Y</param>
+                <action id="1" name="Append text" sid="6536039782913749" type="Debug">
+                    <param id="0" name="Text">newline &amp; &quot;TouchTime&quot; &amp; TouchTime</param>
                 </action>
             </actions>
         </event-block>

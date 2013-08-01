@@ -4,7 +4,7 @@
     <name>MainEvents</name>
     <events>
         <include>IsoToggling</include>
-        <include>UserControlls</include>
+        <include>UserControls</include>
         <include>DinoHealth</include>
         <include>DynamicWalls</include>
         <include>TelePorting</include>
