@@ -4,7 +4,6 @@
     <name>UserControls</name>
     <events>
         <variable constant="0" name="TouchTime" sid="2257544369564688" static="0" type="number">0</variable>
-        <variable constant="0" name="MovementAngle" sid="6652532277654011" static="0" type="number">31.18</variable>
         <event-group description="" disabled="1" sid="5043631264520298" title="Navigation Controlls">
             <sub-events>
                 <comment>Left </comment>
@@ -126,8 +125,8 @@
                                     <param id="0" name="Animation">&quot;quad4&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="8032694100724548" type="System">
-                                    <param id="0" name="Variable">MovementAngle</param>
+                                <action id="-10" name="Set value" sid="8032694100724548" type="Dino">
+                                    <param id="0" name="Instance variable">MovAngle</param>
                                     <param id="1" name="Value">31.18</param>
                                 </action>
                             </actions>
@@ -150,8 +149,8 @@
                                     <param id="0" name="Animation">&quot;quad3&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="3204301254828094" type="System">
-                                    <param id="0" name="Variable">MovementAngle</param>
+                                <action id="-10" name="Set value" sid="3204301254828094" type="Dino">
+                                    <param id="0" name="Instance variable">MovAngle</param>
                                     <param id="1" name="Value">148.82</param>
                                 </action>
                             </actions>
@@ -174,8 +173,8 @@
                                     <param id="0" name="Animation">&quot;quad1&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="6759066992240819" type="System">
-                                    <param id="0" name="Variable">MovementAngle</param>
+                                <action id="-10" name="Set value" sid="6759066992240819" type="Dino">
+                                    <param id="0" name="Instance variable">MovAngle</param>
                                     <param id="1" name="Value">-31.18</param>
                                 </action>
                             </actions>
@@ -198,8 +197,8 @@
                                     <param id="0" name="Animation">&quot;quad2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="4605728892252059" type="System">
-                                    <param id="0" name="Variable">MovementAngle</param>
+                                <action id="-10" name="Set value" sid="4605728892252059" type="Dino">
+                                    <param id="0" name="Instance variable">MovAngle</param>
                                     <param id="1" name="Value">211.82</param>
                                 </action>
                             </actions>
@@ -235,12 +234,7 @@
                             <param id="0" name="Object">Nv_Rectangle</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-23" name="Move at angle" sid="9945499111019724" type="Dino">
-                            <param id="0" name="Angle">MovementAngle</param>
-                            <param id="1" name="Distance">5</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
@@ -273,8 +267,8 @@
             </conditions>
             <actions>
                 <action id="-23" name="Move at angle" sid="4605710070313467" type="Dino">
-                    <param id="0" name="Angle">MovementAngle</param>
-                    <param id="1" name="Distance">5</param>
+                    <param id="0" name="Angle">Dino.MovAngle</param>
+                    <param id="1" name="Distance">10</param>
                 </action>
             </actions>
         </event-block>

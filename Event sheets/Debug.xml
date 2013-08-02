@@ -9,10 +9,10 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="6662432638518252" type="Debug">
-                    <param id="0" name="Text">&quot;Angle:&quot;&amp;angle(Dino.X,Dino.Y,Touch.X,Touch.Y)</param>
+                    <param id="0" name="Text">&quot;Hight&quot;&amp;FireBall.Height</param>
                 </action>
                 <action id="1" name="Append text" sid="6536039782913749" type="Debug">
-                    <param id="0" name="Text">newline &amp; &quot;TouchTime&quot; &amp; TouchTime</param>
+                    <param id="0" name="Text">&quot;Width&quot;&amp;FireBall.Width</param>
                 </action>
             </actions>
         </event-block>

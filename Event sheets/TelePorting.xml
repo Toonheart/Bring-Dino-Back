@@ -11,42 +11,71 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="2039450290092462" type="PortingTileIn">
-                    <param id="0" name="Visibility">1</param>
-                </action>
                 <action id="-3" name="Set position" sid="3256023400112085" type="Dino">
                     <param id="0" name="X">PortingTileIn.X</param>
                     <param id="1" name="Y">PortingTileIn.Y</param>
                 </action>
-                <action id="-3" name="Set position" sid="6769217821802231" type="TelePortWave">
-                    <param id="0" name="X">PortingTileIn.X</param>
-                    <param id="1" name="Y">PortingTileIn.Y</param>
+                <action id="-3" name="Set position" sid="1201071118687375" type="TelePortWave">
+                    <param id="0" name="X">PortingTilein.X</param>
+                    <param id="1" name="Y">PortingTilein.Y</param>
                 </action>
-                <action id="4" name="Set animation" sid="9345561638992536" type="TelePortWave">
+                <action id="4" name="Set animation" sid="1728943038979751" type="TelePortWave">
                     <param id="0" name="Animation">&quot;PortalActive&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="9343363059871903">
-            <conditions>
-                <condition id="4" name="On finished" sid="6204947086825999" type="TelePortWave">
-                    <param id="0" name="Animation">&quot;PortalActive&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="3787898674228131" type="Dino">
-                    <param id="0" name="Object">PortingTileOut</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3015593499702564" type="PortingTileIn">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-3" name="Set position" sid="3932046515363148" type="TelePortWave">
-                    <param id="0" name="X">1600</param>
-                    <param id="1" name="Y">1400</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="9343363059871903">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="6204947086825999" type="TelePortWave">
+                            <param id="0" name="Animation">&quot;PortalActive&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="3787898674228131" type="Dino">
+                            <param id="0" name="Object">PortingTileOut</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1465220579724802" type="Dino">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6769217821802231" type="TelePortWave" />
+                    </actions>
+                </event-block>
+                <event-block sid="2590128949723754">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="50357188928533" type="Dino">
+                            <param id="0" name="Object">PortingTileOut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8243541066636798" type="PortingTileOut">
+                            <param id="0" name="Object">TelePortWave</param>
+                            <param id="1" name="Layer">&quot;IsoFront&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8666384542900509" type="TelePortWave">
+                            <param id="0" name="Animation">&quot;PortalActive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3908664460573418">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="2154076391299146" type="TelePortWave">
+                                    <param id="0" name="Animation">&quot;PortalActive&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="418645460404275" type="TelePortWave" />
+                                <action id="-15" name="Set visible" sid="1822133548574602" type="Dino">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

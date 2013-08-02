@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Obstacles</name>
     <events>
-        <event-group collapsed="1" description="Simple Lazer obstacle that toggles on and off automatically" disabled="1" sid="2875556717450429" title="SimpleLazer -  Old time based. deprecated">
+        <event-group description="Simple Lazer obstacle that toggles on and off automatically" disabled="1" sid="2875556717450429" title="SimpleLazer -  Old time based. deprecated">
             <sub-events>
                 <event-block disabled="1" sid="2128786631442716">
                     <conditions>
@@ -51,9 +51,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Simple Lazer obstacle that toggles on and off automatically" disabled="1" sid="6720494927667913" title="SimpleLazer2">
+        <event-group description="Simple Lazer obstacle that toggles on and off automatically" sid="6720494927667913" title="SimpleLazer2">
             <sub-events>
-                <event-block disabled="1" sid="2128786631442716">
+                <event-block sid="2128786631442716">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="9112340783718369" type="Obs_Lazer" />
                         <condition id="-8" name="Compare two values" sid="5428695087107018" type="System">
@@ -64,7 +64,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="1454829010325803">
+                        <event-block sid="1454829010325803">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="2235533423262951" type="Obs_Lazer">
                                     <param id="0" name="Instance variable">Toogle</param>
@@ -79,7 +79,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block disabled="1" sid="5708935340376171">
+                                <event-block sid="5708935340376171">
                                     <conditions>
                                         <condition id="4" name="On finished" sid="6753116836729386" type="Obs_Lazer">
                                             <param id="0" name="Animation">&quot;LazerON&quot;</param>
@@ -94,7 +94,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="3090569617649375">
+                        <event-block sid="3090569617649375">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6543911879559895" type="Obs_Lazer">
                                     <param id="0" name="Instance variable">Toogle</param>
@@ -109,7 +109,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block disabled="1" sid="7975837371454576">
+                                <event-block sid="7975837371454576">
                                     <conditions>
                                         <condition id="4" name="On finished" sid="7496956465714547" type="Obs_Lazer">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -125,6 +125,17 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5191778330150373">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9745810985916027" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8591066459942784" type="Obs_Lazer">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

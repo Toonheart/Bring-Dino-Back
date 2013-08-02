@@ -66,18 +66,15 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-8" name="Set angle" sid="4877189811481571" type="FireBall">
-                                    <param id="0" name="Angle">MovementAngle</param>
-                                </action>
                                 <action id="0" name="Spawn another object" sid="7678510668488738" type="Dino">
                                     <param id="0" name="Object">FireBall</param>
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="7967987685530592" type="FireBall">
-                                    <param id="0" name="Angle">MovementAngle</param>
+                                <action id="-8" name="Set angle" sid="373186577662637" type="FireBall">
+                                    <param id="0" name="Angle">Dino.MovAngle</param>
                                 </action>
-                                <action id="-12" name="Subtract from" sid="1337794815955268" type="Dino">
+                                <action disabled="1" id="-12" name="Subtract from" sid="1337794815955268" type="Dino">
                                     <param id="0" name="Instance variable">FireBallLimit</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
