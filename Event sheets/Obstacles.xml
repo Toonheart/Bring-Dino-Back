@@ -139,5 +139,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="spikes behavior" sid="3218801821651703" title="Spikes">
+            <sub-events>
+                <event-block sid="8864258673434379">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3154697891639621" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9003778223204469" type="Spikes">
+                            <param id="0" name="Animation">&quot;SpikeON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
