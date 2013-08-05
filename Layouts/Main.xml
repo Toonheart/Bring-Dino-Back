@@ -5453,6 +5453,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -5478,6 +5481,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -5659,6 +5665,7 @@
                         <FireBallLimit>0</FireBallLimit>
                         <IsoOffset>10</IsoOffset>
                         <MovAngle>31.18</MovAngle>
+                        <PortalPosition>0</PortalPosition>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo" />

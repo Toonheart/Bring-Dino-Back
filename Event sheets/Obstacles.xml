@@ -67,7 +67,7 @@
                         <event-block sid="1454829010325803">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="2235533423262951" type="Obs_Lazer">
-                                    <param id="0" name="Instance variable">Toogle</param>
+                                    <param id="0" name="Instance variable">Toggle</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -87,7 +87,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="9314834480381871" type="Obs_Lazer">
-                                            <param id="0" name="Instance variable">Toogle</param>
+                                            <param id="0" name="Instance variable">Toggle</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -97,7 +97,7 @@
                         <event-block sid="3090569617649375">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6543911879559895" type="Obs_Lazer">
-                                    <param id="0" name="Instance variable">Toogle</param>
+                                    <param id="0" name="Instance variable">Toggle</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -117,7 +117,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="1943425972962057" type="Obs_Lazer">
-                                            <param id="0" name="Instance variable">Toogle</param>
+                                            <param id="0" name="Instance variable">Toggle</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -141,18 +141,95 @@
         </event-group>
         <event-group description="spikes behavior" sid="3218801821651703" title="Spikes">
             <sub-events>
-                <event-block sid="8864258673434379">
+                <event-block sid="3698272879442136">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="3154697891639621" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="4576930130444942" type="Spikes" />
+                        <condition id="-8" name="Compare two values" sid="4200999566604626" type="System">
+                            <param id="0" name="First value">distance(dino.X,dino.Y,Spikes.X,Spikes.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9003778223204469" type="Spikes">
-                            <param id="0" name="Animation">&quot;SpikeON&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6820757276649021">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3933455224154042" type="Spikes">
+                                    <param id="0" name="Instance variable">Toggle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7349498835113452" type="Spikes">
+                                    <param id="0" name="Animation">&quot;SpikeON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1606592828438949">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="667561043668854" type="Spikes">
+                                            <param id="0" name="Animation">&quot;SpikeON&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9715541525803941" type="Spikes">
+                                            <param id="0" name="Instance variable">Toggle</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2147855413189992">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8817602963627015" type="Spikes">
+                                    <param id="0" name="Instance variable">Toggle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4486471816068782" type="Spikes">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2699636362406193">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="20110123460423" type="Spikes">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1111090747205731" type="Spikes">
+                                            <param id="0" name="Instance variable">Toggle</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="6156474438864324">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="8619793447410564" type="System">
+                    <param id="0" name="First value">distance(dino.X,dino.Y,Spikes.X,Spikes.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1485880779839985" type="Spikes">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

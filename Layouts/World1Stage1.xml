@@ -1956,7 +1956,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Toogle>1</Toogle>
+                        <Toggle>1</Toggle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -2176,31 +2176,6 @@
                         <depth>0</depth>
                         <hotspotX>0.503759384</hotspotX>
                         <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Spikes" uid="395">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>367</x>
-                        <y>500</y>
-                        <z>0</z>
-                        <width>128.668334961</width>
-                        <height>164.725830078</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501474917</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3061,6 +3036,7 @@
                         <FireBallLimit>0</FireBallLimit>
                         <IsoOffset>10</IsoOffset>
                         <MovAngle>31.18</MovAngle>
+                        <PortalPosition>0</PortalPosition>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo" />
@@ -3084,8 +3060,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>238</x>
-                        <y>146</y>
+                        <x>510</x>
+                        <y>334</y>
                         <z>0</z>
                         <width>70</width>
                         <height>82</height>
@@ -3267,6 +3243,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TelePortWaveOut" uid="396">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>391</x>
+                        <y>1091</y>
+                        <z>0</z>
+                        <width>163</width>
+                        <height>236</height>
+                        <depth>0</depth>
+                        <hotspotX>0.546012282</hotspotX>
+                        <hotspotY>0.987288117</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -3291,6 +3289,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -3316,6 +3317,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -3341,6 +3345,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -3366,6 +3373,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -3384,7 +3394,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TelePortWave" uid="351">
+                <instance type="TelePortWaveIn" uid="351">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3394,13 +3404,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>831</x>
-                        <y>948</y>
+                        <x>861</x>
+                        <y>1099</y>
                         <z>0</z>
                         <width>163</width>
                         <height>236</height>
                         <depth>0</depth>
-                        <hotspotX>0.503067493</hotspotX>
+                        <hotspotX>0.546012282</hotspotX>
+                        <hotspotY>0.970339</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Spikes" uid="395">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Toggle>1</Toggle>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>367</x>
+                        <y>500</y>
+                        <z>0</z>
+                        <width>128.668334961</width>
+                        <height>164.725830078</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501474917</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
