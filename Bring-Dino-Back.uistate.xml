@@ -10,9 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">World1Stage1</layout>
+        <layout>World1Stage1</layout>
         <layout>Main</layout>
-        <event-sheet>Obstacles</event-sheet>
+        <event-sheet active="1">Obstacles</event-sheet>
         <event-sheet>TelePorting</event-sheet>
         <event-sheet>DinoHealth</event-sheet>
         <event-sheet>PowerUps</event-sheet>
