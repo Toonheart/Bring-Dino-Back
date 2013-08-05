@@ -14,29 +14,100 @@
                 <action id="-15" name="Set visible" sid="9090325871654255" type="PauseScreen">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="2706410518823937" type="Resume">
-                    <param id="0" name="Object">PauseScreen</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
                 <action id="1" name="Set pause state" sid="5340808814444252" type="Pause">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="2706410518823937" type="ResumeMenu">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Resume&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2088193538959925" type="Restart">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Restart&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="109029121806677" type="Sound">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Sound&quot;</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="4078196400491684">
+        <comment>Resume on clicking Resume button</comment>
+        <event-block sid="8939549560755474">
             <conditions>
-                <condition id="0" name="On clicked" sid="8147356474626922" type="Resume" />
+                <condition id="3" name="On touched object" sid="8476081870791777" type="Touch">
+                    <param id="0" name="Object">ResumeMenu</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="1" name="Set pause state" sid="9067232800658497" type="Pause">
                     <param id="0" name="State">1</param>
                 </action>
-                <action id="-3" name="Set position" sid="7672596940714543" type="Resume">
-                    <param id="0" name="X">1600</param>
-                    <param id="1" name="Y">1500</param>
-                </action>
                 <action id="-15" name="Set visible" sid="9231157192646293" type="PauseScreen">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="5285917405702123" type="Menu">
+                    <param id="0" name="X">1600</param>
+                    <param id="1" name="Y">1200</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Restaring the game</comment>
+        <event-block sid="9790070614180406">
+            <conditions>
+                <condition id="3" name="On touched object" sid="681084824576041" type="Touch">
+                    <param id="0" name="Object">Restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set pause state" sid="8286045335738939" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="1780519444981542" type="System" />
+                <action id="-21" name="Reset global variables" sid="9046542149946094" type="System" />
+            </actions>
+        </event-block>
+        <comment>Mute Sound</comment>
+        <event-block sid="6998005408373932">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4121852569250148" type="Touch">
+                    <param id="0" name="Object">Sound</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="3058644174410217" type="Audio">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="1" name="Set pause state" sid="6677296732029345" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8166211546490044" type="PauseScreen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="457160085635073" type="Menu">
+                    <param id="0" name="X">1600</param>
+                    <param id="1" name="Y">1200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4006621880616079">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="1825379275603964" type="Mouse">
+                    <param id="0" name="Object">Menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4083603764724783" type="Menu">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9697247916127683">
+            <conditions>
+                <condition id="-22" name="Else" sid="407002981634071" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="7364891324376852" type="Menu">
+                    <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>

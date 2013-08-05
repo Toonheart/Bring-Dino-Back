@@ -69,7 +69,7 @@
                                 <action id="0" name="Spawn another object" sid="7678510668488738" type="Dino">
                                     <param id="0" name="Object">FireBall</param>
                                     <param id="1" name="Layer">3</param>
-                                    <param id="2" name="Image point">1</param>
+                                    <param id="2" name="Image point">&quot;FirePoint&quot;</param>
                                 </action>
                                 <action id="-8" name="Set angle" sid="373186577662637" type="FireBall">
                                     <param id="0" name="Angle">Dino.MovAngle</param>

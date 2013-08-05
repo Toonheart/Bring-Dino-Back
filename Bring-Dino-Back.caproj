@@ -10,21 +10,23 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -95,7 +97,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6277814631912079" speed="5">
                     <frame duration="1" hotspotX="0.685714" hotspotY="0.902439">
-                        <image-point name="Imagepoint 1" x="0.614286" y="0.573171" />
+                        <image-point name="FirePoint" x="0.8" y="0.560976" />
                         <collision-poly>
                             <point x="0.185714" y="0.158537" />
                             <point x="0.5" y="0" />
@@ -108,7 +110,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Quad4" pingpong="0" repeatcount="1" repeatto="0" sid="6756126376440533" speed="5">
                     <frame duration="1" hotspotX="0.685714" hotspotY="0.902439">
-                        <image-point name="Imagepoint 1" x="0.757143" y="0.573171" />
+                        <image-point name="FirePoint" x="0.757143" y="0.573171" />
                         <collision-poly>
                             <point x="0.185714" y="0.158537" />
                             <point x="0.5" y="0" />
@@ -121,7 +123,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Quad3" pingpong="0" repeatcount="1" repeatto="0" sid="86573071732778" speed="5">
                     <frame duration="1" hotspotX="0.542857" hotspotY="0.902439">
-                        <image-point name="Imagepoint 1" x="0.3" y="0.573171" />
+                        <image-point name="FirePoint" x="0.3" y="0.573171" />
                         <collision-poly>
                             <point x="0.828571" y="0.5" />
                             <point x="0.885714" y="0.902439" />
@@ -134,7 +136,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Quad2" pingpong="0" repeatcount="1" repeatto="0" sid="7188499443755867" speed="5">
                     <frame duration="1" hotspotX="0.813559" hotspotY="0.902439">
-                        <image-point name="Imagepoint 1" x="0.508475" y="0.5" />
+                        <image-point name="FirePoint" x="0.508475" y="0.5" />
                         <collision-poly>
                             <point x="0.20339" y="0.146341" />
                             <point x="0.491525" y="0.097561" />
@@ -148,7 +150,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Quad1" pingpong="0" repeatcount="1" repeatto="0" sid="9318022326534997" speed="5">
                     <frame duration="1" hotspotX="0.474576" hotspotY="0.951219">
-                        <image-point name="Imagepoint 1" x="0.508475" y="0.5" />
+                        <image-point name="FirePoint" x="0.508475" y="0.5" />
                         <collision-poly>
                             <point x="0.898305" y="0.5" />
                             <point x="0.881356" y="0.914634" />
@@ -254,7 +256,7 @@
                     <frame duration="1" hotspotX="0.501475" hotspotY="0.5">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="0.98525" y="0.0115207" />
+                            <point x="0" y="0" />
                             <point x="0.0117994" y="0" />
                         </collision-poly>
                     </frame>
@@ -409,13 +411,13 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.1875" y="0.1875" />
-                            <point x="0.5" y="0.046875" />
+                            <point x="0.5" y="0.0625" />
                             <point x="0.8125" y="0.1875" />
-                            <point x="0.945313" y="0.5" />
-                            <point x="0.828125" y="0.828125" />
-                            <point x="0.5" y="0.960938" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.9375" />
                             <point x="0.1875" y="0.8125" />
-                            <point x="0.046875" y="0.5" />
+                            <point x="0.0625" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -580,15 +582,18 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1530389120426937" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Resume" x="0.515593" y="0.339844" />
+                        <image-point name="Sound" x="0.5" y="0.5" />
+                        <image-point name="Restart" x="0.474012" y="0.72168" />
                         <collision-poly>
-                            <point x="0.239796" y="0.221698" />
-                            <point x="0.5" y="0.0990566" />
-                            <point x="0.846939" y="0.141509" />
-                            <point x="0.887755" y="0.5" />
-                            <point x="0.760204" y="0.778302" />
-                            <point x="0.5" y="0.948113" />
-                            <point x="0.0765306" y="0.929245" />
-                            <point x="0.285714" y="0.5" />
+                            <point x="0.135135" y="0.126953" />
+                            <point x="0.5" y="0.0761719" />
+                            <point x="0.852391" y="0.138672" />
+                            <point x="0.826403" y="0.5" />
+                            <point x="0.85447" y="0.863281" />
+                            <point x="0.5" y="0.917969" />
+                            <point x="0.135135" y="0.873047" />
+                            <point x="0.163202" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1539,8 +1544,73 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ResumeMenu" sid="2371141494159375">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="343134571822108" speed="5">
+                    <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0479042" y="0.126316" />
+                            <point x="0.952096" y="0.126316" />
+                            <point x="0.986028" y="0.5" />
+                            <point x="0.884232" y="0.694737" />
+                            <point x="0.115768" y="0.694737" />
+                            <point x="0.0139721" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Restart" sid="8171069048400115">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1473058994781723" speed="5">
+                    <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0479042" y="0.126316" />
+                            <point x="0.952096" y="0.126316" />
+                            <point x="0.986028" y="0.5" />
+                            <point x="0.884232" y="0.694737" />
+                            <point x="0.115768" y="0.694737" />
+                            <point x="0.0139721" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sound" sid="3314606303184052">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9438395812035961" speed="5">
+                    <frame duration="1" hotspotX="0.500998" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0479042" y="0.126316" />
+                            <point x="0.952096" y="0.126316" />
+                            <point x="0.986028" y="0.5" />
+                            <point x="0.884232" y="0.694737" />
+                            <point x="0.115768" y="0.694737" />
+                            <point x="0.0139721" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="8807208617946327">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Mouse" sid="9904874047568727">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Menu" plugin-id="Sprite" sid="3772124957170178">
+            <members>
+                <member>Restart</member>
+                <member>ResumeMenu</member>
+                <member>Sound</member>
+            </members>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Main.xml</layout>
         <layout>World1Stage1.xml</layout>
@@ -1571,6 +1641,21 @@
         </global-instance>
         <global-instance type="Pause" uid="306" />
         <global-instance type="Keyboard" uid="321" />
+        <global-instance type="Audio" uid="402">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="403" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
