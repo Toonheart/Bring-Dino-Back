@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Patroling</name>
     <events>
-        <event-group description="" sid="3533798473512352" title="L-R Patroling" />
+        <event-group description="" disabled="1" sid="3533798473512352" title="L-R Patroling" />
         <comment>Walk right </comment>
-        <event-block sid="270914503400046">
+        <event-block disabled="1" sid="270914503400046">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="8280150642054239" type="AlienLR">
                     <param id="0" name="Object">RightArrow</param>
@@ -21,7 +21,7 @@
             </actions>
         </event-block>
         <comment>walk left</comment>
-        <event-block sid="6970329717721274">
+        <event-block disabled="1" sid="6970329717721274">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="7242598968161161" type="AlienLR">
                     <param id="0" name="Object">LeftArrow</param>
@@ -36,9 +36,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="4299446344798814" title="U-D patroling" />
+        <event-group description="" disabled="1" sid="4299446344798814" title="U-D patroling" />
         <comment>Walk down</comment>
-        <event-block sid="8184598937285054">
+        <event-block disabled="1" sid="8184598937285054">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="3380807167865721" type="AlienUD">
                     <param id="0" name="Object">DownArrow</param>
@@ -51,7 +51,7 @@
             </actions>
         </event-block>
         <comment>Walk up</comment>
-        <event-block sid="5443768993002231">
+        <event-block disabled="1" sid="5443768993002231">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="9381472911013193" type="AlienUD">
                     <param id="0" name="Object">UpArrow</param>

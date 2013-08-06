@@ -5379,7 +5379,7 @@
                         <behavior-instance type="8Direction">
                             <properties>
                                 <max-speed>150</max-speed>
-                                <acceleration>600</acceleration>
+                                <acceleration>0</acceleration>
                                 <deceleration>0</deceleration>
                                 <directions>Left &amp; right</directions>
                                 <set-angle>No</set-angle>
