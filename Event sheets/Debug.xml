@@ -5,14 +5,14 @@
     <events>
         <event-block sid="4217867523694654">
             <conditions>
-                <condition id="1" name="On any touch end" sid="8367775981296209" type="Touch" />
+                <condition id="-1" name="Every tick" sid="8367775981296209" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="6662432638518252" type="Debug">
-                    <param id="0" name="Text">&quot;Hight&quot;&amp;FireBall.Height</param>
+                    <param id="0" name="Text">&quot;soundstatus:&quot;&amp;SoundStatus</param>
                 </action>
-                <action id="1" name="Append text" sid="6536039782913749" type="Debug">
-                    <param id="0" name="Text">&quot;Width&quot;&amp;FireBall.Width</param>
+                <action id="1" name="Append text" sid="8318751512444287" type="Debug">
+                    <param id="0" name="Text">&quot;  MusicStatus&quot;&amp;MusicStatus</param>
                 </action>
             </actions>
         </event-block>

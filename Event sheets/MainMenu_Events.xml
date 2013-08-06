@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenu_Events</name>
+    <events>
+        <include>Levels_Events</include>
+        <include>Debug</include>
+        <include>Pause</include>
+        <event-block sid="4690477362741401">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3013983059583469" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6051961585694404" type="System">
+                    <param id="0" name="Layout">&quot;World1Stage1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2798517670868757">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8390676263773664" type="Mouse">
+                    <param id="0" name="Object">MainMenus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="8290238872799656" type="MainMenus">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1233439745787255">
+            <conditions>
+                <condition id="-22" name="Else" sid="3719158936005826" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="8085274258817636" type="MainMenus">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3616482536820795">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8625059797759983" type="Touch">
+                    <param id="0" name="Object">SoundMain</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2225215300974168" type="System">
+                    <param id="0" name="Variable">SoundStatus</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6195500816510705" type="System">
+                    <param id="0" name="Variable">SoundStatus</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5794128126465812">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1293134111145462" type="Touch">
+                    <param id="0" name="Object">MusicMain</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5039414651292229" type="System">
+                    <param id="0" name="Variable">MusicStatus</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7025106568409321" type="System">
+                    <param id="0" name="Variable">MusicStatus</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4044020992912352">
+            <conditions>
+                <condition id="3" name="On touched object" sid="672523545946416" type="Touch">
+                    <param id="0" name="Object">SoundMain</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2443697223708393" type="System">
+                    <param id="0" name="Variable">SoundStatus</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4432887710101071" type="System">
+                    <param id="0" name="Variable">SoundStatus</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="3039552108206195">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1360247323139292" type="Touch">
+                    <param id="0" name="Object">MusicMain</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7862991984284202" type="System">
+                    <param id="0" name="Variable">MusicStatus</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1451048189546005" type="System">
+                    <param id="0" name="Variable">MusicStatus</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3593330883294966">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7363041929140401" type="Touch">
+                    <param id="0" name="Object">CreditsMain</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7256317922018007" type="System">
+                    <param id="0" name="Layout">Credits</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

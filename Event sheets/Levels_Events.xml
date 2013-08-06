@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Levels_Events</name>
+    <events>
+        <event-block sid="9494127375998497">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6295008491758222" type="Touch">
+                    <param id="0" name="Object">LevelONE</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="123637472006357" type="System">
+                    <param id="0" name="Layout">World1Stage1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7152379899683637">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6978032393275163" type="Touch">
+                    <param id="0" name="Object">GoToMainMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6660258082304318" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

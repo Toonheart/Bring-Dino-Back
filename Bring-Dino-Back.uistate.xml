@@ -10,13 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">World1Stage1</layout>
-        <layout>Main</layout>
-        <event-sheet>Obstacles</event-sheet>
-        <event-sheet>TelePorting</event-sheet>
-        <event-sheet>DinoHealth</event-sheet>
-        <event-sheet>PowerUps</event-sheet>
-        <event-sheet>Pause</event-sheet>
+        <layout>World1Stage1</layout>
+        <layout>MainMenu</layout>
+        <layout>Levels</layout>
+        <layout>Credits</layout>
+        <event-sheet active="1">Pause</event-sheet>
+        <event-sheet>MainMenu_Events</event-sheet>
+        <event-sheet>Debug</event-sheet>
+        <event-sheet>Levels_Events</event-sheet>
+        <event-sheet>Credits_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,6 +27,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="Menu" />
+        <family expanded="1" name="PauseMenus" />
+        <family expanded="0" name="MainMenus" />
     </families-expanded>
 </c2uistate>

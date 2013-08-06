@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Pause</name>
     <events>
+        <include>Levels_Events</include>
+        <include>MainMenu_Events</include>
+        <variable comment="1=play,0=Mute" constant="0" name="MusicStatus" sid="5407718608639652" static="0" type="number">1</variable>
+        <variable comment="1=play,0=Mute" constant="0" name="SoundStatus" sid="6836939138129452" static="0" type="number">1</variable>
         <comment>Pause the game and show menu screen</comment>
         <event-block sid="3709908675197067">
             <conditions>
@@ -29,6 +33,18 @@
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;Sound&quot;</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="2157418774328341" type="Music">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Music&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="5989149612809779" type="Levels">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Levels&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="7523189555574543" type="GoToMainMenu">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;MainMenu&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>Resume on clicking Resume button</comment>
@@ -45,7 +61,7 @@
                 <action id="-15" name="Set visible" sid="9231157192646293" type="PauseScreen">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="5285917405702123" type="Menu">
+                <action id="-3" name="Set position" sid="5285917405702123" type="PauseMenus">
                     <param id="0" name="X">1600</param>
                     <param id="1" name="Y">1200</param>
                 </action>
@@ -67,36 +83,14 @@
             </actions>
         </event-block>
         <comment>Mute Sound</comment>
-        <event-block sid="6998005408373932">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4121852569250148" type="Touch">
-                    <param id="0" name="Object">Sound</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="8" name="Set silent" sid="3058644174410217" type="Audio">
-                    <param id="0" name="Mode">0</param>
-                </action>
-                <action id="1" name="Set pause state" sid="6677296732029345" type="Pause">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="8166211546490044" type="PauseScreen">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-3" name="Set position" sid="457160085635073" type="Menu">
-                    <param id="0" name="X">1600</param>
-                    <param id="1" name="Y">1200</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="4006621880616079">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="1825379275603964" type="Mouse">
-                    <param id="0" name="Object">Menu</param>
+                    <param id="0" name="Object">PauseMenus</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="4083603764724783" type="Menu">
+                <action id="-16" name="Set opacity" sid="4083603764724783" type="PauseMenus">
                     <param id="0" name="Opacity">60</param>
                 </action>
             </actions>
@@ -106,8 +100,219 @@
                 <condition id="-22" name="Else" sid="407002981634071" type="System" />
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="7364891324376852" type="Menu">
+                <action id="-16" name="Set opacity" sid="7364891324376852" type="PauseMenus">
                     <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="5774155918575603" title="Sound">
+            <sub-events>
+                <comment>Toggle Sound status on touched sound</comment>
+                <event-block sid="5365768602757424">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7706075337801737" type="Touch">
+                            <param id="0" name="Object">Sound</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3042824059630806" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5559639918401438" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="643687585656035" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5770337341196207" type="PauseScreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2957059043617146" type="PauseMenus">
+                            <param id="0" name="X">1600</param>
+                            <param id="1" name="Y">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3320308757813537">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8893277178673493" type="Touch">
+                            <param id="0" name="Object">Sound</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7638713164730409" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5705209013493371" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="6296431778477609" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7583144589086956" type="PauseScreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1130518202857554" type="PauseMenus">
+                            <param id="0" name="X">1600</param>
+                            <param id="1" name="Y">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>mute sounds If Reset</comment>
+                <event-block sid="1043758238152816">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7601487790001431" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="1140525076374347" type="Audio">
+                            <param id="0" name="Tag">&quot;Sounds&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8267183447547081" type="SoundIcon">
+                            <param id="0" name="Animation">&quot;SoundsOFF&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Play if status set</comment>
+                <event-block sid="8731416044535429">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1491912629890381" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="9791260317971887" type="Audio">
+                            <param id="0" name="Tag">&quot;Sounds&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4720763917926853" type="SoundIcon">
+                            <param id="0" name="Animation">&quot;SoundsON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4776928004339621" title="Music">
+            <sub-events>
+                <event-block sid="2253146355843664">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2084512552390603" type="Touch">
+                            <param id="0" name="Object">Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1123731480267822" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2810816575913994" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="1021226680704854" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9398796032993812" type="PauseScreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1978292985019261" type="PauseMenus">
+                            <param id="0" name="X">1600</param>
+                            <param id="1" name="Y">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9583205641138881">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="651939452838741" type="Touch">
+                            <param id="0" name="Object">Music</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7312972615756894" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9985712098751774" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="61773020134672" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2602601650449126" type="PauseScreen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="5763118979639609" type="PauseMenus">
+                            <param id="0" name="X">1600</param>
+                            <param id="1" name="Y">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7853954343858881">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3769648741554158" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="628993928788448" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8982526518578346" type="MusicIcon">
+                            <param id="0" name="Animation">&quot;MusicON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8623899730429481">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2891248815132063" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="6513501103130042" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5607873160321758" type="MusicIcon">
+                            <param id="0" name="Animation">&quot;MusicOFF&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2753915603365161">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9093175376083746" type="Touch">
+                    <param id="0" name="Object">Levels</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5772108327600898" type="System">
+                    <param id="0" name="Layout">Levels</param>
                 </action>
             </actions>
         </event-block>
