@@ -10,23 +10,23 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -44,7 +44,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -223,26 +223,26 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="0" name="SpikeON" pingpong="0" repeatcount="1" repeatto="0" sid="7280089210416309" speed="1">
-                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
-                        <collision-poly>
-                            <point x="0.466076" y="0.458526" />
-                            <point x="0.80826" y="0.582949" />
-                            <point x="0.867257" y="0.9447" />
-                            <point x="0.0825958" y="0.612904" />
-                            <point x="0.162242" y="0.387097" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
-                        <collision-poly>
-                            <point x="0.466076" y="0.458526" />
-                            <point x="0.80826" y="0.582949" />
-                            <point x="0.867257" y="0.9447" />
-                            <point x="0.0825958" y="0.612904" />
-                            <point x="0.162242" y="0.387097" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="3" loop="0" name="SpikeON" pingpong="0" repeatcount="2" repeatto="0" sid="7280089210416309" speed="1">
                     <frame duration="1" hotspotX="0.463127" hotspotY="0.778802">
+                        <collision-poly>
+                            <point x="0.466076" y="0.458526" />
+                            <point x="0.80826" y="0.582949" />
+                            <point x="0.867257" y="0.9447" />
+                            <point x="0.0825958" y="0.612904" />
+                            <point x="0.162242" y="0.387097" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
+                        <collision-poly>
+                            <point x="0.466076" y="0.458526" />
+                            <point x="0.80826" y="0.582949" />
+                            <point x="0.867257" y="0.9447" />
+                            <point x="0.0825958" y="0.612904" />
+                            <point x="0.162242" y="0.387097" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
                         <collision-poly>
                             <point x="0.466076" y="0.458526" />
                             <point x="0.80826" y="0.582949" />
@@ -258,35 +258,6 @@
                             <point x="0" y="0" />
                             <point x="0" y="0" />
                             <point x="0.0117994" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="3" loop="0" name="SpikeOFF" pingpong="0" repeatcount="1" repeatto="0" sid="6482159716886251" speed="2">
-                    <frame duration="1" hotspotX="0.463127" hotspotY="0.778802">
-                        <collision-poly>
-                            <point x="0.466076" y="0.458526" />
-                            <point x="0.80826" y="0.582949" />
-                            <point x="0.867257" y="0.9447" />
-                            <point x="0.0825958" y="0.612904" />
-                            <point x="0.162242" y="0.387097" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
-                        <collision-poly>
-                            <point x="0.466076" y="0.458526" />
-                            <point x="0.80826" y="0.582949" />
-                            <point x="0.867257" y="0.9447" />
-                            <point x="0.0825958" y="0.612904" />
-                            <point x="0.162242" y="0.387097" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.430678" hotspotY="0.794931">
-                        <collision-poly>
-                            <point x="0.466076" y="0.458526" />
-                            <point x="0.80826" y="0.582949" />
-                            <point x="0.867257" y="0.9447" />
-                            <point x="0.0825958" y="0.612904" />
-                            <point x="0.162242" y="0.387097" />
                         </collision-poly>
                     </frame>
                 </animation>
