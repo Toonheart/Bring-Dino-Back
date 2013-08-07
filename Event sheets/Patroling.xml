@@ -12,9 +12,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="9607435466129554" type="AlienLR">
-                    <param id="0" name="Control">1</param>
-                </action>
                 <action id="7" name="Set mirrored" sid="6498061723642351" type="AlienLR">
                     <param id="0" name="State">1</param>
                 </action>
@@ -30,9 +27,6 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="1166408577817878" type="AlienLR">
                     <param id="0" name="State">0</param>
-                </action>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="7933240817794766" type="AlienLR">
-                    <param id="0" name="Control">0</param>
                 </action>
             </actions>
         </event-block>

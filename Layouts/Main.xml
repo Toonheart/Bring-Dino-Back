@@ -5375,18 +5375,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <directions>Left &amp; right</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
+                    <instance-variables>
+                        <MovementAngle>-31.18</MovementAngle>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -5777,6 +5768,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <MovementAngle>0</MovementAngle>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
@@ -5795,11 +5789,11 @@
                         <x>1179</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60.939128876</width>
+                        <height>67.214614868</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502283096</hotspotY>
+                        <hotspotX>0.502283096</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

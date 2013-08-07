@@ -45,6 +45,14 @@
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;MainMenu&quot;</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="2808509317863191" type="GoToMainMenu">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;MainMenu&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="727718812080147" type="Awards">
+                    <param id="0" name="Object">PauseScreen</param>
+                    <param id="1" name="Image point (optional)">&quot;Awards&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>Resume on clicking Resume button</comment>
@@ -313,6 +321,24 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="5772108327600898" type="System">
                     <param id="0" name="Layout">Levels</param>
+                </action>
+                <action id="1" name="Set pause state" sid="4274165719024234" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915895676083272">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6726086610005275" type="Touch">
+                    <param id="0" name="Object">Awards</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="993877037205917" type="System">
+                    <param id="0" name="Layout">Awards</param>
+                </action>
+                <action id="1" name="Set pause state" sid="3903225808797148" type="Pause">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>

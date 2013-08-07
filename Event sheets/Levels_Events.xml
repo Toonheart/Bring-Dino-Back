@@ -3,10 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Levels_Events</name>
     <events>
+        <include>Awards_Events</include>
+        <variable constant="0" name="Stars" sid="7880401295696795" static="0" type="number">0</variable>
         <event-block sid="9494127375998497">
             <conditions>
                 <condition id="3" name="On touched object" sid="6295008491758222" type="Touch">
-                    <param id="0" name="Object">LevelONE</param>
+                    <param id="0" name="Object">Level1</param>
                 </condition>
             </conditions>
             <actions>
@@ -24,6 +26,71 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="6660258082304318" type="System">
                     <param id="0" name="Layout">MainMenu</param>
+                </action>
+                <action id="1" name="Set pause state" sid="2165616352138732" type="Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2829156932476635">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2730982750530289" type="Dino">
+                    <param id="0" name="Object">star</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="805477039073657" type="star" />
+                <action id="-10" name="Add to" sid="4354349369149568" type="System">
+                    <param id="0" name="Variable">Stars</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1058191777841853">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8472757449665929" type="Dino">
+                    <param id="0" name="Object">Win</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="1158585842833477" type="LevelsArray">
+                    <param id="0" name="X">CurrentLevel</param>
+                    <param id="1" name="Value">max(2 + Stars, LevelsArray.At(currentLevel))</param>
+                </action>
+                <action id="-10" name="Add to" sid="4980429808934645" type="System">
+                    <param id="0" name="Variable">CurrentLevel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6252644198916931" type="System">
+                    <param id="0" name="Layout">Awards</param>
+                </action>
+                <action id="-9" name="Set value" sid="5713132641594097" type="System">
+                    <param id="0" name="Variable">Stars</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7242255541228201">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3800469663466333" type="Dino">
+                    <param id="0" name="Object">Complete</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5756608983192535" type="System">
+                    <param id="0" name="Layout">Awards</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="6203602191632867">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1821949262612895" type="Touch">
+                    <param id="0" name="Object">levelsButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set pause state" sid="1307846997860622" type="Pause">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>

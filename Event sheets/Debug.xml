@@ -3,16 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Debug</name>
     <events>
-        <event-block sid="4217867523694654">
+        <event-block sid="5269221893226362">
             <conditions>
-                <condition id="-1" name="Every tick" sid="8367775981296209" type="System" />
+                <condition id="-1" name="Every tick" sid="6085495527900436" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="6662432638518252" type="Debug">
-                    <param id="0" name="Text">&quot;soundstatus:&quot;&amp;SoundStatus</param>
-                </action>
-                <action id="1" name="Append text" sid="8318751512444287" type="Debug">
-                    <param id="0" name="Text">&quot;  MusicStatus&quot;&amp;MusicStatus</param>
+                <action id="0" name="Set text" sid="1010952953490532" type="Debug">
+                    <param id="0" name="Text">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
