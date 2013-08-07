@@ -5,18 +5,6 @@
     <events>
         <include>Awards_Events</include>
         <variable constant="0" name="Stars" sid="7880401295696795" static="0" type="number">0</variable>
-        <event-block sid="9494127375998497">
-            <conditions>
-                <condition id="3" name="On touched object" sid="6295008491758222" type="Touch">
-                    <param id="0" name="Object">Level1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="123637472006357" type="System">
-                    <param id="0" name="Layout">World1Stage1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="7152379899683637">
             <conditions>
                 <condition id="3" name="On touched object" sid="6978032393275163" type="Touch">
@@ -32,6 +20,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Add collected stars </comment>
         <event-block sid="2829156932476635">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="2730982750530289" type="Dino">
@@ -46,6 +35,10 @@
                 </action>
             </actions>
         </event-block>
+        <comment>its to show stars</comment>
+        <comment>set value to 2 (means level complete. 1-first frame,2-second frame look at the logic in  in levels events,first star starts after value 2,i.e3) + number of stars IF it is greater than the previous value</comment>
+        <comment>and this value is assigned if the value is grater than current value thats why used max()</comment>
+        <comment>LevelsArray.At(currentLevel) is the current active value at level</comment>
         <event-block sid="1058191777841853">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8472757449665929" type="Dino">

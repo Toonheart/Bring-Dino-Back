@@ -139,6 +139,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>On and off spikes only once when dino entered the range</comment>
         <event-group description="spikes behavior" sid="3218801821651703" title="Spikes">
             <sub-events>
                 <event-block sid="3698272879442136">

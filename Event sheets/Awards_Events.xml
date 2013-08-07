@@ -4,6 +4,7 @@
     <name>Awards_Events</name>
     <events>
         <variable constant="0" name="CurrentLevel" sid="9161709148260429" static="0" type="number">0</variable>
+        <comment>on start of layout onlocking first level</comment>
         <event-block sid="514507632017117">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="9843879460831499" type="System" />

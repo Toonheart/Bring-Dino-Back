@@ -216,6 +216,7 @@
         </event-group>
         <event-group description="" sid="4776928004339621" title="Music">
             <sub-events>
+                <comment>Toggling SoundStatus on touched music menu</comment>
                 <event-block sid="2253146355843664">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2084512552390603" type="Touch">
@@ -272,6 +273,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Play if status set</comment>
                 <event-block sid="7853954343858881">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="3769648741554158" type="System">
@@ -291,6 +293,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>mute if music status is Reset</comment>
                 <event-block sid="8623899730429481">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="2891248815132063" type="System">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemies</name>
     <events>
+        <comment>Continue moving Enimie as long as overlaping Tile family</comment>
         <event-block any="1" sid="5244509226552113">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1448685497751042" type="AlienLR">
@@ -29,6 +30,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Change direction to -31.18 on overlapping Right Arrow</comment>
         <event-block sid="5258661364759261">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="9355622641484525" type="AlienLR">
@@ -42,6 +44,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Continue moving Enimie as long as overlaping Tile family</comment>
         <event-block any="1" sid="8585890743859143">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6532579794337004" type="AlienUD">
@@ -55,6 +58,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Change direction to 31.18 on overlapping Right Arrow</comment>
         <event-block sid="1330497931881687">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="2618297660460749" type="AlienUD">
@@ -68,6 +72,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Change direction to 211.82 on overlapping Left Arrow</comment>
         <event-block sid="8304855543954278">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1706934267725073" type="AlienUD">

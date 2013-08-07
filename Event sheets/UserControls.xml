@@ -95,6 +95,7 @@
         </event-group>
         <event-group description="" sid="3052419455236889" title="Navigation using on touch rectangle">
             <sub-events>
+                <comment>Set movAngl of dino according to the Qoud of touching,discard if touched on Dino</comment>
                 <event-block sid="6362794153418371">
                     <conditions>
                         <condition id="1" name="On any touch end" sid="6718320858999144" type="Touch" />
@@ -212,6 +213,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>If time grater than a constant move dino at MoveAngle</comment>
         <event-block sid="4033276884454023">
             <conditions>
                 <condition id="0" name="On any touch start" sid="41199647947994" type="Touch" />
@@ -222,6 +224,42 @@
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="6054873025585486">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="8234579653403228" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="1312880241821637" type="Touch">
+                            <param id="0" name="Object">Nv_Rectangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3129402180609706" type="System">
+                            <param id="0" name="Variable">TouchTime</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4656001734851154">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3464148590761294" type="System">
+                            <param id="0" name="Variable">TouchTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="9825740552950602" type="Touch">
+                            <param id="0" name="Object">Nv_Rectangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4605710070313467" type="Dino">
+                            <param id="0" name="Angle">Dino.MovAngle</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block disabled="1" sid="4748913526399116">
             <conditions>
@@ -238,40 +276,6 @@
                     <actions />
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="6054873025585486">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="8234579653403228" type="System">
-                    <param id="0" name="Interval (seconds)">0.3</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="1312880241821637" type="Touch">
-                    <param id="0" name="Object">Nv_Rectangle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="3129402180609706" type="System">
-                    <param id="0" name="Variable">TouchTime</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4656001734851154">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="3464148590761294" type="System">
-                    <param id="0" name="Variable">TouchTime</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="9825740552950602" type="Touch">
-                    <param id="0" name="Object">Nv_Rectangle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-23" name="Move at angle" sid="4605710070313467" type="Dino">
-                    <param id="0" name="Angle">Dino.MovAngle</param>
-                    <param id="1" name="Distance">10</param>
-                </action>
-            </actions>
         </event-block>
     </events>
 </c2eventsheet>
