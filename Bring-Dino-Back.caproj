@@ -10,9 +10,10 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -22,9 +23,9 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -167,9 +168,6 @@
         </object-type>
         <object-type name="Touch" sid="5732290920144721">
             <plugin id="Touch" />
-        </object-type>
-        <object-type name="Debug" sid="6634968710867077">
-            <plugin id="Text" />
         </object-type>
         <object-type name="HealthIndicator" sid="5226528074924198">
             <plugin id="Sprite" />
@@ -1657,8 +1655,8 @@
         <object-type name="SoundIcon" sid="2640190958418921">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Anchor" sid="1810272359826433">
-                    <behavior id="Anchor" />
+                <behavior-type name="Pin" sid="6564340233250587">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -1695,8 +1693,8 @@
         <object-type name="MusicIcon" sid="7038942484597617">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Anchor" sid="898116006786596">
-                    <behavior id="Anchor" />
+                <behavior-type name="Pin" sid="2611239037803114">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -1769,6 +1767,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1402781064493461" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Status" x="0.846369" y="0.426471" />
                         <collision-poly>
                             <point x="0.0223464" y="0.0588235" />
                             <point x="0.977654" y="0.0588235" />
@@ -1847,14 +1846,6 @@
                             <point x="0.0177665" y="0.5" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="9945481864312109">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2771001353886203" speed="5">
-                    <frame duration="1" hotspotX="0.502283" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2026,23 +2017,80 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="4099168206541381">
+        <object-type name="MovingWall" sid="3701802703186376">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MovAngle" sid="6313674447257421" type="number" />
+            </instance-variables>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7982834437144511" speed="5">
-                    <frame duration="1" hotspotX="0.501441" hotspotY="0.503597">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5704010370051985" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
                         <collision-poly>
-                            <point x="0.0201729" y="0.0503597" />
-                            <point x="0.498559" y="0.028777" />
-                            <point x="0.979827" y="0.0503597" />
-                            <point x="0.979827" y="0.496403" />
-                            <point x="0.925072" y="0.81295" />
-                            <point x="0.074928" y="0.81295" />
-                            <point x="0.0201729" y="0.496403" />
+                            <point x="0.5" y="0.0133333" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.015625" y="0.493333" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Cup" sid="3253042677816011">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9723871842811677" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.134921" y="0.113333" />
+                            <point x="0.5" y="0.07" />
+                            <point x="0.865079" y="0.113333" />
+                            <point x="0.876984" y="0.5" />
+                            <point x="0.865079" y="0.886667" />
+                            <point x="0.5" y="0.933333" />
+                            <point x="0.134921" y="0.886667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CupAward" sid="8707170551866847">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Status" sid="6807836851303442" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3024321021165424" speed="0">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.890625" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.109375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Awarded" pingpong="0" repeatcount="1" repeatto="0" sid="5953141525958575" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.890625" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.109375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="9494199390371287">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families>
@@ -2052,9 +2100,11 @@
                 <member>GoToMainMenu</member>
                 <member>Levels</member>
                 <member>Music</member>
+                <member>MusicMain</member>
                 <member>Restart</member>
                 <member>ResumeMenu</member>
                 <member>Sound</member>
+                <member>SoundMain</member>
             </members>
         </family>
         <family name="MainMenus" plugin-id="Sprite" sid="7558143241004642">
@@ -2084,7 +2134,7 @@
         <layout>Awards.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>MainEvents.xml</event-sheet>
+        <event-sheet>World1Stage1.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>DinoHealthOld.xml</event-sheet>
         <event-sheet>Patroling.xml</event-sheet>
@@ -2092,7 +2142,7 @@
         <event-sheet>Collisions.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Pause.xml</event-sheet>
-        <event-sheet>World1Stage1Events.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
         <event-sheet>Obstacles.xml</event-sheet>
         <event-sheet>TelePorting.xml</event-sheet>
         <event-sheet>DynamicWalls.xml</event-sheet>
@@ -2104,6 +2154,7 @@
         <event-sheet>Credits_Events.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>Awards_Events.xml</event-sheet>
+        <event-sheet>MovingWalls.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="305">

@@ -3,143 +3,40 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Awards_Events</name>
     <events>
-        <variable constant="0" name="CurrentLevel" sid="9161709148260429" static="0" type="number">0</variable>
-        <comment>on start of layout onlocking first level</comment>
-        <event-block sid="514507632017117">
+        <include>Pause</include>
+        <event-block sid="1519031830477718">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="9843879460831499" type="System" />
+                <condition id="-2" name="On start of layout" sid="4542769874565598" type="System" />
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="2293610448334395">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="5160569174048477" type="LevelsArray">
-                            <param id="0" name="X">CurrentLevel</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Set at X" sid="8595192267253734" type="LevelsArray">
-                            <param id="0" name="X">CurrentLevel</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
-        <event-block sid="8526825576803538">
+        <event-block sid="2110419498246064">
             <conditions>
-                <condition id="-11" name="For Each" sid="4113868166294588" type="System">
-                    <param id="0" name="Object">levelsButton</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="4793126688819841">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="4213909738954972" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="3105169704841527" type="levelsButton">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7217244297274105">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="1089143635867661" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="5724550019909469" type="levelsButton">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9009309286530684">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="3534384464665183" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="1902648285641445" type="levelsButton">
-                            <param id="0" name="Frame number">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2482543985753131">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="6714914438027903" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3031388584175072" type="levelsButton">
-                            <param id="0" name="Animation">&quot;1star&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3695095972941628">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="8176963733799357" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1121926246752007" type="levelsButton">
-                            <param id="0" name="Animation">&quot;2star&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3222569163689727">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="3185792764365691" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9692884051205189" type="levelsButton">
-                            <param id="0" name="Animation">&quot;3star&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>Go to levels on clicked Levels if it was unlocked,but here we have only one level</comment>
-        <event-block sid="332107057396734">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4037256064163854" type="Touch">
-                    <param id="0" name="Object">levelsButton</param>
-                </condition>
-                <condition id="0" name="Compare at X" sid="4066333558366927" type="LevelsArray">
-                    <param id="0" name="X">levelsButton.level</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="0" name="On collision with another object" sid="5350934025505244" type="Dino">
+                    <param id="0" name="Object">Cup</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="8069251487496032" type="System">
-                    <param id="0" name="Layout">World1Stage1</param>
+                <action id="-9" name="Destroy" sid="3112058945485791" type="Cup" />
+                <action id="0" name="Add key" sid="2049340172440335" type="Dictionary">
+                    <param id="0" name="Key">&quot;Cup&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6981085565093642">
+            <conditions>
+                <condition id="3" name="Has key" sid="679138956476273" type="Dictionary">
+                    <param id="0" name="Key">&quot;Cup&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="9735528737493916" type="CupAward">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="4" name="Set animation" sid="3319369700541089" type="CupAward">
+                    <param id="0" name="Animation">&quot;Awarded&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

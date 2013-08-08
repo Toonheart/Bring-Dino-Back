@@ -7,6 +7,21 @@
         <include>MainMenu_Events</include>
         <variable comment="1=play,0=Mute" constant="0" name="MusicStatus" sid="5407718608639652" static="0" type="number">1</variable>
         <variable comment="1=play,0=Mute" constant="0" name="SoundStatus" sid="6836939138129452" static="0" type="number">1</variable>
+        <event-block sid="5471087840995911">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="942997122683741" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="633942398982542" type="SoundIcon">
+                    <param id="0" name="Pin to">SoundMain</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6866480021638362" type="MusicIcon">
+                    <param id="0" name="Pin to">MusicMain</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Pause the game and show menu screen</comment>
         <event-block sid="3709908675197067">
             <conditions>
@@ -29,11 +44,11 @@
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;Restart&quot;</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="109029121806677" type="Sound">
+                <action id="-4" name="Set position to another object" sid="109029121806677" type="SoundMain">
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;Sound&quot;</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="2157418774328341" type="Music">
+                <action id="-4" name="Set position to another object" sid="2157418774328341" type="MusicMain">
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;Music&quot;</param>
                 </action>

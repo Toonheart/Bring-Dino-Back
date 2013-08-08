@@ -7,11 +7,7 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="6085495527900436" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="1010952953490532" type="Debug">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

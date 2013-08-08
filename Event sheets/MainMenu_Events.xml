@@ -45,36 +45,72 @@
                 <condition id="3" name="On touched object" sid="8625059797759983" type="Touch">
                     <param id="0" name="Object">SoundMain</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="2225215300974168" type="System">
-                    <param id="0" name="Variable">SoundStatus</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="6195500816510705" type="System">
-                    <param id="0" name="Variable">SoundStatus</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="4347196965959204">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2225215300974168" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6195500816510705" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8699869535075809">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5622990816166432" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2855383004524697" type="System">
+                            <param id="0" name="Variable">SoundStatus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="5794128126465812">
             <conditions>
                 <condition id="3" name="On touched object" sid="1293134111145462" type="Touch">
                     <param id="0" name="Object">MusicMain</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="5039414651292229" type="System">
-                    <param id="0" name="Variable">MusicStatus</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7025106568409321" type="System">
-                    <param id="0" name="Variable">MusicStatus</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1421622781497176">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5039414651292229" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7025106568409321" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2213133921466609">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7730329229594243" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4358996638007117" type="System">
+                            <param id="0" name="Variable">MusicStatus</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block disabled="1" sid="4044020992912352">
             <conditions>

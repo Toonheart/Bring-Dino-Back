@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MovingWalls</name>
+    <events>
+        <event-block sid="7835213194442714">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7208608295789667" type="MovingWall">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4093285570476479" type="MovingWall">
+                    <param id="0" name="Instance variable">MovAngle</param>
+                    <param id="1" name="Value">211.82</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4911694412168037">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="142941072855352" type="MovingWall">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4979205655622219" type="MovingWall">
+                    <param id="0" name="Instance variable">MovAngle</param>
+                    <param id="1" name="Value">31.82</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4665436999827048">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6575779158663092" type="MovingWall">
+                    <param id="0" name="Object">Tiles</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="1854309363713374" type="MovingWall" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="7736686659206318" type="MovingWall">
+                    <param id="0" name="Angle">MovingWall.MovAngle</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>If moving wall is on screen Continuosly move at MoveAngle</comment>
+    </events>
+</c2eventsheet>

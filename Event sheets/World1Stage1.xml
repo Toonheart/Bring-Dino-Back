@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>MainEvents</name>
+    <name>World1Stage1</name>
     <events>
+        <include>Awards_Events</include>
         <include>IsoToggling</include>
         <include>UserControls</include>
         <include>DinoHealth</include>
@@ -13,6 +14,11 @@
         <include>PowerUps</include>
         <include>Collisions</include>
         <include>Collectibles</include>
+        <include>Patroling</include>
+        <include>MovingWalls</include>
+        <include>Enemies</include>
+        <include>UserControls</include>
+        <include>Obstacles</include>
         <include>Patroling</include>
         <include>Debug</include>
     </events>
