@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>AllGlobalVariables</name>
+    <events>
+        <variable comment="Total number of Levels" constant="0" name="TotalLevels" sid="2515132602038471" static="0" type="number">3</variable>
+        <variable comment="Level num of current or last level" constant="0" name="CurrentLevel" sid="1890026377716185" static="0" type="number">0</variable>
+        <variable comment="The latest level location to be discovered" constant="0" name="HighestUnLockedLevel" sid="2273534289292871" static="0" type="number">0</variable>
+        <variable comment="1=play,0=Mute" constant="0" name="MusicStatus" sid="4349165763271056" static="0" type="number">1</variable>
+        <variable comment="1=play,0=Mute" constant="0" name="SoundStatus" sid="2090110125828418" static="0" type="number">1</variable>
+    </events>
+</c2eventsheet>

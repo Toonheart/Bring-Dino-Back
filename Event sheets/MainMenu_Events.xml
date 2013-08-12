@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu_Events</name>
     <events>
-        <include>Levels_Events</include>
+        <include>LevelsEvents_Old</include>
         <include>Debug</include>
         <include>Pause</include>
         <event-block sid="4690477362741401">

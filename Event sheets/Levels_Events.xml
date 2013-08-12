@@ -3,227 +3,156 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Levels_Events</name>
     <events>
-        <variable constant="0" name="CurrentLevel" sid="9161709148260429" static="0" type="number">0</variable>
-        <include>Awards_Events</include>
-        <variable constant="0" name="Stars" sid="7880401295696795" static="0" type="number">0</variable>
-        <event-block sid="7152379899683637">
+        <event-block sid="6182989821206841">
             <conditions>
-                <condition id="3" name="On touched object" sid="6978032393275163" type="Touch">
-                    <param id="0" name="Object">GoToMainMenu</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="2208842711369031" type="System" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="6660258082304318" type="System">
-                    <param id="0" name="Layout">MainMenu</param>
+                <action id="0" name="Set text" sid="4385199803320592" type="Debug">
+                    <param id="0" name="Text">&quot;HUL:&quot;&amp;HighestUnLockedLevel</param>
                 </action>
-                <action id="1" name="Set pause state" sid="2165616352138732" type="Pause">
-                    <param id="0" name="State">1</param>
+                <action id="1" name="Append text" sid="489677023243898" type="Debug">
+                    <param id="0" name="Text">&quot;CurLevel:&quot;&amp;CurrentLevel</param>
                 </action>
             </actions>
         </event-block>
-        <comment>on start of layout onlocking first level</comment>
-        <event-block sid="9729978391003405">
+        <comment>On start of layout set LatestKnownLewel to SaveCompletedLevel from webstorage</comment>
+        <event-block sid="6135501991645985">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="7372487636652193" type="System" />
+                <condition id="-2" name="On start of layout" sid="5140456130946976" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="1974754524804584" type="System">
+                    <param id="0" name="Variable">HighestUnLockedLevel</param>
+                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;SavecomlpetedLevel&quot;))+1</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="3651635417738545">
+                <comment>Set default global variables if playing for first time.</comment>
+                <event-block sid="8734100661416313">
                     <conditions>
-                        <condition id="0" name="Compare at X" sid="6671304902427388" type="LevelsArray">
-                            <param id="0" name="X">CurrentLevel</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="3" inverted="1" name="Local key exists" sid="1659412047183497" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveCompletedLevel&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Set at X" sid="7794038289315025" type="LevelsArray">
-                            <param id="0" name="X">CurrentLevel</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
+                        <action id="-21" name="Reset global variables" sid="9261567218866716" type="System" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>Go to levels on clicked Levels if it was unlocked,but here we have only one level</comment>
-        <event-block sid="8674287531745356">
+        <comment>Show the unlocked levels with opacity=100</comment>
+        <event-block sid="3698757703736165">
             <conditions>
-                <condition id="3" name="On touched object" sid="6260228660311518" type="Touch">
-                    <param id="0" name="Object">levelsButton</param>
+                <condition id="-2" name="On start of layout" sid="8091706862360805" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5289176653342466">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5861100951976292" type="System">
+                            <param id="0" name="Object">LevelsButton</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="777898479028915">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9583323030526059" type="LevelsButton">
+                                    <param id="0" name="Instance variable">LevelNumber</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">HighestUnLockedLevel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="6070299583334179" type="LevelsButton">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>On touched Level which is unlocked go to the associated level and set CurrentLevel to LatestKnownLevel</comment>
+        <event-block sid="5218897266534125">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9860818357947661" type="Touch">
+                    <param id="0" name="Object">LevelsButton</param>
                 </condition>
-                <condition id="0" name="Compare at X" sid="3023340496577311" type="LevelsArray">
-                    <param id="0" name="X">levelsButton.level</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="-8" name="Compare two values" sid="8923644450945477" type="System">
+                    <param id="0" name="First value">LevelsButton.Opacity</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">100</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="5301874271656396" type="System">
-                    <param id="0" name="Layout">World1Stage1</param>
+                <action id="-9" name="Set value" sid="8727065534057284" type="System">
+                    <param id="0" name="Variable">CurrentLevel</param>
+                    <param id="1" name="Value">LevelsButton.LevelNumber</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="6100354587298398" type="System">
+                    <param id="0" name="Layout">LevelsButton.MyLayout</param>
                 </action>
             </actions>
         </event-block>
-        <comment>Add collected stars </comment>
-        <event-block sid="2829156932476635">
+        <event-block sid="8298186249514316">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="2730982750530289" type="Dino">
-                    <param id="0" name="Object">star</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="805477039073657" type="star" />
-                <action id="-10" name="Add to" sid="4354349369149568" type="System">
-                    <param id="0" name="Variable">Stars</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>its to show stars</comment>
-        <comment>set value to 2 (means level complete. 1-first frame,2-second frame look at the logic in  in levels events,first star starts after value 2,i.e3) + number of stars IF it is greater than the previous value</comment>
-        <comment>and this value is assigned if the value is grater than current value thats why used max()</comment>
-        <comment>LevelsArray.At(currentLevel) is the current active value at level</comment>
-        <event-block sid="1058191777841853">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="8472757449665929" type="Dino">
+                <condition id="0" name="On collision with another object" sid="4964548357042767" type="Dino">
                     <param id="0" name="Object">Win</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="2" name="Set at X" sid="1158585842833477" type="LevelsArray">
-                    <param id="0" name="X">CurrentLevel</param>
-                    <param id="1" name="Value">max(2 + Stars, LevelsArray.At(currentLevel))</param>
-                </action>
-                <action id="-10" name="Add to" sid="4980429808934645" type="System">
-                    <param id="0" name="Variable">CurrentLevel</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="6252644198916931" type="System">
-                    <param id="0" name="Layout">Awards</param>
-                </action>
-                <action id="-9" name="Set value" sid="5713132641594097" type="System">
-                    <param id="0" name="Variable">Stars</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2106269899712108">
-            <conditions>
-                <condition id="-11" name="For Each" sid="2002291538113357" type="System">
-                    <param id="0" name="Object">levelsButton</param>
-                </condition>
-            </conditions>
             <actions />
             <sub-events>
-                <event-block sid="7872892894811608">
+                <event-block sid="7916678249659152">
                     <conditions>
-                        <condition id="0" name="Compare at X" sid="9882490605500493" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
+                        <condition id="-8" name="Compare two values" sid="7007938315453203" type="System">
+                            <param id="0" name="First value">CurrentLevel</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Second value">HighestUnLockedLevel</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="2407512073713547" type="levelsButton">
-                            <param id="0" name="Frame number">1</param>
+                        <action id="-10" name="Add to" sid="2091181754063698" type="System">
+                            <param id="0" name="Variable">HighestUnLockedLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="3297193103041815" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveCompletedLevel&quot;</param>
+                            <param id="1" name="Value">CurrentLevel</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9792500685077049" type="System">
+                            <param id="0" name="Layout">LevelsScreen</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5187744785196772">
+                <event-block sid="7845257730004271">
                     <conditions>
-                        <condition id="0" name="Compare at X" sid="5460334121393702" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
+                        <condition id="-22" name="Else" sid="3280384908032599" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="2245844878193561" type="levelsButton">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2717548184944166">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="7931511136979436" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="7395121697205203" type="levelsButton">
-                            <param id="0" name="Frame number">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7589906805565669">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="518270755448918" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2823483689177107" type="levelsButton">
-                            <param id="0" name="Animation">&quot;1star&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="409651696737531">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="4663977669529925" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6168797370590396" type="levelsButton">
-                            <param id="0" name="Animation">&quot;2star&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6240305502458036">
-                    <conditions>
-                        <condition id="0" name="Compare at X" sid="5599705939327435" type="LevelsArray">
-                            <param id="0" name="X">levelsButton.level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6146727753929723" type="levelsButton">
-                            <param id="0" name="Animation">&quot;3star&quot;</param>
-                            <param id="1" name="From">1</param>
+                        <action id="-2" name="Go to layout" sid="9541815479807866" type="System">
+                            <param id="0" name="Layout">LevelsScreen</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="7242255541228201">
+        <event-block sid="9096670520237383">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="3800469663466333" type="Dino">
-                    <param id="0" name="Object">Complete</param>
+                <condition id="-8" name="Compare two values" sid="8927530046003619" type="System">
+                    <param id="0" name="First value">HighestUnLockedLevel</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">TotalLevels</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="5756608983192535" type="System">
-                    <param id="0" name="Layout">Awards</param>
+                <action id="-9" name="Set value" sid="3777926029585482" type="System">
+                    <param id="0" name="Variable">HighestUnLockedLevel</param>
+                    <param id="1" name="Value">TotalLevels</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="6203602191632867">
-            <conditions>
-                <condition id="3" name="On touched object" sid="1821949262612895" type="Touch">
-                    <param id="0" name="Object">levelsButton</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="1" name="Set pause state" sid="1307846997860622" type="Pause">
-                    <param id="0" name="State">1</param>
+                <action id="-16" name="Set opacity" sid="6490922077014722" type="LevelsButton">
+                    <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>

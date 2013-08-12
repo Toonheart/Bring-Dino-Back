@@ -10,25 +10,26 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -1849,7 +1850,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="levelsButton" sid="3084422960346872">
+        <object-type name="levelsButtonOld" sid="3084422960346872">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="level" sid="3161935351202755" type="number" />
@@ -2092,6 +2093,60 @@
         <object-type global="1" name="Dictionary" sid="9494199390371287">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="LevelsButton" sid="3408139303171269">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LevelNumber" sid="5294371832045427" type="number" />
+                <instance-variable name="MyLayout" sid="9774817280818253" type="string" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1137418365189651" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.266667" y="0.266667" />
+                            <point x="0.5" y="0.26" />
+                            <point x="0.696667" y="0.303333" />
+                            <point x="0.976667" y="0.5" />
+                            <point x="0.726667" y="0.726667" />
+                            <point x="0.5" y="0.746667" />
+                            <point x="0.306667" y="0.693333" />
+                            <point x="0.0233333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502825">
+                        <collision-poly>
+                            <point x="0.334507" y="0.536723" />
+                            <point x="0.5" y="0.163842" />
+                            <point x="0.742958" y="0.412429" />
+                            <point x="0.700704" y="0.497175" />
+                            <point x="0.697183" y="0.514124" />
+                            <point x="0.5" y="0.892655" />
+                            <point x="0.355634" y="0.429379" />
+                            <point x="0.334507" y="0.497175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501992" hotspotY="0.502488">
+                        <collision-poly>
+                            <point x="0.310757" y="0.38806" />
+                            <point x="0.498008" y="0.0945274" />
+                            <point x="0.824701" y="0.218905" />
+                            <point x="0.860558" y="0.497512" />
+                            <point x="0.737052" y="0.671642" />
+                            <point x="0.498008" y="0.920398" />
+                            <point x="0.119522" y="0.850746" />
+                            <point x="0.270916" y="0.497512" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501901" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WebStorage" sid="9288833291064519">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Debug" sid="808679801476654">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PauseMenus" plugin-id="Sprite" sid="3772124957170178">
@@ -2129,7 +2184,7 @@
         <layout>World1Stage1.xml</layout>
         <layout>GraphicStore.xml</layout>
         <layout>MainMenu.xml</layout>
-        <layout>Levels.xml</layout>
+        <layout>LevelsScreen.xml</layout>
         <layout>Credits.xml</layout>
         <layout>Awards.xml</layout>
     </layout-folder>
@@ -2150,11 +2205,13 @@
         <event-sheet>UserControls.xml</event-sheet>
         <event-sheet>IsoToggling.xml</event-sheet>
         <event-sheet>MainMenu_Events.xml</event-sheet>
-        <event-sheet>Levels_Events.xml</event-sheet>
+        <event-sheet>LevelsEvents_Old.xml</event-sheet>
         <event-sheet>Credits_Events.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>Awards_Events.xml</event-sheet>
         <event-sheet>MovingWalls.xml</event-sheet>
+        <event-sheet>Levels_Events.xml</event-sheet>
+        <event-sheet>AllGlobalVariables.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="305">
@@ -2179,6 +2236,7 @@
             </properties>
         </global-instance>
         <global-instance type="Mouse" uid="403" />
+        <global-instance type="WebStorage" uid="432" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

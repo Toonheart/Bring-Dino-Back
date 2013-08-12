@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Credits_Events</name>
     <events>
-        <include>Levels_Events</include>
+        <include>LevelsEvents_Old</include>
         <include>MainMenu_Events</include>
     </events>
 </c2eventsheet>

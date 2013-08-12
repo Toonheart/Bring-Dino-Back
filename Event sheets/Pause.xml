@@ -3,10 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Pause</name>
     <events>
-        <include>Levels_Events</include>
+        <include>LevelsEvents_Old</include>
         <include>MainMenu_Events</include>
-        <variable comment="1=play,0=Mute" constant="0" name="MusicStatus" sid="5407718608639652" static="0" type="number">1</variable>
-        <variable comment="1=play,0=Mute" constant="0" name="SoundStatus" sid="6836939138129452" static="0" type="number">1</variable>
         <event-block sid="5471087840995911">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="942997122683741" type="System" />
@@ -338,7 +336,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="5772108327600898" type="System">
-                    <param id="0" name="Layout">Levels</param>
+                    <param id="0" name="Layout">LevelsScreen</param>
                 </action>
                 <action id="1" name="Set pause state" sid="4274165719024234" type="Pause">
                     <param id="0" name="State">1</param>
