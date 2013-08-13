@@ -73,5 +73,41 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="7368613087901938" title="Brakable Objects">
+            <sub-events>
+                <comment>Brake Aquarium and play blast animation</comment>
+                <event-block sid="5202290591450823">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="87732144943919" type="Dino">
+                            <param id="0" name="Object">Aquarium</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="2810686301054507" type="Aquarium">
+                            <param id="0" name="Object">Explode</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7382162716722045" type="Aquarium" />
+                    </actions>
+                </event-block>
+                <comment>Brake pot and play Blast animation</comment>
+                <event-block sid="8527708410251119">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7199232279312239" type="Dino">
+                            <param id="0" name="Object">Pot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="640709130484085" type="Pot">
+                            <param id="0" name="Object">Explode</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3359552680327049" type="Pot" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

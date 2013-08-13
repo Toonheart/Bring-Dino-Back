@@ -351,10 +351,22 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="993877037205917" type="System">
-                    <param id="0" name="Layout">Awards</param>
+                    <param id="0" name="Layout">AwardsScreen</param>
                 </action>
-                <action id="1" name="Set pause state" sid="3903225808797148" type="Pause">
+                <action id="1" name="Set pause state" sid="7283849470481898" type="Pause">
                     <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8541437311552554">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9811489078314065" type="Touch">
+                    <param id="0" name="Object">GoToMainMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2889372920559414" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
                 </action>
             </actions>
         </event-block>

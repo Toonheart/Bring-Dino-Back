@@ -3,20 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Levels_Events</name>
     <events>
-        <event-block sid="6182989821206841">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="2208842711369031" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="4385199803320592" type="Debug">
-                    <param id="0" name="Text">&quot;HUL:&quot;&amp;HighestUnLockedLevel</param>
-                </action>
-                <action id="1" name="Append text" sid="489677023243898" type="Debug">
-                    <param id="0" name="Text">&quot;CurLevel:&quot;&amp;CurrentLevel</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>On start of layout set LatestKnownLewel to SaveCompletedLevel from webstorage</comment>
+        <comment>On start of layout set HighestUnlockedLevel to SaveCompletedLevel from webstorage</comment>
         <event-block sid="6135501991645985">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5140456130946976" type="System" />
@@ -24,7 +11,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="1974754524804584" type="System">
                     <param id="0" name="Variable">HighestUnLockedLevel</param>
-                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;SavecomlpetedLevel&quot;))+1</param>
+                    <param id="1" name="Value">int(WebStorage.LocalValue(&quot;SaveCompletedLevel&quot;))+1</param>
                 </action>
             </actions>
             <sub-events>
@@ -74,7 +61,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>On touched Level which is unlocked go to the associated level and set CurrentLevel to LatestKnownLevel</comment>
+        <comment>On touched Level which is unlocked go to the associated level and set CurrentLevel to corresponding level num</comment>
         <event-block sid="5218897266534125">
             <conditions>
                 <condition id="3" name="On touched object" sid="9860818357947661" type="Touch">
@@ -96,6 +83,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>On destination reached if the current level is Highest Unlocked Level Add 1 to HighestUnlockedLevel(i.e Unlocking the next Level) and update the completed levevls at webstorage</comment>
         <event-block sid="8298186249514316">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4964548357042767" type="Dino">
@@ -126,18 +114,24 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7845257730004271">
+                <comment>If player is playing the levels which he already completed don&apos;t update the Highest unlocked level but goto next levevl on destination reached.</comment>
+                <event-block sid="6181254362808201">
                     <conditions>
-                        <condition id="-22" name="Else" sid="3280384908032599" type="System" />
+                        <condition id="-22" name="Else" sid="8383245435106758" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="9541815479807866" type="System">
-                            <param id="0" name="Layout">LevelsScreen</param>
+                        <action id="-25" name="Go to layout (by name)" sid="4832383351736134" type="System">
+                            <param id="0" name="Layout">&quot;Stage&quot;&amp; (CurrentLevel+1)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8552915926500117" type="System">
+                            <param id="0" name="Variable">CurrentLevel</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>If Highest unlocked levels reached to total levels unlock all the levevels</comment>
         <event-block sid="9096670520237383">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="8927530046003619" type="System">

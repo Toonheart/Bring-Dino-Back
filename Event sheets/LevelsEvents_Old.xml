@@ -121,7 +121,7 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="6252644198916931" type="System">
-                    <param id="0" name="Layout">Awards</param>
+                    <param id="0" name="Layout">AwardsScreen</param>
                 </action>
                 <action id="-9" name="Set value" sid="5713132641594097" type="System">
                     <param id="0" name="Variable">Stars</param>
@@ -234,7 +234,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="5756608983192535" type="System">
-                    <param id="0" name="Layout">Awards</param>
+                    <param id="0" name="Layout">AwardsScreen</param>
                 </action>
             </actions>
         </event-block>

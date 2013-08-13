@@ -58,7 +58,7 @@
                     </properties>
                     <instance-variables>
                         <LevelNumber>0</LevelNumber>
-                        <MyLayout>World1Stage1</MyLayout>
+                        <MyLayout>stage0</MyLayout>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -84,7 +84,7 @@
                     </properties>
                     <instance-variables>
                         <LevelNumber>1</LevelNumber>
-                        <MyLayout>World1Stage1</MyLayout>
+                        <MyLayout>stage1</MyLayout>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -110,7 +110,7 @@
                     </properties>
                     <instance-variables>
                         <LevelNumber>2</LevelNumber>
-                        <MyLayout>World1Stage1</MyLayout>
+                        <MyLayout>stage2</MyLayout>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -136,7 +136,7 @@
                     </properties>
                     <instance-variables>
                         <LevelNumber>3</LevelNumber>
-                        <MyLayout>World1Stage1</MyLayout>
+                        <MyLayout>stage3</MyLayout>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

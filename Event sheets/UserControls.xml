@@ -6,7 +6,7 @@
         <include>Enemies</include>
         <include>MovingWalls</include>
         <variable constant="0" name="TouchTime" sid="2257544369564688" static="0" type="number">0</variable>
-        <event-group description="" disabled="1" sid="5043631264520298" title="Navigation Controlls">
+        <event-group description="" sid="5043631264520298" title="Navigation Controlls">
             <sub-events>
                 <comment>Left </comment>
                 <event-block any="1" sid="3627740116699216">
@@ -252,9 +252,17 @@
             <actions>
                 <action id="-23" name="Move at angle" sid="2381711701944829" type="Dino">
                     <param id="0" name="Angle">Dino.MovAngle</param>
-                    <param id="1" name="Distance">10</param>
+                    <param id="1" name="Distance">20</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="6669140016646393">
+            <conditions>
+                <condition id="11" name="On Nth touch end" sid="6894573613505729" type="Touch">
+                    <param id="0" name="Touch number">2</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

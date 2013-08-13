@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Maintainance_Sheet</name>
+    <events>
+        <event-block disabled="1" sid="3251778526413302">
+            <conditions>
+                <condition id="4" name="On finished" sid="5006576027323021" type="Explode">
+                    <param id="0" name="Animation">&quot;Blast&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8773557337263592" type="Explode" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

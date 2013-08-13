@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Stage3_Events</name>
+    <events>
+        <include>Debug</include>
+        <include>UserControls</include>
+        <include>Levels_Events</include>
+    </events>
+</c2eventsheet>
