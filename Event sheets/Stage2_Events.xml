@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Stage2_Events</name>
     <events>
+        <include>Debug</include>
         <include>UserControls</include>
         <include>Levels_Events</include>
-        <include>Debug</include>
     </events>
 </c2eventsheet>

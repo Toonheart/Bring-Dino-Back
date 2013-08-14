@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>oldStage0_Events</name>
+    <events>
+        <include>UserControls</include>
+        <include>Levels_Events</include>
+        <include>Debug</include>
+        <event-block sid="4710636884062473">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4719734753452934" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6387408752981669" type="Dino">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1006791500987692">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="7232821925946623" type="Egg">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="6256848225447473" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3039804009074349" type="Dino">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4895002074569729">
+            <conditions>
+                <condition id="4" name="On finished" sid="3924633997745463" type="Egg">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4329564389896068" type="Egg" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

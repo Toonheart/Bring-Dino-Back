@@ -2,7 +2,7 @@
 <c2layout>
     <name>Stage2</name>
     <sid>8628696852023445</sid>
-    <event-sheet>Stage3_Events</event-sheet>
+    <event-sheet>Stage2_Events</event-sheet>
     <size>
         <width>1280</width>
         <height>800</height>

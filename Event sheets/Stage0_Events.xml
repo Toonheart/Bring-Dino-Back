@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Stage0_Events</name>
+    <events>
+        <include>World1Stage1</include>
+        <comment>Place Dino position to Egg because Screen need to show the centre of Layout but Keep it invissible</comment>
+        <comment>When Egg is broken set Dino vissible</comment>
+        <event-block sid="9962859755867703">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="3018651516852745" type="Egg">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="2965656659882625" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9109654710496988" type="Egg">
+                    <param id="0" name="Object">Dino</param>
+                    <param id="1" name="Layer">&quot;IsoFloorTop&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Destroy the egg  after finishing the aimation</comment>
+        <event-block sid="5319457878219095">
+            <conditions>
+                <condition id="4" name="On finished" sid="8050897058522582" type="Egg">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5854159575921648" type="Egg" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
