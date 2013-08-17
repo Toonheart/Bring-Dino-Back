@@ -13,6 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>World1Stage1</layout>
         <event-sheet active="1">FoodSystem</event-sheet>
         <event-sheet>PowerUps</event-sheet>
+        <event-sheet>World1Stage1</event-sheet>
+        <event-sheet>Debug</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

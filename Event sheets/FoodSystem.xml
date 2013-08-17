@@ -3,6 +3,24 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FoodSystem</name>
     <events>
+        <event-block sid="5937278009926517">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1065581020341303" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9552405519285135" type="Dino">
+                    <param id="0" name="Instance variable">AngryStatus</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="759482191668077" type="Dino">
+                    <param id="0" name="Instance variable">AngryStatus</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Increase life if  meatloaf was collected</comment>
         <event-block sid="1505504050374297">
             <conditions>
@@ -10,12 +28,7 @@
                     <param id="0" name="Object">Meatloaf</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="8526573452547278" type="Dino">
-                    <param id="0" name="Instance variable">AngryStatus</param>
-                    <param id="1" name="Value">5</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block sid="1112574813138079">
                     <conditions>
@@ -30,6 +43,11 @@
                             <param id="0" name="Instance variable">DinoHealth</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="3096932580812111" type="Meatloaf" />
+                        <action id="-10" name="Set value" sid="675578811048847" type="Dino">
+                            <param id="0" name="Instance variable">AngryStatus</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9391783621341236">
@@ -38,6 +56,10 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="5628549548188413" type="Meatloaf" />
+                        <action id="-10" name="Set value" sid="8526573452547278" type="Dino">
+                            <param id="0" name="Instance variable">AngryStatus</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -48,8 +70,8 @@
                 <condition id="-6" name="Every X seconds" sid="2872462728507601" type="System">
                     <param id="0" name="Interval (seconds)">1.0</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="5110185606908125" type="Dino">
-                    <param id="0" name="Instance variable">DinoHealth</param>
+                <condition id="-7" name="Compare instance variable" sid="9037076503791854" type="Dino">
+                    <param id="0" name="Instance variable">AngryStatus</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -71,16 +93,18 @@
                 <condition id="-4" name="Trigger once while true" sid="461439166046588" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="9320938834293553" type="FoodThoughtBubble">
-                    <param id="0" name="X">Dino.X-(Dino.Width/2)</param>
-                    <param id="1" name="Y">Dino.y-(Dino.Height)</param>
+                <action id="-3" name="Create object" sid="9320938834293553" type="System">
+                    <param id="0" name="Object to create">FoodThoughtBubble</param>
+                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                    <param id="2" name="X">Dino.X-(Dino.Width/2)</param>
+                    <param id="3" name="Y">Dino.Y-(Dino.Height)</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="9001880249557519" type="FoodThoughtBubble">
                     <param id="0" name="Pin to">Dino</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action id="4" name="Set animation" sid="3469745666690617" type="FoodThoughtBubble">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="0" name="Animation">&quot;Angry&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -89,22 +113,23 @@
         <event-block sid="9544794994431323">
             <conditions>
                 <condition id="2" name="Is playing" sid="9949920129262514" type="FoodThoughtBubble">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="0" name="Animation">&quot;Angry&quot;</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="5202335904162831" type="Dino">
                     <param id="0" name="Instance variable">AngryStatus</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">5</param>
+                    <param id="2" name="Value">15</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="3692852668053488" type="FoodThoughtBubble" />
             </actions>
         </event-block>
+        <comment>On finnished Angry animation if fod not collected substract 0.5 health and reset angrystatusValue</comment>
         <event-block sid="9369534483013094">
             <conditions>
                 <condition id="4" name="On finished" sid="3823999441789304" type="FoodThoughtBubble">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="0" name="Animation">&quot;Angry&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -113,33 +138,21 @@
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5122023785116363" type="Dino">
                             <param id="0" name="Instance variable">AngryStatus</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8925925001918879" type="FoodThoughtBubble" />
+                        <action id="-12" name="Subtract from" sid="819932439975844" type="Dino">
+                            <param id="0" name="Instance variable">DinoHealth</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1411674665438253" type="Dino">
+                            <param id="0" name="Instance variable">AngryStatus</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="5153890039833723">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="517167880104983" type="System">
-                                    <param id="0" name="Interval (seconds)">1.0</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="2356692534205329" type="Dino">
-                                    <param id="0" name="Instance variable">AngryStatus</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="4759791956648396" type="Dino">
-                                    <param id="0" name="Instance variable">DinoHealth</param>
-                                    <param id="1" name="Value">0.5</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

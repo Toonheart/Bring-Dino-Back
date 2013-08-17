@@ -12,10 +12,7 @@
                     <param id="0" name="Text">fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot;</param>
                 </action>
                 <action id="1" name="Append text" sid="3351546711690524" type="Debug">
-                    <param id="0" name="Text">&quot;ScrollX,Y&quot;&amp;scrollx</param>
-                </action>
-                <action id="1" name="Append text" sid="7170637341265302" type="Debug">
-                    <param id="0" name="Text">&quot;,&quot;&amp;scrolly</param>
+                    <param id="0" name="Text">&quot;AngryStatus&quot;&amp;Dino.AngryStatus</param>
                 </action>
             </actions>
         </event-block>
