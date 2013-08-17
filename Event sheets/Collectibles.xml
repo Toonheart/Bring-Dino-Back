@@ -3,21 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collectibles</name>
     <events>
-        <comment>Increase life if  meatloaf was collected</comment>
-        <event-block sid="6469772385545555">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1911018428363795" type="Dino">
-                    <param id="0" name="Object">Meatloaf</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="8671441659285239" type="Dino">
-                    <param id="0" name="Instance variable">DinoHealth</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Destroy" sid="3319587775912247" type="Meatloaf" />
-            </actions>
-        </event-block>
         <event-group description="" sid="9592584413186165" title="Alphabates Collection">
             <sub-events>
                 <comment>Collect D and show it on HUD</comment>

@@ -1540,6 +1540,7 @@
                         <IsoOffset>10</IsoOffset>
                         <MovAngle>31.18</MovAngle>
                         <PortalPosition>0</PortalPosition>
+                        <AngryStatus>5</AngryStatus>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo" />

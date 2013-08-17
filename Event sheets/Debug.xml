@@ -7,15 +7,15 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="6085495527900436" type="System" />
             </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="4799246616802332">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="6995118437454122" type="System" />
-            </conditions>
             <actions>
-                <action id="0" name="Set text" sid="931579115124253" type="Debug">
-                    <param id="0" name="Text">WebStorage.LocalValue(&quot;SaveDictionary&quot;)</param>
+                <action id="0" name="Set text" sid="9435725005497935" type="Debug">
+                    <param id="0" name="Text">fps &amp; &quot; FPS (&quot; &amp; renderer &amp; &quot;)&quot;</param>
+                </action>
+                <action id="1" name="Append text" sid="3351546711690524" type="Debug">
+                    <param id="0" name="Text">&quot;ScrollX,Y&quot;&amp;scrollx</param>
+                </action>
+                <action id="1" name="Append text" sid="7170637341265302" type="Debug">
+                    <param id="0" name="Text">&quot;,&quot;&amp;scrolly</param>
                 </action>
             </actions>
         </event-block>

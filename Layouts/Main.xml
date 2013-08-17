@@ -5657,6 +5657,7 @@
                         <IsoOffset>10</IsoOffset>
                         <MovAngle>31.18</MovAngle>
                         <PortalPosition>0</PortalPosition>
+                        <AngryStatus>5</AngryStatus>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo" />
@@ -6461,11 +6462,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>192</y>
+                        <x>64</x>
+                        <y>-128</y>
                         <z>0</z>
                         <width>608</width>
-                        <height>192</height>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

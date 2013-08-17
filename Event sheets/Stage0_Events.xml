@@ -33,5 +33,70 @@
                 <action id="-9" name="Destroy" sid="5854159575921648" type="Egg" />
             </actions>
         </event-block>
+        <comment>Show the tutoriol text board</comment>
+        <event-block sid="3930314137346768">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="8309683602030437" type="Egg" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4993067606022589" type="TextBoardTuto">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set first line of Tutoriol text 20char/0.5 sec</comment>
+        <event-block sid="6299733904098623">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="8606746320568484" type="TextBoardTuto" />
+                <condition id="-6" name="Every X seconds" sid="2401804181967412" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5609522746228694" type="DestTextTuto1">
+                    <param id="0" name="Text">left(SourceTextTuto1.Text, len(DestTextTuto1.Text) + 20)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set 2nd line of Tutoriol text 20char/0.5 sec</comment>
+        <event-block sid="526597398345611">
+            <conditions>
+                <condition id="0" name="Compare text" sid="7942038956217467" type="DestTextTuto1">
+                    <param id="0" name="Text to compare">&quot;Tap any where on screen to turn the Dino towards desired angle.&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4171599958077979" type="DestTextTuto2">
+                    <param id="0" name="Text">left(SourceTextTuto2.Text, len(DestTextTuto2.Text) + 20)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Show ReadConfirm button</comment>
+        <event-block sid="2012063482799122">
+            <conditions>
+                <condition id="0" name="Compare text" sid="2239743664761155" type="DestTextTuto2">
+                    <param id="0" name="Text to compare">&quot;And keep touching screen to move dino in that direction.&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="8970561407684792" type="TutOK">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Close tutoriol</comment>
+        <event-block sid="6540815896794767">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9337130521272787" type="TutOK" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8690894250688449" type="DestTextTuto1" />
+                <action id="-9" name="Destroy" sid="5706772930826164" type="SourceTextTuto1" />
+                <action id="-9" name="Destroy" sid="6970555423356961" type="TextBoardTuto" />
+                <action id="-9" name="Destroy" sid="284119639296162" type="TutOK" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

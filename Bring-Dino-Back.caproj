@@ -10,10 +10,11 @@
     <unique-id>g9yntdsu9lkh</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="ramones" id="DropShadowText" version="1.299999952">Text (Drop shadow)</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -26,9 +27,9 @@
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -83,6 +84,7 @@
                 <instance-variable name="IsoOffset" sid="9708431071814419" type="number" />
                 <instance-variable name="MovAngle" sid="2545639610674713" type="number" />
                 <instance-variable name="PortalPosition" sid="760733737649464" type="number" />
+                <instance-variable name="AngryStatus" sid="7276470120909486" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="4726247122454335">
@@ -102,6 +104,7 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6277814631912079" speed="5">
                     <frame duration="1" hotspotX="0.685714" hotspotY="0.902439">
                         <image-point name="FirePoint" x="0.8" y="0.560976" />
+                        <image-point name="ThoughtPoint" x="0.542857" y="-0.0121951" />
                         <collision-poly>
                             <point x="0.185714" y="0.158537" />
                             <point x="0.5" y="0" />
@@ -2312,11 +2315,178 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="6757187734161584">
+        <object-type name="TextBoardTuto" sid="6095609847870256">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3826814107571789" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7410101083367117" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500711">
+                        <collision-poly>
+                            <point x="0.0255319" y="0.0512091" />
+                            <point x="0.5" y="0.0056899" />
+                            <point x="0.974468" y="0.0512091" />
+                            <point x="0.995035" y="0.499289" />
+                            <point x="0.936879" y="0.8734" />
+                            <point x="0.0631206" y="0.8734" />
+                            <point x="0.00496454" y="0.499289" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SourceTextTuto1" sid="462431946904485">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="DestTextTuto1" sid="740819502940012">
+            <plugin id="DropShadowText" />
+        </object-type>
+        <object-type name="TutOK" sid="2102067191091832">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="SourceTextTuto2" sid="5985240386416781">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="DestTextTuto2" sid="8292304414763044">
+            <plugin id="DropShadowText" />
+        </object-type>
+        <object-type name="FoodThoughtBubble" sid="3071491354779067">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5500530476403362">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5691276179511259" speed="1">
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.0277778" hotspotY="1.00847">
+                        <image-point name="FoodPoint" x="0.540123" y="0.470339" />
+                        <collision-poly>
+                            <point x="0.117284" y="0.161017" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.910494" y="0.122881" />
+                            <point x="0.984568" y="0.5" />
+                            <point x="0.808642" y="0.737288" />
+                            <point x="0.5" y="0.872881" />
+                            <point x="0.169753" y="0.766949" />
+                            <point x="0.0339506" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -2396,6 +2566,7 @@
         <event-sheet>Stage3_Events.xml</event-sheet>
         <event-sheet>Maintainance_Sheet.xml</event-sheet>
         <event-sheet>Stage0_Events.xml</event-sheet>
+        <event-sheet>FoodSystem.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="305">
