@@ -10,11 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>World1Stage1</layout>
-        <event-sheet active="1">FoodSystem</event-sheet>
+        <layout active="1">World1Stage1</layout>
+        <layout>AwardsScreen</layout>
+        <layout>Stage0</layout>
+        <event-sheet>FoodSystem</event-sheet>
         <event-sheet>PowerUps</event-sheet>
         <event-sheet>World1Stage1</event-sheet>
         <event-sheet>Debug</event-sheet>
+        <event-sheet>Pause</event-sheet>
+        <event-sheet>Maintainance_Sheet</event-sheet>
+        <event-sheet>Stage0_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

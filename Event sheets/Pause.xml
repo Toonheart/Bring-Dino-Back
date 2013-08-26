@@ -64,14 +64,6 @@
                     <param id="0" name="Object">PauseScreen</param>
                     <param id="1" name="Image point (optional)">&quot;MainMenu&quot;</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="2808509317863191" type="GoToMainMenu">
-                    <param id="0" name="Object">PauseScreen</param>
-                    <param id="1" name="Image point (optional)">&quot;MainMenu&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="727718812080147" type="Awards">
-                    <param id="0" name="Object">PauseScreen</param>
-                    <param id="1" name="Image point (optional)">&quot;Awards&quot;</param>
-                </action>
             </actions>
         </event-block>
         <comment>Resume on clicking Resume button</comment>
@@ -334,6 +326,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Goto Levels Screen</comment>
         <event-block sid="2753915603365161">
             <conditions>
                 <condition id="3" name="On touched object" sid="9093175376083746" type="Touch">
@@ -344,11 +337,9 @@
                 <action id="-2" name="Go to layout" sid="5772108327600898" type="System">
                     <param id="0" name="Layout">LevelsScreen</param>
                 </action>
-                <action id="1" name="Set pause state" sid="4274165719024234" type="Pause">
-                    <param id="0" name="State">1</param>
-                </action>
             </actions>
         </event-block>
+        <comment>Goto Awards screen</comment>
         <event-block sid="915895676083272">
             <conditions>
                 <condition id="3" name="On touched object" sid="6726086610005275" type="Touch">
@@ -359,11 +350,9 @@
                 <action id="-2" name="Go to layout" sid="993877037205917" type="System">
                     <param id="0" name="Layout">AwardsScreen</param>
                 </action>
-                <action id="1" name="Set pause state" sid="7283849470481898" type="Pause">
-                    <param id="0" name="State">1</param>
-                </action>
             </actions>
         </event-block>
+        <comment>GotoMainMenu</comment>
         <event-block sid="8541437311552554">
             <conditions>
                 <condition id="3" name="On touched object" sid="9811489078314065" type="Touch">
@@ -373,6 +362,9 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="2889372920559414" type="System">
                     <param id="0" name="Layout">MainMenu</param>
+                </action>
+                <action id="1" name="Set pause state" sid="7283849470481898" type="Pause">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>

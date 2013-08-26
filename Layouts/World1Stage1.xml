@@ -3658,8 +3658,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>368</x>
-                        <y>227</y>
+                        <x>-78</x>
+                        <y>404</y>
                         <z>0</z>
                         <width>50.492870331</width>
                         <height>48.482093811</height>
@@ -3683,8 +3683,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>634</x>
-                        <y>411</y>
+                        <x>-76</x>
+                        <y>529</y>
                         <z>0</z>
                         <width>50.492870331</width>
                         <height>48.482093811</height>
@@ -3708,8 +3708,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>158</x>
-                        <y>91</y>
+                        <x>-78</x>
+                        <y>468</y>
                         <z>0</z>
                         <width>50.492870331</width>
                         <height>48.482093811</height>
@@ -3997,6 +3997,116 @@
                     <world>
                         <x>499</x>
                         <y>309</y>
+                        <z>0</z>
+                        <width>50.996017456</width>
+                        <height>39.960197449</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501992047</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Meatloaf" uid="676">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>651</x>
+                        <y>173</y>
+                        <z>0</z>
+                        <width>50.996017456</width>
+                        <height>39.960197449</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501992047</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Meatloaf" uid="677">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>986</x>
+                        <y>149</y>
+                        <z>0</z>
+                        <width>50.996017456</width>
+                        <height>39.960197449</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501992047</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Meatloaf" uid="678">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>210</x>
+                        <y>146</y>
+                        <z>0</z>
+                        <width>50.996017456</width>
+                        <height>39.960197449</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501992047</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Meatloaf" uid="679">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1093</x>
+                        <y>364</y>
+                        <z>0</z>
+                        <width>50.996017456</width>
+                        <height>39.960197449</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501992047</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Meatloaf" uid="680">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>2</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>195</x>
+                        <y>634</y>
                         <z>0</z>
                         <width>50.996017456</width>
                         <height>39.960197449</height>

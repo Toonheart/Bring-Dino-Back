@@ -93,6 +93,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="8690894250688449" type="DestTextTuto1" />
+                <action id="-9" name="Destroy" sid="3469977645970054" type="DestTextTuto2" />
                 <action id="-9" name="Destroy" sid="5706772930826164" type="SourceTextTuto1" />
                 <action id="-9" name="Destroy" sid="6970555423356961" type="TextBoardTuto" />
                 <action id="-9" name="Destroy" sid="284119639296162" type="TutOK" />
