@@ -265,16 +265,7 @@
                                     <param id="2" name="Second value">-112.5</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="4045886402122477" type="Dino">
-                                    <param id="0" name="Animation">&quot;quad1&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="6783158264777311" type="Dino">
-                                    <param id="0" name="Instance variable">MovAngle</param>
-                                    <param id="1" name="Value">-90</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="8695020908914926">
                             <conditions>
@@ -290,10 +281,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="836982784477528" type="Dino">
-                                    <param id="0" name="Animation">&quot;quad2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="4605728892252059" type="Dino">
                                     <param id="0" name="Instance variable">MovAngle</param>
                                     <param id="1" name="Value">211.82</param>
@@ -384,6 +371,240 @@
                 <action id="-23" name="Move at angle" sid="2381711701944829" type="Dino">
                     <param id="0" name="Angle">Dino.MovAngle</param>
                     <param id="1" name="Distance">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="5822045775404593">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="7624207027206688" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3613403656943744" type="Dino">
+                    <param id="0" name="Angle">148.822</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="7825064187446963" type="Dino">
+                    <param id="0" name="Animation">&quot;quad3&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7957100685261308">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="8478661844155636" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3218496442845852" type="Dino">
+                    <param id="0" name="Angle">-31.18</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="5595426116687017" type="Dino">
+                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9498874703821436">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="1406678091437267" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="2145033280671237" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3469444380111072" type="Dino">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="914769641157703" type="Dino">
+                    <param id="0" name="Animation">&quot;quad2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="273960544046321">
+            <conditions>
+                <condition id="-22" name="Else" sid="3166593920632427" type="System" />
+                <condition id="5" name="Compare axis" sid="2774370870301794" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3480018272601007" type="Dino">
+                    <param id="0" name="Angle">211.82</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="836982784477528" type="Dino">
+                    <param id="0" name="Animation">&quot;quad2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5706973143255618">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="9084035540957666" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="4554845237614134" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="4648994077103003" type="Dino">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="4958632640942256" type="Dino">
+                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1660685374450758">
+            <conditions>
+                <condition id="-22" name="Else" sid="1349691442159748" type="System" />
+                <condition id="5" name="Compare axis" sid="2358084291750384" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="2612202665267916" type="Dino">
+                    <param id="0" name="Angle">31.18</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="4433636057725719" type="Dino">
+                    <param id="0" name="Animation">&quot;quad4&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6071126019045733">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="1928612775982741" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="8512247890530842" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3310814885153723" type="Dino">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="4881131298847851" type="Dino">
+                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1054857734570916">
+            <conditions>
+                <condition id="-22" name="Else" sid="2824878229864679" type="System" />
+                <condition id="5" name="Compare axis" sid="2058891861119064" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="9874489536025031" type="Dino">
+                    <param id="0" name="Angle">148.82</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="3282923199361649" type="Dino">
+                    <param id="0" name="Animation">&quot;quad3&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="889929104195597">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="1736004770167773" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="3499190175300604" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="1709928808120554" type="Dino">
+                    <param id="0" name="Angle">-90</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="2283976988141557" type="Dino">
+                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2192593605579645">
+            <conditions>
+                <condition id="-22" name="Else" sid="695053876417489" type="System" />
+                <condition id="5" name="Compare axis" sid="590794768166937" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="7344641419801382" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="4810504452620879" type="Dino">
+                    <param id="0" name="Angle">-31.18</param>
+                    <param id="1" name="Distance">5</param>
+                </action>
+                <action id="4" name="Set animation" sid="2722294842759935" type="Dino">
+                    <param id="0" name="Animation">&quot;quad1&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
